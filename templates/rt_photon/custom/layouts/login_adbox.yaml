@@ -1,0 +1,18 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: login_adbox
+  timestamp: 1443802396
+layout:
+  /container/:
+    -
+      -
+        'leftbar 40':
+          -
+      -
+        'loginform 60':
+          - system-content
+          - system-messages-9828
+structure:
+  container:
+    boxed: '1'

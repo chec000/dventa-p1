@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+  <name>System - User custom</name>
+  <author>Jaime Medina</author>
+  <creationDate>Mayo 2018</creationDate>
+  <copyright>Copyright (C) 2018 Adventa. All rights reserved.</copyright>
+  <license></license>
+  <authorEmail>jaime.medina@adventa.mx</authorEmail>
+  <authorUrl>http://adventa.mx</authorUrl>
+  <version>1.0.1</version>
+  <description>Plugin para realizar personalizaciones al componente Com_users del core</description>
+  <files>
+    <filename plugin="usercustom">usercustom.php</filename>
+    <filename>index.html</filename>
+	<folder>sql</folder>
+  </files>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+</extension>

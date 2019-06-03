@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="campos" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL">
+        <fiel
+                name="name"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+
+        <field
+                name="email"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="cellphone"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="phone"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+
+
+
+        <field
+                name="street"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="int_number"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="ext_number"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="reference"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="zip_code"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="location"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="city"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="state"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="rfc"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="nss"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="pid"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="gmid"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="password"
+                type="checkbox"
+                class="inputbox"
+                label="COM_FOLIO_FIELD_BOTH_LABEL"
+                description="COM_FOLIO_FIELD_BOTH_DESC"
+                value="true"
+
+
+        />
+
+    </fieldset>
+
+
+</form>

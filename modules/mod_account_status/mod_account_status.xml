@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2017 Adventa (http://www.adventa.com.mx/). All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>mod_account_status</name>
+	<author>Adventa</author>
+	<creationDate>Septiembre 2017</creationDate>
+	<copyright>Copyright (c) 2017 Adventa. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.adventa.com.mx/</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ACCOUNT_STATUS_DESC</description>
+	<files>
+		<filename module="mod_account_status">mod_account_status.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>sql</folder>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_account_status.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_account_status.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_account_status.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_account_status.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="wrapper"
+					type="text"
+					default="account-status"
+					label="MOD_ACCOUNT_STATUS_WRAPPER_LABEL"
+					description="MOD_ACCOUNT_STATUS_WRAPPER_LABEL_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="user_name"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_NAMEUSER_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_NAMEUSER_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="user_username"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_USERNAME_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_USERNAME_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="actual_points"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_ACTUAL_POINTS_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_ACTUAL_POINTS_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="reedemed_points"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_REEDEMED_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_REEDEMED_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="adquired_points"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_ADQUIRED_POINTS_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_ADQUIRED_POINTS_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="headers_tag"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_HEADER_TAG_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_HEADER_TAG_DESC"
+					filter="safehtml"
+				/>
+				<field
+					name="text_tag"
+					type="text"
+					label="MOD_ACCOUNT_STATUS_FIELD_TEXT_TAG_LABEL"
+					description="MOD_ACCOUNT_STATUS_FIELD_TEXT_TAG_DESC"
+					filter="safehtml"
+				/>
+				<field name="ac_points_order" type="list" default="1" label="MOD_ACCOUNT_STATUS_FIELD_AC_POINTS_ORDER_LABEL" description="MOD_ACCOUNT_STATUS_FIELD_AC_POINTS_ORDER_DESC" size="2">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+
+				<field name="aq_points_order" type="list" default="2" label="MOD_ACCOUNT_STATUS_FIELD_AQ_POINTS_ORDER_LABEL" description="MOD_ACCOUNT_STATUS_FIELD_AQ_POINTS_ORDER_DESC" size="2">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+
+				<field name="re_points_order" type="list" default="3" label="MOD_ACCOUNT_STATUS_FIELD_RE_POINTS_ORDER_LABEL" description="MOD_ACCOUNT_STATUS_FIELD_RE_POINTS_ORDER_DESC" size="2">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

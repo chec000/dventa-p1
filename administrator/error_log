@@ -1,0 +1,4 @@
+[24-Jan-2018 12:33:04 America/Chicago] PHP Notice:  Only variables should be assigned by reference in /home1/adboxadm/public_html/urrea/administrator/components/com_layoutpoints/models/fileuploads.php on line 269
+[24-Jan-2018 12:33:05 America/Chicago] PHP Notice:  Undefined property: stdClass::$reason_id in /home1/adboxadm/public_html/urrea/administrator/components/com_layoutpoints/views/fileuploads/tmpl/default.php on line 146
+[24-Jan-2018 12:38:47 America/Chicago] PHP Notice:  Undefined property: stdClass::$reason_id in /home1/adboxadm/public_html/urrea/administrator/components/com_layoutpoints/views/fileuploads/tmpl/default.php on line 146
+[24-Jan-2018 12:41:12 America/Chicago] PHP Notice:  Undefined property: stdClass::$reason_id in /home1/adboxadm/public_html/urrea/administrator/components/com_layoutpoints/views/fileuploads/tmpl/default.php on line 146

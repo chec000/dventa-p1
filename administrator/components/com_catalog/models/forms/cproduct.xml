@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="cproduct">
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field
+      name="category_id" type="sql" default="" required="true" label="COM_CATALOG_CXR_CATEGORY" description="COM_CATALOG_CXR_CATEGORY" hint="COM_CATALOG_CXR_CATEGORY"
+      query="SELECT id as value, name as category_id FROM core_product_categories where enabled = 1 order by name asc"
+      >
+    </field>
+    <field name="title" type="text" required="true" label="PRODUCTS_TITLE" description="PRODUCTS_TITLE" hint="PRODUCTS_TITLE"/>
+    <field name="sku" type="text" required="true" label="PRODUCTS_SKU" description="PRODUCTS_SKU" hint="PRODUCTS_SKU"/>
+    <field name="description" type="textarea" required="false" label="PRODUCTS_DESCRIPTION" description="PRODUCTS_DESCRIPTION" hint="PRODUCTS_DESCRIPTION"/>
+    <field name="brand" type="textarea" required="false" label="PRODUCTS_BRAND" description="PRODUCTS_BRAND" hint="PRODUCTS_BRAND"/>
+    <field name="real_price" type="number" required="false" label="PRODUCTS_REAL_PRICE" description="PRODUCTS_REAL_PRICE" hint="PRODUCTS_REAL_PRICE"/>
+    <field name="price" type="number" required="false" label="PRODUCTS_PRICE" description="PRODUCTS_PRICE" hint="PRODUCTS_PRICE"/>
+    <field name="payload" type="textarea" required="false" label="PRODUCTS_PAYLOAD" description="PRODUCTS_PAYLOAD" hint="PRODUCTS_PAYLOAD"/>
+    <field name="enabled" type="radio" required="true" buttons="true" class="btn-group btn-group-yesno" default="1" label="PRODUCTS_ENABLED" description="PRODUCTS_ENABLED" hint="PRODUCTS_ENABLED">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+    <field name="file_name" type="text" readonly="true" required="false" label="PRODUCTS_IMAGE" description="PRODUCTS_IMAGE" hint="PRODUCTS_IMAGE"/>
+  </fieldset>
+</form>

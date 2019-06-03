@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="cxrol">
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field
+    name="rol_id" type="sql" default="" label="Rol ID" description="Rol ID" hint="Rol ID"
+    query="SELECT id as value, title as rol_id FROM #__usergroups order by title asc"
+    />
+    <field
+    name="category_id" type="sql" default="" label="COM_CATALOG_CXR_CATEGORY" description="COM_CATALOG_CXR_CATEGORY" hint="COM_CATALOG_CXR_CATEGORY"
+    query="SELECT id as value, name as category_id FROM core_product_categories where enabled = 1 order by name asc"
+    />
+    </fieldset>
+</form>

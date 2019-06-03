@@ -1,0 +1,10 @@
+favicon: 'gantry-media://global/favicon.png'
+touchicon: ''
+css:
+  -
+    location: ''
+    inline: ".g-newsslider-headlines li {\nopacity: 100 !important;\n}"
+    extra: {  }
+    priority: '0'
+    name: ajustes
+javascript: {  }

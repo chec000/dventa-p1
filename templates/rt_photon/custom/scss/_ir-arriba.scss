@@ -1,0 +1,70 @@
+/*--------------------------------------------
+ESTILOS PARTÍCULA ACORDEON
+--------------------------------------------*/
+.ir-arriba { 
+    position: fixed; 
+    width: 3rem;
+    height: 3rem;
+    line-height: 0;
+    right: 1rem;
+    color: #fff;
+    padding: 0;
+    z-index: 999;
+    outline: none;
+    align-items: center;
+    @include display(flex);
+    @include justify-content(center);
+    text-decoration: none;
+    @include transition(all 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0s);
+    opacity: 1;
+}
+.ir-arriba:hover {
+    opacity: .9;
+}
+.ir-arriba.g-ir-arriba-confondo:hover {
+    background: $accent-color-1 !important;
+}
+
+.ir-arriba .fa{
+    line-height: 0;
+}
+
+/*Efecto 1*/
+.ir-arriba-estilo1-defecto{
+    bottom: 1rem;
+    opacity: 0;
+}
+.ir-arriba-estilo1{
+opacity: 1;
+}
+/*Efecto 2*/
+.ir-arriba-estilo2-defecto{
+    bottom: -4rem;
+    padding: 0;
+}
+.ir-arriba-estilo2{
+    bottom: 1rem;
+    padding: 0;
+}
+
+
+/*Efecto 3*/
+.ir-arriba-estilo3-defecto{
+     bottom: 1rem;
+    @include transform(scale(0));
+}
+.ir-arriba-estilo3{
+    @include transform(scale(1));
+}
+/*Efecto 4*/
+.ir-arriba-estilo4-defecto{
+    bottom: 1rem;
+    @include transform(rotateY(90deg));
+    @include transition(transform 600ms);
+    
+}
+.ir-arriba-estilo4{
+@include transform(rotateY(0deg));
+@include transition(transform 600ms);
+}
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.0" type="plugin" group="user" method="upgrade">
+  <name>User - User Override</name>
+  <author>Jaime Medina</author>
+  <creationDate>Junio 2018</creationDate>
+  <copyright>Copyright (C) 2018 Adventa. All rights reserved.</copyright>
+  <license></license>
+  <authorEmail>jaime.medina@adventa.mx</authorEmail>
+  <authorUrl>http://adventa.mx</authorUrl>
+  <version>1.0.2</version>
+  <description>Plugin para realizar personalizaciones al componente Com_users del core</description>
+
+
+  <files>
+    <filename plugin="useroverride">useroverride.php</filename>
+    <filename>index.html</filename>
+	<folder>files</folder>
+	<folder>forms</folder>
+	<folder>assets</folder>
+	<folder>sql</folder>
+  </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_useroverride.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.plg_useroverride.ini</language>
+    </languages>
+
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+</extension>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_core_configs</name>
+    <creationDate>2017-10-05</creationDate>
+    <copyright>Adventa (C) 2017. All rights reserved.</copyright>
+    <license></license>
+    <author>Adventa</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>Allow you to modify multiple configurations inside the platform.</description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <administration>
+        <menu img="media/com_core_configs/images/s_com_core_configs.png" >COM_CORE_CONFIGS</menu>
+        <submenu>
+            
+			<menu link="option=com_core_configs&amp;view=configs" view="configs" img="media/com_core_configs/images/s_configs.png" alt="Core_configs/Configs">COM_CORE_CONFIGS_TITLE_CONFIGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>core_configs.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/en-GB.com_core_configs.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_core_configs.sys.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_core_configs.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_core_configs.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="core_configs"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

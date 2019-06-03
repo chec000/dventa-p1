@@ -1,0 +1,63 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: adbox_system_content
+  timestamp: 1512066350
+layout:
+  top: {  }
+  navigation: {  }
+  /mainwrap/:
+    -
+      - system-content-2084
+  /optional/: {  }
+  mainBanner: {  }
+  /footer/: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  mainwrap:
+    type: section
+    attributes:
+      boxed: '1'
+      class: main-content
+  optional:
+    type: section
+    attributes:
+      boxed: ''
+  mainBanner:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children

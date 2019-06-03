@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2017 onesession. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="user" method="upgrade">
+	<name>plg_user_onesession</name>
+	<author>Adventa</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>(C) 2017 Adventa. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>edgar.gallardo@adventa.mx</authorEmail>
+	<authorUrl>www.adventa.mx</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	
+	</description>
+
+	<files>
+		<filename plugin="onesession">onesession.php</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+	</files>
+
+	<languages folder="languages">
+            
+			<language tag="en-GB">en-GB/en-GB.plg_user_onesession.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_user_onesession.sys.ini</language>
+			<language tag="es-ES">es-ES/es-ES.plg_user_onesession.ini</language>
+			<language tag="es-ES">es-ES/es-ES.plg_user_onesession.sys.ini</language>
+        </languages>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,25 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url('gantry-theme://css/jquery.mb.bgndgallery.min.css') }}" type="text/css" />
+{% endblock %}
+
+{% block javascript %}
+
+  {% if particle.jquery  %}
+    <script src="{{ url('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js') }}"></script>
+  {% endif %}
+  <script src="{{ url('gantry-theme://js/jquery.mb.bgndGallery.js') }}"></script>
+  <script>
+  $(function(){
+      $.mbBgndGallery.buildGallery({
+              effect: "{{particle.effect}}",
+              containment:"body",
+              timer:{{particle.timmer}},
+              effTimer:{{particle.transitionTime}},
+              // If your server allow directory listing
+              folderPath:"../../{{particle.path}}"
+      });
+    })
+  </script>
+{% endblock %}

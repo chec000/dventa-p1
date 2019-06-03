@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `#__core_countuser` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_id` int(11) NOT NULL,
+	`count_session` int(11) NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;

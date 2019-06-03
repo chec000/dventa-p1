@@ -1,0 +1,69 @@
+ordering:
+  iniciar-sesion: ''
+  home: ''
+  mecanica: ''
+  estado-de-cuenta: ''
+  catalogo: ''
+  comunicados:
+    boletines: ''
+  carrito: ''
+  user:
+    mis-datos: ''
+    __module-iG6P5: ''
+    cerrar-sesion: ''
+  historial-de-canje: ''
+items:
+  iniciar-sesion:
+    id: 140
+  home:
+    id: 132
+  mecanica:
+    id: 133
+  estado-de-cuenta:
+    id: 139
+  catalogo:
+    id: 134
+  comunicados:
+    id: 136
+  comunicados/boletines:
+    id: 137
+  carrito:
+    id: 135
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-shopping-cart'
+  user:
+    id: 205
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-id-card'
+    columns:
+      - 100
+  user/cerrar-sesion:
+    id: 152
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-sign-out'
+  user/mis-datos:
+    id: 206
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-user-circle'
+  historial-de-canje:
+    id: 281
+  user/__module-iG6P5:
+    type: particle
+    particle: module
+    title: 'Adbox - Helpdesk'
+    options:
+      particle:
+        enabled: '1'
+        module_id: '104'
+        chrome: ''
+      block:
+        extra: {  }
+    enabled: '1'

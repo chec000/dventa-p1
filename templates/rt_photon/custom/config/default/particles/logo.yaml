@@ -1,0 +1,8 @@
+enabled: '1'
+url: ''
+target: _self
+image: 'gantry-media://global/logo.png'
+link: '0'
+svg: ''
+text: ''
+class: g-logo

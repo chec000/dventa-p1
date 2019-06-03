@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.1" client="site" method="upgrade">
+	<name>MOD_USERPOINTS</name>
+	<author>Adventa</author>
+	<creationDate>Septiembre 2017</creationDate>
+	<copyright>Copyright (c) 2017 Adventa. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.adventa.com.mx/</authorUrl>
+	<version>1.1</version>
+	<description>MOD_USERPOINTS_DESC</description>
+	<files>
+		<filename module="mod_userpoints">mod_userpoints.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_userpoints.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_userpoints.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_userpoints.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_userpoints.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="coin_icon"
+					type="text"
+					label="MOD_USERPOINTS_COIN_ICON_LABEL"
+					description="MOD_USERPOINTS_COIN_ICON_DESC"
+					hint="fa fa-money"
+				/>
+				<field
+					name="user_icon"
+					type="text"
+					label="MOD_USERPOINTS_USER_ICON_LABEL"
+					description="MOD_USERPOINTS_USER_ICON_DESC"
+					hint="fa fa-id-card-o"
+				/>
+				<field
+					name="user"
+					type="list"
+					default="0"
+					required="true"
+					label="MOD_USERPOINTS_FIELD_USERSELECT_LABEL"
+					description="MOD_USERPOINTS_FIELD_USERSELECT_DESC">
+  					<option value="">MOD_USERPOINTS_FIELD_DEFAULT_LABEL</option>
+					  <option value="0">MOD_USERPOINTS_FIELD_USERNAME_LABEL</option>
+					  <option value="1">MOD_USERPOINTS_FIELD_USER_LABEL</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

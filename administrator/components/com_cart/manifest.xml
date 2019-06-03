@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_cart</name>
+	<author>ZitDev</author>
+	<creationDate>October 2017</creationDate>
+	<copyright>Copyright (C) 2017 Zitred. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>dev@zitred.com</authorEmail>
+	<authorUrl>www.zitred.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Cart joomla component</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/cart.install.sql</file>
+		</sql>
+	</install> 
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/cart.uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="components">
+		<filename>cart.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<folder>views</folder>
+		<folder>assets</folder>
+		<folder>language</folder>    
+		<folder>helpers</folder>        
+		<folder>models</folder>          
+	</files>
+	<administration>
+		<menu>COM_CART</menu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>cart.php</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>language</folder> 
+		</files>
+	</administration>
+</extension>

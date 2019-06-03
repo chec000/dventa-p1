@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="greetings"
+		label="COM_CHECKOUT_STATUS_CONFIG_TITLE"
+		description="COM_CHECKOUT_STATUS_CONFIG_DESC"
+		>
+		<field
+			name="checkout_emails"
+			type="textarea"
+			label="COM_CHECKOUT_STATUS_CONFIG_CHECKOUT_MAIL_LBL"
+			description="COM_CHECKOUT_STATUS_CONFIG_CHECKOUT_MAIL_DESC"
+			default=""
+			>
+		</field>
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_checkout_status" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

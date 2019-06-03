@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `#__core_configs` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+`key` VARCHAR(200)  NOT NULL ,
+`value` TEXT NOT NULL ,
+`visibility` TINYINT(1)  NOT NULL ,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT COLLATE=utf8mb4_unicode_ci;
+

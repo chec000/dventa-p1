@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="default" label="COM_USERS_REGISTRATION_PROFILE_LABEL">    
+        
+        <field
+            name="name"
+            type="text"
+            label="COM_USERS_REGISTER_NAME_LABEL"
+            description="COM_USERS_REGISTER_NAME_DESC"
+            filter="string"
+            required="true"
+            size="30"
+            maxlength="25"
+			readonly="readonly"
+        />
+		
+        <field
+            name="midname"
+            type="text"
+            label="COM_USERS_REGISTER_MIDNAME_LABEL"
+            description="COM_USERS_REGISTER_MIDNAME_DESC"
+            filter="string"
+            required="true"
+            size="30"
+            maxlength="50"
+			readonly="readonly"
+        />
+		
+        <field
+            name="lastname"
+            type="text"
+            label="COM_USERS_REGISTER_LASTNAME_LABEL"
+            description="COM_USERS_REGISTER_LASTNAME_DESC"
+            filter="string"
+            required="false"
+            size="30"
+            maxlength="50"
+			readonly="readonly"
+        />
+
+        <field
+            name="username"
+            type="text"
+            label="COM_USERS_REGISTER_USERNAME_LABEL"
+            description="COM_USERS_DESIRED_USERNAME"
+            class="validate-username"
+            filter="username"
+            message="COM_USERS_REGISTER_USERNAME_MESSAGE"
+            required="true"
+            size="15"
+            hint="Ej: RFCU010101"
+            validate="username"
+            maxlength="10"
+			readonly="readonly"
+        />
+	 
+                
+        <field
+            name="email1"
+            type="email"
+            label="COM_USERS_REGISTER_EMAIL1_LABEL"
+            description="COM_USERS_REGISTER_EMAIL1_DESC"
+            field="id"
+            filter="string"
+            message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+            required="true"
+            size="30"
+            unique="true"
+            validate="email"
+            autocomplete="email"
+            maxlength="40"
+        />
+                
+        <field
+            name="telephone"
+            type="text"
+            label="COM_USERS_REGISTER_TELEPHONE_LABEL"
+            description="COM_USERS_REGISTER_TELEPHONE_DESC"
+            class="validate-telephone"
+            required="false"
+            size="15"
+            hint="(Lada) + Tel"
+            maxlength="26"
+        />
+                
+        <field
+            name="cellphone"
+            type="text"
+            label="COM_USERS_REGISTER_CELLPHONE_LABEL"
+            description="COM_USERS_REGISTER_CELLPHONE_DESC"
+            class="validate-cellphone"
+            required="true"
+            size="10"
+            hint=""
+            maxlength="10"
+        />
+
+        <field
+            name="password1"
+            id="password1" 
+            type="password"
+            label="COM_USERS_PROFILE_PASSWORD1_LABEL"
+            description="COM_USERS_DESIRED_PASSWORD"
+            autocomplete="off"
+            field="password1"
+            filter="raw"
+            size="30"
+            validate="password"
+            required="true"
+            maxlength="15"
+        /> 
+        
+	<field
+            name="password2"
+            id="password2" 
+            type="password"
+            label="COM_USERS_PROFILE_PASSWORD2_LABEL"
+            description="COM_USERS_DESIRED_PASSWORD"
+            autocomplete="off"
+            field="password2"
+            filter="raw"
+            size="30"
+            validate="password"
+            required="true"
+            maxlength="15"
+        /> 	
+		
+		
+        <field
+            name="curp"
+            type="text"
+            label="COM_USERS_REGISTER_CURP_LABEL"
+            description="COM_USERS_REGISTER_CURP_DESC"
+            size="18"
+            hint="COM_USERS_REGISTER_CURP_HINT"
+            required="true"
+            maxlength="18"
+        />
+		
+		<field 
+            name="ine" 
+            type="file" 
+            label="COM_USERS_PROFILE_INE_LABEL" 
+            description="COM_USERS_PROFILE_INE_DESC" 
+            accept="image/*" 
+            filerequired="true"
+            size="5"			
+        />
+		
+		
+        <field
+            name="gmin"
+            type="text"
+            label="COM_USERS_REGISTER_GMIN_LABEL"
+            description="COM_USERS_REGISTER_GMIN_DESC"
+            size="9"
+            hint="COM_USERS_REGISTER_GMIN_HINT"
+            required="true"
+            maxlength="9"
+        />
+        <field
+            name="pid"
+            type="text"
+            label="COM_USERS_REGISTER_PID_LABEL"
+            description="COM_USERS_REGISTER_PID_DESC"
+            size="6"
+            hint="COM_USERS_REGISTER_PID_HINT"
+            required="true"
+            maxlength="6"
+        />
+
+        <field
+            name="spacer"
+            type="spacer"
+            label="COM_USERS_PROFILE_NOTE"
+            class="text-profile-note"
+        />
+        
+        <field name="id" type="hidden" default="" />
+        <field name="user_id" type="hidden" default="" />
+       
+    </fieldset>
+</form>

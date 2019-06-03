@@ -1,0 +1,503 @@
+<?php
+/**
+ * @version    CVS: 1.0.0
+ * @package    Com_Report
+ * @author     Othon Parra Alcantar <othon.parra@adventa.mx>
+ * @copyright  
+ * @license    Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt
+ */
+
+// No direct access.
+defined('_JEXEC') or die;
+
+jimport('joomla.application.component.controlleradmin');
+
+use Joomla\Utilities\ArrayHelper;
+
+/**
+ * Userfields list controller class.
+ *
+ * @since  1.6
+ */
+class ReportControllerReportfields extends JControllerAdmin
+{
+	/**
+	 * Method to clone existing Userfields
+	 *
+	 * @return void
+	 */
+	public function duplicate()
+	{
+		// Check for request forgeries
+		Jsession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
+
+		// Get id(s)
+		$pks = $this->input->post->get('cid', array(), 'array');
+
+		try
+		{
+			if (empty($pks))
+			{
+				throw new Exception(JText::_('COM_REPORT_NO_ELEMENT_SELECTED'));
+			}
+
+			ArrayHelper::toInteger($pks);
+			$model = $this->getModel();
+			$model->duplicate($pks);
+			$this->setMessage(Jtext::_('COM_REPORT_ITEMS_SUCCESS_DUPLICATED'));
+		}
+		catch (Exception $e)
+		{
+			JFactory::getApplication()->enqueueMessage($e->getMessage(), 'warning');
+		}
+
+		$this->setRedirect('index.php?option=com_report&view=reportfields');
+	}
+
+	/**
+	 * Proxy for getModel.
+	 *
+	 * @param   string  $name    Optional. Model name
+	 * @param   string  $prefix  Optional. Class prefix
+	 * @param   array   $config  Optional. Configuration array for model
+	 *
+	 * @return  object	The Model
+	 *
+	 * @since    1.6
+	 */
+	public function getModel($name = 'reportfield', $prefix = 'ReportModel', $config = array())
+	{
+		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
+
+		return $model;
+	}
+
+	/**
+	 * Method to save the submitted ordering values for records via AJAX.
+	 *
+	 * @return  void
+	 *
+	 * @since   3.0
+	 */
+	public function download(){
+		// Get the model
+		$model = $this->getModel($name = 'reportfields', $prefix = 'ReportModel', $config = array());
+		$app = JFactory::getApplication();
+		$field_merge = array();
+		$order_data =  array();
+		$fields= $model->getActiveFIelds();
+		$users = $model->getUsers();
+		$user_cedis = "";
+		$cedis_data = (object) array();
+		$orders = $model->getOrderProducts();
+		$core_cedis = $model->getCedisValue();
+		if ($core_cedis == 'cedis')
+		{
+			$core_cedis='1';
+		}else{
+			$core_cedis='0';
+		}
+		date_default_timezone_set('America/Monterrey');
+		$date = date('Y-m-d H-i-s');
+		$filename = "Canjes_report ".$date;
+		$output = fopen('php://output', 'w');
+		
+		
+		foreach ($fields as $field){
+			array_push($field_merge,$field->field_name);
+		}
+		//Imprime las cabeceras de las columnas
+		fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF));
+		fputcsv($output, $field_merge);
+		
+		
+		foreach ($orders as $order)
+		{ 
+			
+			$orderbyid = $model->getOrderById($order->order_id);
+			//$user_cedis = $model->getUserCedis($orderbyid->userid);
+			$user_cedis = $orderbyid->cedis_id;
+			$cedis_data = $model->getCedisInfo($user_cedis);
+			
+			
+			foreach ($fields as $field){
+				if ($field->field == "no_canje"){
+					array_push($order_data, $order->order_id);
+				}
+				else if ($field->field == "codigo_cu"){
+					if($order->sku != ""){
+						array_push($order_data, $order->sku);
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				else if ($field->field == "estatus_pedido"){
+					array_push($order_data, "N/D");
+					//-------------------------------------------------------------------
+
+				}
+				else if ($field->field == "codigo_pmr"){
+					array_push($order_data, "N/D");
+					//-------------------------------------------------------------------
+				}
+				else if ($field->field == "precio_unitario_pesos"){
+					if($order->real_price != ""){
+						array_push($order_data, $order->real_price);						
+					}else{
+						array_push($order_data, "N/D");
+					}
+				}
+				else if ($field->field == "precio_total_pesos"){
+					if($order->real_price != "" && $order->quantity != ""){
+						$total= $order->real_price*$order->quantity;
+						array_push($order_data, $total);						
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				else if ($field->field == "precio_unitario_puntos"){
+					if($order->price != ""){
+						array_push($order_data, $order->price);
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				else if ($field->field == "precio_total_puntos"){
+					if($order->price != "" && $order->quantity != ""){
+						$total= $order->price*$order->quantity;
+						array_push($order_data, $total);						
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				else if ($field->field == "cantidad"){
+					if($order->quantity != ""){
+						array_push($order_data, $order->quantity);
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				/*else if ($field->field == "descripcion_articulo"){
+					if( $order->description != ""){
+						array_push($order_data, $order->description);						
+					}else{
+						array_push($order_data, "N/D");
+						
+					}
+				}*/
+				else if ($field->field == "nombre_articulo"){
+                                        if( $order->title != ""){
+                                                array_push($order_data, $order->title);
+                                        }else{
+                                                array_push($order_data, "N/D");
+
+                                        }
+                                }
+				else if ($field->field == "fecha_canje"){
+					if($orderbyid->fecha_canje!=""){
+						array_push($order_data, $orderbyid->fecha_canje);						
+					}else{
+						array_push($order_data, "N/D");												
+					}
+				}
+				else if ($field->field == "nombre_usuario"){
+					if($orderbyid->nombre!=""){
+						array_push($order_data, $orderbyid->nombre);											
+					}else{
+						array_push($order_data, "N/D");	
+					}
+				}
+				else if ($field->field == "username"){
+					if($orderbyid->username!=""){
+						array_push($order_data, $orderbyid->username);
+					}else{
+						array_push($order_data, "N/D");	
+					}						
+				}
+				else if ($field->field == "email"){
+					if($orderbyid->email!=""){
+						array_push($order_data, $orderbyid->email);
+					}else{
+						array_push($order_data, "N/D");	
+					}
+											
+				}
+				else if ($field->field == "estatus_usuario" && isset($orderbyid->block)){
+					if($orderbyid->block == 0){
+						array_push($order_data, 'Activo');												
+					}else if($orderbyid->block == 1){
+						array_push($order_data, 'Bloqueado');
+					}
+
+				}
+				else if ($field->field == "telephone"){
+					$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.num_tel');
+					if(isset($user_profiles->profile_value)){
+						array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+				else if ($field->field == "cellphone"){
+					$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.num_cel');
+					if(isset($user_profiles->profile_value)){
+						array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+					}else{
+						array_push($order_data, "N/D");
+					}
+					
+				}
+
+				if($core_cedis == '1'){
+					if ($field->field == "id_cedis"){
+						if(isset($cedis_data->cedis_id)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->cedis_id);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "cedis_name"){
+						if(isset($cedis_data->names_cedis)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->names_cedis);
+							}
+						}
+						else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "street"){
+						if(isset($cedis_data->street)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->street);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "num_ext"){
+						if(isset($cedis_data->ext_number)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->ext_number);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "num_int"){
+						if(isset($cedis_data->int_number)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->int_number);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "location"){
+						if(isset($cedis_data->location)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->location);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "reference"){
+						if(isset($cedis_data->reference)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->reference);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "city"){
+						if(isset($cedis_data->city)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->city);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "estate"){
+						if(isset($cedis_data->estate)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->estate);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "zip_code"){
+						if(isset($cedis_data->zip_code)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->zip_code);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+
+				}else if($core_cedis == '0'){
+					//When core cedis is disabled	
+					if ($field->field == "id_cedis"){
+						if(isset($cedis_data->cedis_id)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->cedis_id);
+							}
+						}else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "cedis_name"){
+						if(isset($cedis_data->names_cedis)){
+							if($cedis_data != '0'){
+								array_push($order_data, $cedis_data->names_cedis);
+							}
+						}
+						else{
+							array_push($order_data, "N/D");
+						}
+						
+					}
+					else if ($field->field == "street"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.street');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "num_ext"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.num_ext');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "num_int"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.num_int');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "location"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.neighborhood');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "reference"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.reference');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "city"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.town');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "estate"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.estate');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+					else if ($field->field == "zip_code"){
+						$user_profiles = $model->getProfileByKey($orderbyid->userid,'profile.pc');
+						if(isset($user_profiles->profile_value)){
+							array_push($order_data,str_replace('"','',$user_profiles->profile_value));
+						}else{
+							array_push($order_data, "N/D");
+						}	
+					}
+						
+				}
+
+
+				
+			}
+			fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF));
+			fputcsv($output, $order_data);
+			$order_data = array();
+		}
+
+
+		$app
+		-> setHeader('Content-Type', 'application/cvs; charset=utf-8', true)
+		//-> setHeader('Content-Length', strlen($content), true)
+		-> setHeader('Content-Disposition', 'attachment; filename="'.$filename.'.csv"', true)
+		-> setHeader('Content-Transfer-Encoding', 'binary', true)
+		-> setHeader('Expires', '0', true)
+		-> setHeader('Pragma','no-cache',true); 
+	
+	// Close the application gracefully.
+	$app->sendHeaders();
+	$app->close();
+	}
+
+	public function saveOrderAjaxx()
+	{
+		// Get the input
+		$input = JFactory::getApplication()->input;
+		$pks   = $input->post->get('cid', array(), 'array');
+		$order = $input->post->get('order', array(), 'array');
+
+		// Sanitize the input
+		ArrayHelper::toInteger($pks);
+		ArrayHelper::toInteger($order);
+
+		// Get the model
+		$model = $this->getModel();
+
+		// Save the ordering
+		$return = $model->saveorder($pks, $order);
+
+		if ($return)
+		{
+			echo "1";
+		}
+
+		// Close the application
+		JFactory::getApplication()->close();
+	}
+
+	public function downloadRedirect(){
+		$this->setRedirect('index.php?option=com_report&view=download');
+	}
+
+
+}

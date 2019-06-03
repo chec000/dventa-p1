@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="greetings"
+		label="COM_CHECKOUT_CONFIG_TITLE"
+		description="COM_CHECKOUT_CONFIG_DESC"
+		>
+		<field
+			name="delivery_edit"
+			type="radio"
+			label="COM_CHECKOUT_CONFIG_DELIVERY_EDIT_TYPE_LBL"
+			description="COM_CHECKOUT_CONFIG_DELIVERY_EDIT_TYPE_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="profile_info"
+			type="list"
+			label="COM_CHECKOUT_CONFIG_PROFILE_INFO_LBL"
+			description="COM_CHECKOUT_CONFIG_PROFILE_INFO_DESC"
+			id="profile_info"
+			default="0"
+			>
+			<option value="0">Default - user_profiles</option>
+			<option value="1">CRE - core_user_info</option>
+		</field>
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_checkout" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

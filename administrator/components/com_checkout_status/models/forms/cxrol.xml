@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="cxrol">
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field
+    name="rol_id" type="sql" default="" required="true" label="COM_CHECKOUT_STATUS_FORM_LBL_ROLID" description="COM_CHECKOUT_STATUS_FORM_DESC_ROLID" hint="COM_CHECKOUT_STATUS_FORM_DESC_ROLID"
+    query="SELECT id as value, title as rol_id FROM #__usergroups order by title asc"
+    />
+    <field name="start_date" type="calendar" default="" label="COM_CHECKOUT_STATUS_FORM_LBL_STARTDATE" description="COM_CHECKOUT_STATUS_FORM_DESC_STARTDATE"
+    class="input-medium" required="true" filter="user_utc" format="%Y-%m-%d"
+    singleheader="true" showtime="false" timeformat="24" todaybutton="true" weeknumbers="true"
+    filltable="true" minyear="-3" maxyear="5" />
+    <field name="end_date" type="calendar" default="" label="COM_CHECKOUT_STATUS_FORM_LBL_ENDDATE" description="COM_CHECKOUT_STATUS_FORM_DESC_ENDDATE"
+    class="input-medium" required="true" filter="user_utc" format="%Y-%m-%d"
+    singleheader="true" showtime="false" timeformat="24" todaybutton="true" weeknumbers="true"
+    filltable="true" minyear="-3" maxyear="5" />
+    </fieldset>
+</form>

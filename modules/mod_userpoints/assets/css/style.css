@@ -1,0 +1,11 @@
+.wrap_userpoints{
+  font-size: 0.8rem;
+}
+.group_user{
+  margin-left:2rem;
+}
+
+.wrap_userpoints div{
+  float:right;
+  margin-left: 1rem;
+}

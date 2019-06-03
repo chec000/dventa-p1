@@ -1,0 +1,74 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: adbox_content
+  timestamp: 1510163493
+layout:
+  top: {  }
+  navigation: {  }
+  /banner/: {  }
+  /mainwrap/:
+    -
+      - position-module-2514
+  /optional/: {  }
+  mainBanner: {  }
+  /footer/: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  banner:
+    type: section
+    attributes:
+      boxed: ''
+  mainwrap:
+    type: section
+    attributes:
+      boxed: '1'
+      class: main-content
+  optional:
+    type: section
+    attributes:
+      boxed: ''
+  mainBanner:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  position-module-2514:
+    title: 'Module Instance'
+    attributes:
+      module_id: '103'
+      key: module-instance

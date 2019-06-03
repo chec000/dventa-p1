@@ -1,0 +1,63 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+
+ <div class="g-video-player g-{{id}}">
+   {% if particle.Title  %}
+      <{{particle.LabelTitle}} {% if particle.CssClass %} class="{{particle.CssClass}}" {% endif %}> {{particle.Title}} </{{particle.LabelTitle}}>
+   {% endif %}
+
+   {% if particle.VideoUrl %}
+    {% if 'youtube' in particle.VideoUrl %}
+      <div data-type="youtube" data-video-id="{{url(particle.VideoUrl)}}"></div>
+    {% endif %}
+    {% if 'vimeo' in particle.VideoUrl %}
+      <div data-type="vimeo" data-video-id="{{url(particle.VideoUrl)}}"></div>
+    {% endif %}
+   {% endif %}
+
+   {% if particle.VideoMP4 or particle.VideoWebm %}
+    <video {% if particle.ImagePreview %} poster="{{url(particle.ImagePreview)}}" {% endif %} controls>
+      {% if particle.VideoMP4 %} <source src="{{url(particle.VideoMP4)}}" type="video/mp4"> {% endif %}
+      {% if particle.VideoWebm %} <source src="{{url(particle.VideoWebm)}}" type="video/webm"> {% endif %}
+   </video>
+   {% endif %}
+
+</div>
+
+ {% assets in 'head' with { priority: 0 } %}
+  <link rel="stylesheet" href="{{ url('gantry-theme://css/plyr.css') }}" type="text/css"/>
+ {% endassets %}
+
+{# Recuperar los parametros de autoreproducir y fullscreen#}
+ {% if particle.AutoPlay %}
+ {%   set AutoPlay = "true" %}
+ {% else %}
+ {%   set AutoPlay = "false" %}
+ {% endif  %}
+
+ {% if particle.fullscreen %}
+ {%   set fullscreen = "true" %}
+ {% else %}
+ {%   set fullscreen = "false" %}
+ {% endif  %}
+
+ {% if particle.clickToPlay %}
+ {%   set clickToPlay = "true" %}
+ {% else %}
+ {%   set clickToPlay = "false" %}
+ {% endif  %}
+
+ {% assets in 'footer' with { priority: 0 } %}
+    <script type="text/javascript" src="{{ url('gantry-theme://js/plyr.js') }}"></script>
+    <script>
+      var player= plyr.setup('.g-{{id}}',{
+          autoplay: {{AutoPlay}},
+          fullscreen: { enabled:{{fullscreen}} },
+          iconUrl: '{{ url('gantry-theme://css/plyr.svg') }}',
+          clickToPlay: {{clickToPlay}}
+      });
+      
+    </script>
+ {% endassets %}
+
+{% endblock %}

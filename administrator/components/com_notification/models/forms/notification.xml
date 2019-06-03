@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="key" default="" maxlength="200" filter="safehtml" type="text" required="true" message="Inserte toda la información solicitada" label="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_KEY" description="COM_NOTIFICATION_FORM_DESC_NOTIFICATION_KEY" hint="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_KEY"/>
+    <field name="value" filter="raw" type="textarea" required="true" message="Inserte toda la información solicitada" label="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_VALUE" description="COM_NOTIFICATION_FORM_DESC_NOTIFICATION_VALUE" hint="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_VALUE" rows="15" cols="5"/>
+    <field name="visibility" type="radio" buttons="true" class="btn-group btn-group-yesno" default="1" label="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_VISIBILITY" description="COM_NOTIFICATION_FORM_DESC_NOTIFICATION_VISIBILITY" hint="COM_NOTIFICATION_FORM_LBL_NOTIFICATION_VISIBILITY">
+      <option value="1">COM_NOTIFICATION_CONFIGS_VISIBILITY_OPTION_ON</option>
+      <option value="0">COM_NOTIFICATION_CONFIGS_VISIBILITY_OPTION_OFF</option>
+    </field>
+  </fieldset>
+</form>

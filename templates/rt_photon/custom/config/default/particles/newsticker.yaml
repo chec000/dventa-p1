@@ -1,0 +1,8 @@
+enabled: '1'
+speed: medium
+Interval: '2000'
+Direction: up
+class: ''
+title: ''
+label: ''
+items: {  }

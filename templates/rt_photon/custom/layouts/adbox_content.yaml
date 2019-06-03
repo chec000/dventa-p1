@@ -1,0 +1,25 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  
+layout:
+  /top/:
+  /navigation/:
+  /banner/:
+  /mainwrap/:
+  /optional/:
+  /mainBanner/:
+  /footer/: {  }
+  /copyright/:
+  /offcanvas/:
+  
+structure:
+  navigation:
+    subtype:nav
+  mainwrap:
+    subtype: section
+    attributes:
+      boxed: '1'
+      class: 'main-content'
+  footer:
+    subtype:footer

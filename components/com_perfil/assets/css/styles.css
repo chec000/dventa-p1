@@ -1,0 +1,106 @@
+
+#componnetContent, #wrap_info{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#perfilForm input{
+   // max-width: 25rem;
+}
+
+.control-group{
+//    max-width: 24rem;
+
+}
+#perfilForm input, .remind input, .reset input {
+    isplay: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.term{
+    width: 7%!important;
+}
+#perfilForm .disableInput{
+    background-color: lightgray;
+}
+
+.container{
+    border:1px solid darkgrey;
+    border-radius:3px;
+    padding:5px;
+    width:40%;
+    margin:0 auto;
+    letter-spacing:1px;
+    font-family: sans-serif;
+    box-shadow: 0px 2px 2px 0px gray;
+}
+
+.container h1{
+    margin-top: 0px;
+    font-weight: normal;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#div_content{
+    width:60%;
+    margin: 0 auto;
+    min-height:200px;
+    height: auto;
+}
+
+#div_content div{
+    margin-bottom:8px;
+
+}
+.clear{
+    clear:both;
+    margin-top: 20px;
+}
+
+#searchResult{
+    list-style: none;
+    padding: 0px;
+    width: 250px;
+    position: absolute;
+    margin: 0;
+}
+
+#searchResult li{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#searchResult li:nth-child(even){
+    //color: white;
+}
+
+#searchResult li:hover{
+    cursor: pointer;
+    color: #555;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+input[type=text]{
+    padding: 5px;
+    width: 250px;
+    letter-spacing: 1px;
+}

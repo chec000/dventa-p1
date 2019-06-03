@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="order">
+		<field name="id" type="hidden" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+		<field
+			name="user_id" type="sql" default="" label="COM_WISHLIST_NEW_USER_LABEL" description="COM_WISHLIST_NEW_USER_DESC" required="true" hint="COM_WISHLIST_NEW_USER_LABEL"
+			query="SELECT id as value, name as user_id FROM #__users where block = 0 order by name asc"
+		/>
+		<field
+	    name="product_id" type="sql" default="" label="COM_WISHLIST_NEW_PRODUCT_LABEL" required="true" description="COM_WISHLIST_NEW_PRODUCT_DESC" hint="COM_WISHLIST_NEW_PRODUCT_LABEL"
+	    query="SELECT id as value, title as product_id FROM core_products where enabled = 1 order by title asc"
+    	/>
+    	<field name="amount" type="number" min="1" required="true" label="COM_WISHLIST_NEW_AMOUNT_LABEL" description="COM_WISHLIST_NEW_AMOUNT_DESC" hint="COM_WISHLIST_NEW_AMOUNT_LABEL"/>
+	</fieldset>
+</form>

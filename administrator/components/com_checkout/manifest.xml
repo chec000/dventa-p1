@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_checkout</name>
+	<author>ZitDev</author>
+	<creationDate>November 2017</creationDate>
+	<copyright>Copyright (C) 2017 Zitred. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>dev@zitred.com</authorEmail>
+	<authorUrl>www.zitred.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Checkout joomla component</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/checkout.install.sql</file>
+		</sql>
+	</install> 
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/checkout.uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="components">
+		<filename>checkout.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<folder>views</folder>
+		<folder>assets</folder>
+		<folder>language</folder>    
+		<folder>helpers</folder>        
+		<folder>models</folder>          
+	</files>
+	<administration>
+		<menu link='option=com_checkout'>COM_CHECKOUT</menu>
+		<files folder="administrator">
+			<filename>checkout.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>           
+	</administration>
+</extension>

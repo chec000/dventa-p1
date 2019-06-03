@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fieldset name="mainWrap" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL">
+        
+        <field
+            name="name"
+            type="text"
+            label="COM_PERFIL_REGISTER_NAME_LABEL"
+            description="COM_USERS_REGISTER_NAME_DESC"
+            filter="string"
+            required="true"
+            size="30"
+            maxlength="25"
+        />
+
+        <field
+            name="email"
+            type="email"
+            label="COM_PERFIL_REGISTER_EMAIL1_LABEL"
+            description="COM_USERS_REGISTER_EMAIL1_DESC"
+            field="id"
+            filter="string"
+            message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+            required="true"
+            size="30"
+            unique="true"
+            autocomplete="email"
+            maxlength="40"
+        />
+        <field
+            name="cellphone"
+            type="text"
+            label="COM_PERFIL_REGISTER_CELLPHONE_DESC"
+            description="COM_USERS_REGISTER_CELLPHONE_DESC"
+            class="validate-cellphone"
+            required="true"
+            size="10"
+            hint=""
+            maxlength="10"
+        />
+
+                <field
+                    name="spacer"
+                    type="spacer"
+                    label="COM_PERFIL_REGISTER_LEGEND"
+                    class="divisor"
+                />
+        <field
+                name="phone"
+                type="text"
+                label="COM_PERFIL_REGISTER_TELEPHONE_DESC"
+                description="COM_PERFIL_REGISTER_PHONE_DESC"
+                class="validate-cellphone"
+                required="true"
+                size="10"
+                hint=""
+                maxlength="10"
+        />
+
+        <field
+                name="street"
+                type="text"
+                label="COM_PERFIL_REGISTER_STREET_LABEL"
+                description="COM_PERFIL_REGISTER_STREET_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="100"
+        />
+
+        <field
+                name="ext_number"
+                type="text"
+                label="COM_PERFIL_REGISTER_EXT_NUMBER_LABEL"
+                description="COM_PERFIL_REGISTER_EXT_NUMBER_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+
+        <field
+                name="int_number"
+                type="text"
+                label="COM_PERFIL_REGISTER_INT_NUMBER_LABEL"
+                description="COM_PERFIL_REGISTER_INT_NUMBER_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+
+        <field
+                name="reference"
+                type="textarea"
+                rows="3"
+                cols="30"
+                label="COM_PERFIL_REGISTER_REFERENCIAS_LABEL"
+                description="COM_PERFIL_REGISTER_REFERENCIAS_DESC"
+                filter="string"
+                required="true"
+
+        />
+
+
+        <field
+                name="zip_code"
+                type="text"
+                label="COM_PERFIL_REGISTER_ZIP_CODE_LABEL"
+                description="COM_PERFIL_REGISTER_ZIP_CODE_DESC"
+                filter="string"
+                hint="COM_PERFIL_REGISTER_ZIP_CODE_LABEL_DESC"
+                required="true"
+                id="zip_code"
+                class="form-control"
+                size="10"
+                maxlength="10"
+
+        />
+
+        <field
+                name="location"
+                type="text"
+                class="disableInput"
+                label="COM_PERFIL_REGISTER_LOCATION_LABEL"
+                description="COM_PERFIL_REGISTER_LOCATION_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                readonly="readonly"
+        />
+        <field
+                name="city"
+                type="text"
+                label="COM_PERFIL_REGISTER_CITY_LABEL"
+                description="COM_PERFIL_REGISTER_CITY_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                readonly="readonly"
+                class="disableInput"
+        />
+        <field
+                name="state"
+                type="text"
+                readonly="readonly"
+                class="disableInput"
+                label="COM_PERFIL_REGISTER_STATE_LABEL"
+                description="COM_PERFIL_REGISTER_STATE_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+        <field
+                name="rfc"
+                type="text"
+                label="COM_PERFIL_REGISTER_RFC_LABEL"
+                description="COM_PERFIL_REGISTER_RFC_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+        <field
+                name="nss"
+                type="text"
+                label="COM_PERFIL_REGISTER_NSS_LABEL"
+                description="COM_PERFIL_REGISTER_NSS_DESC"
+                filter="string"
+                required="true"
+                size="11"
+                maxlength="11"
+        />
+        <field
+                name="pid"
+                type="text"
+                label="COM_PERFIL_REGISTER_PID_LABEL"
+                description="COM_PERFIL_REGISTER_PID_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                minLenght="6"
+        />
+        <field
+                name="gmin"
+                type="text"
+                label="COM_PERFIL_REGISTER_GMIN_LABEL"
+                description="COM_PERFIL_REGISTER_GMIN_DESC"
+                filter="string"
+                hint="COM_PERFIL_REGISTER_GMIN_HINT"
+                required="true"
+                size="30"
+                maxlength="9"
+        />
+
+
+
+        <field name="TERM"
+                type="checkbox"
+                required="true"
+                label=""
+                class="form-control term"
+                value="1" 
+                default="1"
+                checked="1"
+        />
+        
+        <field name="id" type="hidden" default="" />
+    </fieldset>
+</form>
+
+
+

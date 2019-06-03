@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2017 Adventa (http://www.adventa.com.mx/). All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Adbox - Historial de canje</name>
+	<author>Adventa</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (c) 2017 Historialdecanje. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://www.adventa.com.mx/</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+	<p>Shows the whole products exchanged by a user in the platform.</p>
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_historial_canje">mod_historial_canje.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_historial_canje.xml</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>sql</folder>
+		<folder>lib</folder>}
+	</files>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.mod_historial_canje.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_historial_canje.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_historial_canje.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_historial_canje.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

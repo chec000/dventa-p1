@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field
+	 name="product_id" type="sql" default="" maxlength="200" filter="safehtml" required="true" message="Inserte toda la información solicitada" label="COM_CART_FORM_LBL_CART_KEY" description="COM_CART_FORM_DESC_CART_KEY" hint="COM_CART_FORM_LBL_CART_KEY"
+	 query="SELECT id as value, title as product_id FROM core_products where enabled = 1 order by title asc"
+    />
+    <field name="stock" filter="raw" type="number" min="1" required="true" message="Inserte toda la información solicitada" label="COM_CART_FORM_LBL_CART_VALUE" description="COM_CART_FORM_DESC_CART_VALUE" hint="COM_CART_FORM_LBL_CART_VALUE" rows="15" cols="5"/>
+  </fieldset>
+</form>

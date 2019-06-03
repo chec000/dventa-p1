@@ -1,0 +1,4 @@
+SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `#__core_user_cart_items`;
+DROP TABLE IF EXISTS `#__core_products_stock`;
+SET FOREIGN_KEY_CHECKS=1;

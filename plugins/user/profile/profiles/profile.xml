@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fields name="profile">
+		<fieldset name="profile" label="PLG_USER_PROFILE_SLIDER_LABEL">
+			<field
+				name="code"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_CODE_LABEL"
+				description="PLG_USER_PROFILE_FIELD_CODE_DESC"
+				id="code"
+				filter="string"
+				size="100"
+			/>
+
+			<field
+				name="last_name1"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_LASTNAME1_LABEL"
+				description="PLG_USER_PROFILE_FIELD_LASTNAME1_DESC"
+				id="last_name1"
+				filter="string"
+				size="50"
+			/>
+
+			<field
+				name="last_name2"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_LASTNAME2_LABEL"
+				description="PLG_USER_PROFILE_FIELD_LASTNAME2_DESC"
+				id="last_name2"
+				filter="string"
+				size="50"
+			/>
+
+			<field
+				name="num_cel"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_NUMCEL_LABEL"
+				description="PLG_USER_PROFILE_FIELD_NUMCEL_DESC"
+				id="num_cel"
+				filter="string"
+				size="30"
+			/>
+
+			<field
+				name="num_tel"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_NUMTEL_LABEL"
+				description="PLG_USER_PROFILE_FIELD_NUMTEL_DESC"
+				id="num_tel"
+				filter="string"
+				size="30"
+				pattern="[0-9]{10}" 
+				title="Solo se permiten valores numericos"
+			/>
+
+			<field
+				name="street"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_STREET_LABEL"
+				description="PLG_USER_PROFILE_FIELD_STREET_DESC"
+				id="street"
+				filter="string"
+				size="150"
+			/>
+
+			<field
+				name="num_ext"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_NUMEXT_LABEL"
+				description="PLG_USER_PROFILE_FIELD_NUMEXT_DESC"
+				id="num_ext"
+				filter="string"
+				size="10"
+			/>
+
+			<field
+				name="num_int"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_NUMINT_LABEL"
+				description="PLG_USER_PROFILE_FIELD_NUMINT_DESC"
+				id="num_int"
+				filter="string"
+				size="10"
+			/>
+
+			<field
+				name="reference"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_REFERENCE_LABEL"
+				description="PLG_USER_PROFILE_FIELD_REFERENCE_DESC"
+				id="reference"
+				filter="string"
+				size="200"
+			/>
+
+			<field
+				name="neighborhood"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_NEIGHBORHOOD_LABEL"
+				description="PLG_USER_PROFILE_FIELD_NEIGHBORHOOD_DESC"
+				id="neighborhood"
+				filter="string"
+				size="90"
+			/>
+
+			<field
+				name="pc"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_PC_LABEL"
+				description="PLG_USER_PROFILE_FIELD_PC_DESC"
+				id="pc"
+				filter="url"
+				size="10"
+			/>
+
+			<field
+				name="town"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_TOWN_LABEL"
+				description="PLG_USER_PROFILE_FIELD_TOWN_DESC"
+				id="town"
+				filter="string"
+				size="50"
+			/>
+
+			<field
+				name="estate"
+				type="text"
+				label="PLG_USER_PROFILE_FIELD_ESTATE_LABEL"
+				description="PLG_USER_PROFILE_FIELD_ESTATE_DESC"
+				id="estate"
+				filter="string"
+				size="30"
+			/>
+
+			<field
+				name="genre"
+				type="list"
+				label="PLG_USER_PROFILE_FIELD_GENRE_LABEL"
+				description="PLG_USER_PROFILE_FIELD_GENRE_DESC"
+				id="genre"
+				>
+				<option	value="Mujer">Mujer</option>
+				<option	value="Hombre">Hombre</option>
+			</field>
+
+			<field
+				name="dob"
+				type="dob"
+				label="PLG_USER_PROFILE_FIELD_DOB_LABEL"
+				description="PLG_USER_PROFILE_FIELD_DOB_DESC"
+				info=""
+				translateformat="true"
+				showtime="false"
+				filter="server_utc"
+			/>
+
+			<field 
+				name="names_cedis" 
+				type="sql" 
+				default="" 
+				label="PLG_USER_PROFILE_FIELD_SAC_LABEL" 
+				description="PLG_USER_PROFILE_FIELD_SAC_DESC" 
+				query="SELECT names_cedis, cedis_id FROM #__core_cedis" 
+				key_field="cedis_id"
+				value="cedis_id" 
+			/>
+			
+		</fieldset>
+	</fields>
+
+
+	<fields name="cedis_fields">
+		<fieldset name="cedis_fields" label="PLG_USER_PROFILE_FULFILL_LABEL">
+			
+			<field
+				readonly="true"
+				name="cedis_names"
+				type="cedis_names"
+				label="Cedis name:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_street"
+				type="cedis_street"
+				label="Cedis street:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_ext_number"
+				type="cedis_ext_number"
+				label="Cedis ext. number:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_int_number"
+				type="cedis_int_number"
+				label="Cedis int. number:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_location"
+				type="cedis_location"
+				label="Cedis location:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_reference"
+				type="cedis_reference"
+				label="Cedis reference:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_estate"
+				type="cedis_estate"
+				label="Cedis estate:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_city"
+				type="cedis_city"
+				label="Cedis city:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_zip_code"
+				type="cedis_zip_code"
+				label="Cedis zip code:"
+				description=""
+				default=""
+				>
+			</field>
+			<field
+				readonly="true"
+				name="cedis_telephone"
+				type="cedis_telephone"
+				label="Cedis telephone:"
+				description=""
+				default=""
+				>
+			</field>
+		</fieldset>
+	</fields>
+</form>

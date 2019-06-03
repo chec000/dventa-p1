@@ -1,0 +1,38 @@
+atoms:
+  -
+    id: atomo-animatecss-wowjs-4780
+    type: atomo-animatecss-wowjs
+    title: 'Wow.js y Animate.css'
+    attributes:
+      enabled: '1'
+      enabled_animatecss: '1'
+      enabled_wowjs: '1'
+      offset: '200'
+      mobile: 'false'
+  -
+    id: frameworks-8133
+    type: frameworks
+    title: 'JavaScript Frameworks'
+    inherit:
+      outline: default
+      atom: frameworks-8133
+      include:
+        - attributes
+  -
+    id: atomo-Ir-arriba-9744
+    type: atomo-Ir-arriba
+    title: 'Ir arriba'
+    inherit:
+      outline: default
+      atom: atomo-Ir-arriba-9744
+      include:
+        - attributes
+  -
+    id: hover-1375
+    type: hover
+    title: Hover
+    inherit:
+      outline: default
+      atom: hover-1375
+      include:
+        - attributes

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="campos" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL" description="COM_PERFIL_COMPONENT_DESC">
+
+
+        <fiel
+                name="name"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_NAME_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <fiel
+                name="username"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_USERNAME_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <field
+                name="email"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_EMAIL_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="cellphone"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CELLPHONE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="phone"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_PHONE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+
+
+
+        <field
+                name="street"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_STREET_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="int_number"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_INT_NUMBER_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="ext_number"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_EXT_NUMBER_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="reference"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_REFERENCE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="zip_code"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_ZIP_CODE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="location"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_LOCATION_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="city"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CITY_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="state"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_STATE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="rfc"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_RFC_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="nss"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_NSS_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+        <field
+                name="pid"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_PID_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <field
+                name="gmid"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_GMID_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <field
+                name="password"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_PASSWORD_LABEL"
+                value="true"
+        />
+    </fieldset>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="greetings"
+		label="COM_WISHLIST_CONFIG_TITLE"
+		description="COM_WISHLIST_CONFIG_DESC"
+		>
+		<field
+			name="wishlist_enable"
+			type="radio"
+			label="COM_WISHLIST_CONFIG_ENABLE_LBL"
+			description="COM_WISHLIST_CONFIG_ENABLE_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_wishlist" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

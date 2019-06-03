@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="greetings"
+		label="COM_CATALOG_CONFIG_TITLE"
+		description="COM_CATALOG_CONFIG_DESC"
+		>
+		<field
+			name="survey"
+			type="radio"
+			label="COM_CATALOG_CONFIG_SURVEY_TYPE_LBL"
+			description="COM_CATALOG_CONFIG_SURVEY_TYPE_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<!--field
+			name="notification_type"
+			type="list"
+			label="COM_CATALOG_CONFIG_NOTIFICATION_TYPE_LBL"
+			description="COM_CATALOG_CONFIG_NOTIFICATION_TYPE_DESC"
+			default="0"
+			>
+			<option value="0">COM_CATALOG_CONFIG_NOTIFICATION_TYPE_NONE</option>
+			<option value="1">COM_CATALOG_CONFIG_NOTIFICATION_TYPE_SMS</option>
+			<option value="2">COM_CATALOG_CONFIG_NOTIFICATION_TYPE_MAIL</option>
+		</field-->
+		<field
+			name="motivale_skus"
+			type="textarea"
+			label="COM_CATALOG_CONFIG_MOTIVALE_SKUS_LBL"
+			description="COM_CATALOG_CONFIG_MOTIVALE_SKUS_DESC"
+			default=""
+			>
+		</field>
+		<field
+			name="likes"
+			type="radio"
+			label="COM_CATALOG_CONFIG_LIKES_LBL"
+			description="COM_CATALOG_CONFIG_LIKES_DESC"
+			class="btn-group btn-group-yesno"
+			default="0"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="styleConfigs"
+		label="COM_CATALOG_CONFIG_STYLE_TITLE"
+		description="COM_CATALOG_CONFIG_STYLE_TITLE_DESC"
+		>
+		<field
+			name="product-image"
+			type="textarea"
+			label="COM_CATALOG_CONFIG_STYLE_LBL"
+			description="COM_CATALOG_CONFIG_STYLE_DESC"
+			default=""
+			>
+		</field>
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_catalog" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

@@ -1,0 +1,376 @@
+@import "dependencies";
+@import "newsticker";
+@import "mosaicgrid";
+@import "gridstatistic";
+@import "testimonials";
+@import "imagegrid";
+@import "ir-arriba";
+@import "popupgrid";
+
+.g-social a{
+  color:#fff !important;
+  background: none !important;
+}
+.g-social a:hover{
+  color:#ccc !important;
+}
+.box-top{
+  margin-top:1rem !important;
+}
+
+//----- < Home es todo un exito -----
+.box-success{
+  padding-left: 1rem;
+  padding-top: 1rem;
+  color: rgba(255,255,255, 0.5);
+}
+.box-success, .box-success span{
+  background: $accent-color-1;
+  color:#fff;
+  font-size: 2.5rem;
+}
+.box-success, .box-success h2{
+  padding-bottom: 0px !important;
+}
+.g-gridstatistic-item-icon{
+  margin-bottom: 0px !important;
+}
+
+
+#box-prefooter{
+  color: #fff;
+  background-image:url(images/backgrounds/home/bg_contact.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#box-prefooter h2{
+  color:$accent-color-4;
+  font-weight: bold;
+  font-size: 3rem;
+}
+#box-prefooter h3{
+  color:$accent-color-2;
+  font-size: 1.5rem;
+  margin-top:0rem;
+}
+#box-prefooter h4{
+  color:$accent-color-4;
+  font-size: 1.7rem;
+  margin-top:0rem;
+}
+
+.g-imagegrid .g-imagegrid-item{
+  padding:0px !important;
+}
+#g-textaprivtcond{
+color: #000000 !important;
+}
+
+#g-copyright{
+  font-size: 0.8rem !important;
+  color: rgba(255,255,255,0.8);
+  padding-bottom: 0;
+  width: 100%;
+}
+#g-copyright a{
+  /*color: $accent-color-2;*/
+  color: #fff;
+}
+.g-newsslider-navigation div.next{
+  background:#B0B7BD;
+}
+
+.main-content{
+  background: #fff;
+  color: #686868;
+  margin: 0rem 1.5rem 1rem;
+  box-shadow: 2px 1px 15px rgba(0,0,0,.05);
+  position: relative;
+}
+
+//Banner de mecánicas;
+#owlcarousel-3083-particle{
+  margin-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.blue-inline{
+  color: $accent-color-1;
+  font-weight: bold;
+}
+.no-margin-bottom{
+  margin-bottom:0px;
+}
+
+#account-status h2{
+  border-bottom: 1px solid #ccc;
+  padding-top: 1rem;
+  color:$accent-color-1;
+}
+#account-status h3{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+.main-points{
+  box-shadow: 2px 2px 4px 1px rgba(0,0,0,.3);
+  padding: 1.5rem;
+  background: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.points-item{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  width: 33%;
+}
+.points-number{
+  font-size: 3rem;
+  color: $accent-color-1;
+}
+
+.right-border{
+  border-right: 1px solid #ccc;
+}
+
+.account-status-avatar{
+  width: 45%;
+  padding-top: 1rem;
+  text-align: right;
+  padding-right: 3rem;
+  border-right: 1px solid #ccc;
+  color:#9e9e9e;
+}
+.account-status-userinfo{
+  width: 50%;
+  padding-left: 2rem;
+}
+.account-status-userinfo h3{
+  color:#9e9e9e;
+}
+.profile-user{
+  font-size: 5rem;
+  text-align: right;
+}
+.account-status-header{
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+//----- < Global -----
+#g-page-surround{
+    background: none;
+}
+form{
+  margin: 0px;
+}
+.control-label{
+  width:auto !important;
+}
+.form-horizontal .controls{
+  margin: 0px;
+}
+.nav-tabs.nav-stacked{
+  margin:0px;
+  text-align: center;
+}
+.nav-stacked >li {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+legend{
+  color:$accent-color-1 !important;
+}
+select{
+  background-color: white;
+  margin-left: 1rem;
+}
+//----- Global /> -----
+
+/*
+Estilos Login
+*/
+.leftbar-login{
+  background: $accent-color-1;
+  opacity: 0.7;
+  border-radius: 5px;
+  z-index: 2;
+}
+.leftbar-login a{
+  font-size: 0.8rem;
+  color: $accent-color-3 !important;
+}
+.leftbar-login a:hover{
+  color: $accent-color-2 !important;
+}
+
+.leftbar-login p{
+  margin-bottom: 0.2rem !important;
+}
+
+.leftbar-login p, span{
+  font-size:0.8rem;
+}
+
+.login-icon{
+  font-size: 4rem;
+}
+
+.leftbar-login hr{
+  margin-top:1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.wrap-login-form{
+
+  background: $accent-color-2;
+  opacity: 0.7;
+  border-radius: 2px;
+  color: #555555;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.star{display:none !important;}
+
+.login input, .logout input, .registration input, .profile-edit input, .remind input, .reset input{
+  border: 0px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  border-radius: 0;
+  font-style: normal;
+}
+
+/* Sección de sistem messages*/
+#g-top{
+  background: none !important;
+}
+
+
+/* Estilos del Catálogo */
+#filter-header_clear-btn, #filter-btn, #product-view__add-btn{
+  background-color: $accent-color-1;
+  border-color: $accent-color-1;
+}
+
+#product-view__back-btn{
+  border-color: $accent-color-1;
+  color:$accent-color-1;
+}
+
+.product-pagination a.active{
+  background-color: $accent-color-1;
+}
+
+#product__related h2::before{
+  background-color: $accent-color-1;
+}
+
+#product-view__quantity{
+  width:100%;
+}
+
+#cart-view__checkout-btn,.next-btn{
+  background-color: $accent-color-1;
+  border-color:$accent-color-1;
+}
+#cart-view__add-btn{
+  border-color:$accent-color-1;
+  color:$accent-color-1;
+}
+#cart-view__add-btn:hover, #cart-view__checkout-btn:hover,.next-btn:hover{
+  background-color: $accent-color-1;
+  border-color:$accent-color-1;
+  color:white;
+}
+#cart-view__title{
+  margin-top:1rem;
+}
+
+//----- < userdata header-----
+.wrap_userpoints{
+  color: #eee;
+  margin-top:1rem;
+}
+//----- < user profile -----
+#profile-edit{
+  display: flex;
+}
+.fieldser-reg{
+  display: inline-block;
+  padding: 3rem;
+  margin: 1rem;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+//----- </ user profile -----
+#member-profile input{
+  max-width: 25rem;
+}
+
+//----- < offcanvas -----
+.g-offcanvas-toggle{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+//----- </ offcanvas -----
+
+//----- < mobile logo -----
+.m-logo{
+    background-color: white;
+    text-align: center;
+}
+//-----
+
+//----- < main menu -----
+#g-navigation .g-main-nav{
+  margin-top: 1.8rem;
+
+}
+//----- </ main menu -----
+
+#g-banner{
+  background-color: $accent-color-1;
+  padding-bottom: 1rem;
+}
+
+#g-showcase, #g-container-showcase{
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
+//--Main banner
+.g-newsslider-preview-title{
+    display: none;
+}
+.g-newsslider-overlay{
+  display:none;
+}
+
+.g-newsslider-pagination li{
+  background: $accent-color-2 !important;
+  color: $accent-color-1 !important;
+}
+.g-newsslider-pagination li.selected{
+  background: $accent-color-1 !important;
+  color: $accent-color-2 !important;
+}
+
+//----- Flypage -----
+.quantity-input__plus, .quantity-input__minus{
+  color: $accent-color-1 !important;
+  font-size: 1rem;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="pupload">
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="file_name" type="file" label="Csv" description="Csv" hint="Csv"/>
+    </fieldset>
+</form>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="userFields">
+    <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="userid" type="users" label="COM_DEALERS_FIELD_USER-ASSIGN_LABEL" description="COM_DEALERS_FIELD_USER-ASSIGN_DESC" class="inputbox small" required="true" size="1">
+    </field>
+    <field name="cedisid" type="dealers" label="COM_DEALERS_FIELD_DEALER-ASSIGN_LABEL" description="COM_DEALERS_FIELD_DEALER-ASSIGN_DESC" class="inputbox small" required="true" size="1" >
+    </field>
+    <field name="state" type="hidden" size="1" default="1" />
+  </fieldset>
+</form>

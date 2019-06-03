@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" readonly="true" class="readonly" default="0"/>
+		<field name="user_id" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_USER_LBL" description="COM_CHECKOUT_TAB_DETAILS_USER_DESC" hint="COM_CHECKOUT_TAB_DETAILS_USER_LBL"/>
+		<field name="email" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_MAIL_LBL" description="COM_CHECKOUT_TAB_DETAILS_MAIL_DESC" hint="COM_CHECKOUT_TAB_DETAILS_MAIL_LBL"/>
+		<field name="total" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_TOTAL_LBL" description="COM_CHECKOUT_TAB_DETAILS_TOTAL_DESC" hint="COM_CHECKOUT_TAB_DETAILS_TOTAL_LBL"/>
+		<field name="status" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_STATUS_LBL" description="COM_CHECKOUT_TAB_DETAILS_STATUS_DESC" hint="COM_CHECKOUT_TAB_DETAILS_STATUS_LBL"/>
+		<field name="created_at" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_DATE_LBL" description="COM_CHECKOUT_TAB_DETAILS_DATE_DESC" hint="COM_CHECKOUT_TAB_DETAILS_DATE_LBL"/>
+		<field name="created_by_id" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_CREATEDBY_LBL" description="COM_CHECKOUT_TAB_DETAILS_CREATEDBY_DESC" hint="COM_CHECKOUT_TAB_DETAILS_CREATEDBY_LBL"/>
+	</fieldset>
+	<fieldset name="delivery">
+		<field name="street" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_STREET_LBL" description="COM_CHECKOUT_TAB_DETAILS_STREET_DESC" hint="COM_CHECKOUT_TAB_DETAILS_STREET_LBL"/>
+		<field name="extNum" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_EXTNUM_LBL" description="COM_CHECKOUT_TAB_DETAILS_EXTNUM_DESC" hint="COM_CHECKOUT_TAB_DETAILS_EXTNUM_LBL"/>
+		<field name="reference" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_REFERENCE_LBL" description="COM_CHECKOUT_TAB_DETAILS_REFERENCE_DESC" hint="COM_CHECKOUT_TAB_DETAILS_REFERENCE_LBL"/>
+		<field name="city" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_CITY_LBL" description="COM_CHECKOUT_TAB_DETAILS_CITY_DESC" hint="COM_CHECKOUT_TAB_DETAILS_CITY_LBL"/>
+		<field name="town" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_TOWN_LBL" description="COM_CHECKOUT_TAB_DETAILS_TOWN_DESC" hint="COM_CHECKOUT_TAB_DETAILS_TOWN_LBL"/>
+		<field name="state" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_STATE_LBL" description="COM_CHECKOUT_TAB_DETAILS_STATE_DESC" hint="COM_CHECKOUT_TAB_DETAILS_STATE_LBL"/>
+		<field name="zipCode" type="text" default="" readonly="true" label="COM_CHECKOUT_TAB_DETAILS_ZIPCODE_LBL" description="COM_CHECKOUT_TAB_DETAILS_ZIPCODE_DESC" hint="COM_CHECKOUT_TAB_DETAILS_ZIPCODE_LBL"/>
+	</fieldset>
+</form>

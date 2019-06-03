@@ -1,0 +1,97 @@
+ordering:
+  iniciar-sesion: ''
+  home: ''
+  mecanica: ''
+  estado-de-cuenta: ''
+  catalogo: ''
+  comunicados:
+    boletines: ''
+    ranking: ''
+    encuesta: ''
+  carrito: ''
+  user:
+    mis-datos: ''
+    __module-dzcsy: ''
+    cerrar-sesion: ''
+items:
+  iniciar-sesion:
+    id: 140
+  home:
+    id: 132
+  mecanica:
+    id: 133
+  estado-de-cuenta:
+    id: 139
+  catalogo:
+    id: 134
+  comunicados:
+    id: 136
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+  comunicados/boletines:
+    id: 137
+  comunicados/ranking:
+    id: 266
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-anchor fa-5x'
+  comunicados/encuesta:
+    id: 164
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+  carrito:
+    id: 135
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-cart-plus'
+  user:
+    id: 205
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: auto
+    icon: 'fa fa-address-card'
+    subtitle: 'Mis datos'
+    columns:
+      - 100
+  user/cerrar-sesion:
+    id: 152
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: ''
+    icon: 'fa fa-sign-out'
+  user/mis-datos:
+    id: 206
+    dropdown_dir: right
+    dropdown_hide: '0'
+    width: ''
+    icon: 'fa fa-user-circle'
+  mis-datos/__module-k1O5L:
+    type: particle
+    particle: module
+    title: 'Adbox - Helpdesk'
+    options:
+      particle:
+        enabled: '1'
+        module_id: '104'
+        chrome: ''
+      block:
+        extra: {  }
+    enabled: true
+    anchor_class: ''
+  user/__module-dzcsy:
+    type: particle
+    particle: module
+    title: 'Adbox - Helpdesk'
+    options:
+      particle:
+        enabled: '1'
+        module_id: '104'
+        chrome: ''
+      block:
+        extra: {  }
+    enabled: true
+    anchor_class: ''

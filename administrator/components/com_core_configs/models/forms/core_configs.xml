@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="key" default="Ej. prefix.function" maxlength="200" filter="safehtml" type="text" required="true" message="Inserte toda la información solicitada" label="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_KEY" description="COM_CORE_CONFIGS_FORM_DESC_CORE_CONFIGS_KEY" hint="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_KEY"/>
+    <field name="value" filter="safehtml" type="textarea" required="true" message="Inserte toda la información solicitada" label="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_VALUE" description="COM_CORE_CONFIGS_FORM_DESC_CORE_CONFIGS_VALUE" hint="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_VALUE"/>
+    <field name="visibility" type="radio" buttons="true" class="btn-group btn-group-yesno" default="1" label="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_VISIBILITY" description="COM_CORE_CONFIGS_FORM_DESC_CORE_CONFIGS_VISIBILITY" hint="COM_CORE_CONFIGS_FORM_LBL_CORE_CONFIGS_VISIBILITY">
+      <option value="1">COM_CORE_CONFIGS_CONFIGS_VISIBILITY_OPTION_ON</option>
+      <option value="0">COM_CORE_CONFIGS_CONFIGS_VISIBILITY_OPTION_OFF</option>
+    </field>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="administrator">
+	<name>Fenix</name>
+	<version>1.0</version>
+	<creationDate>05/2018</creationDate>
+	<author>Jaime Medina</author>
+	<authorEmail>jaime.medina@adventa.mx</authorEmail>
+	<copyright>Copyright (C) 2018 Adventa.</copyright>
+	<description>TPL_FENIX_XML_DESCRIPTION</description>
+	<files>
+		<filename>HeadRenderer.php</filename>
+		<filename>component.php</filename>
+		<filename>cpanel.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>login.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	<folder>less</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>submenu</position>
+		<position>toolbar</position>
+		<position>title</position>
+		<position>status</position>
+		<position>icon</position>
+		<position>cp_shell</position>
+		<position>cpanel</position>
+		<position>bottom</position>
+		<position>footer</position>
+		<position>login</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_fenix.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_fenix.sys.ini</language>
+		<language tag="en-GB">es-ES/es-ES.tpl_fenix.ini</language>
+		<language tag="en-GB">es-ES/es-ES.tpl_fenix.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+
+				<field 
+					name="templateColor" 
+					type="color" 
+					label="TPL_FENIX_COLOR_LABEL"
+					description="TPL_FENIX_COLOR_DESC" 
+					class="" 
+					default="#5d213b"
+					validate="color"
+				/>
+
+				<field 
+					name="headerColor" 
+					type="color" 
+					label="TPL_FENIX_COLOR_HEADER_LABEL"
+					description="TPL_FENIX_COLOR_HEADER_DESC" 
+					class="" 
+					default="#b0143c"
+					validate="color"
+				/>
+
+				<field 
+					name="sidebarColor" 
+					type="color" 
+					label="TPL_FENIX_COLOR_SIDEBAR_LABEL"
+					description="TPL_FENIX_COLOR_SIDEBAR_DESC" 
+					class="" 
+					default="#5d213b"
+					validate="color"
+				/>
+
+				<field 
+					name="linkColor" 
+					type="color" 
+					label="TPL_FENIX_COLOR_LINK_LABEL"
+					description="TPL_FENIX_COLOR_LINK_DESC" 
+					class="" 
+					default="#70335b"
+					validate="color"
+				/>
+
+				<field 
+					name="loginBackgroundColor" 
+					type="color" 
+					label="TPL_FENIX_COLOR_LOGIN_BACKGROUND_LABEL"
+					description="TPL_FENIX_COLOR_LOGIN_BACKGROUND_DESC"
+					class="" 
+					default="#872f55"
+					validate="color"
+				/>
+
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_FENIX_LOGO_LABEL"
+					description="TPL_FENIX_LOGO_DESC"
+					class="" 
+					default=""
+				 />
+
+				<field 
+					name="loginLogoFile" 
+					type="media" 
+					label="TPL_FENIX_LOGIN_LOGO_LABEL"
+					description="TPL_FENIX_LOGIN_LOGO_DESC"
+					class="" 
+					default=""
+				 />
+
+				<field 
+					name="admin_menus"
+					type="radio"
+					label="TPL_FENIX_FIELD_ADMIN_MENUS_LABEL"
+					description="TPL_FENIX_FIELD_ADMIN_MENUS_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field 
+					name="displayHeader" 
+					type="radio"
+					label="TPL_FENIX_HEADER_LABEL"
+					description="TPL_FENIX_HEADER_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field 
+					name="statusFixed" 
+					type="list"
+					label="TPL_FENIX_STATUS_LABEL"
+					description="TPL_FENIX_STATUS_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">TPL_FENIX_STATUS_BOTTOM</option>
+					<option value="0">TPL_FENIX_STATUS_TOP</option>
+				</field>
+
+				<field 
+					name="stickyToolbar" 
+					type="radio"
+					label="TPL_FENIX_STICKY_LABEL"
+					description="TPL_FENIX_STICKY_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

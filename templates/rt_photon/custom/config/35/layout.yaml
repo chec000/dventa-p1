@@ -1,0 +1,111 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: adbox_content
+  timestamp: 1510163493
+layout:
+  top: {  }
+  navigation: {  }
+  /banner/:
+    -
+      - owlcarousel-3083
+  /mainwrap/:
+    -
+      - system-content-1307
+  /optional/: {  }
+  mainBanner: {  }
+  footer: {  }
+  copyright: {  }
+  offcanvas: {  }
+structure:
+  top:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  banner:
+    type: section
+    attributes:
+      boxed: '0'
+      class: ''
+  mainwrap:
+    type: section
+    attributes:
+      boxed: '1'
+      class: main-content
+  optional:
+    type: section
+    attributes:
+      boxed: ''
+  mainBanner:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  copyright:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+content:
+  owlcarousel-3083:
+    title: 'Owl Carousel'
+    attributes:
+      class: ''
+      width: g-owlcarousel-fullwidth
+      animateIn: ''
+      loop: '1'
+      autoplay: '1'
+      items:
+        -
+          image: 'gantry-media://B1.jpg'
+          icon: ''
+          title: ''
+          desc: ''
+          link: ''
+          linktext: ''
+          buttontarget: _self
+          buttonclass: ''
+          name: '¡Escoge el premio!'
+        -
+          image: 'gantry-media://B2.jpg'
+          icon: ''
+          title: ''
+          desc: ''
+          link: ''
+          linktext: ''
+          buttontarget: _self
+          buttonclass: ''
+          name: '¡Solo ingresa y canjea!'
+    block:
+      class: g-bottom-offset

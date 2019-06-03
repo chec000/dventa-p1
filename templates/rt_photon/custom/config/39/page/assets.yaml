@@ -1,0 +1,7 @@
+css:
+  -
+    location: ''
+    inline: "#g-page-surround{\n    display: -ms-flexbox;\n    display: -webkit-flex;\n    display: flex;\n    -ms-flex-align: center;\n    -webkit-align-items: center;\n    -webkit-box-align: center;\n    align-items: center;\n}\n.g-wrapper {\n    margin-left: auto !important;\n    margin-right: auto !important;\n}\n\n#wrap-login-form{\nopacity: 0.5 !important;\n}"
+    extra: {  }
+    priority: '0'
+    name: 'Center cointainer'
