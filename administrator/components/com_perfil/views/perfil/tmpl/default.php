@@ -1,34 +1,71 @@
 <?php
-defined('_JEXEC') or die('Restricted access');
-JHtml::_('behavior.tooltip');
-JHtml::_('behavior.formvalidation');
-JHtml::_('formbehavior.chosen', 'select');
-JHtml::_('behavior.keepalive');
-jimport( 'joomla.form.form' );
+defined('_JEXEC') or die;
+//JHtml::_('behavior.formvalidator');
 ?>
+<div class="wrapPerfil">
+    <div id="componnetContent" style="display:  <?php echo  ($this->params==true)?'block':'none'; ?>">
+        <form  action="<?php echo JRoute::_('index.php?option=com_perfil&task=perfiles.save'); ?>" method="post" name="perfilForm" id="perfilForm" class="form-validate form-horizontal well" enctype="multipart/form-data">
+            <fieldset>
+                <legend>
+                    <?php echo JText::_('COM_PERFIL_REGISTRATION_PROFILE_LABEL'); ?>
+                </legend>
+                <?php
+                foreach ($this->form->getFieldset('mainWrap') as $field):
+                    ?>
+                    <?php  if($this->params!=false): ?>
 
-<form action="<?php echo JRoute::_('index.php?option=com_wishlist&layout=edit&id=') ?>"
-      method="post" name="adminForm" id="adminForm" class="form-validate">
-    <div class="form-horizontal">
-        <div class="row-fluid">
-            <div class="span10 form-horizontal">
-                <fieldset class="adminform">
-                    <?php foreach ($this->form->getFieldsets('campos') as $fieldset) : ?>
+                    <?php foreach ($this->params as $param=>$value):
+                        ?>
+                        <?php  if($field->fieldname==$param): ?>
                         <div class="control-group">
                             <div class="control-label">
-                                <?php echo $field->label; ?>
+                                <?php echo ($field->label); ?>
                             </div>
                             <div class="controls">
-                                <?php echo $field->input; ?>
+                                <?php
+                                echo $field->input;
+                                ?>
                             </div>
                         </div>
+
+                        <?php  if($field->fieldname==$param&&$field->fieldname=="password"): ?>
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <label id="jform_password2-lbl" for="password2" class="hasPopover" title="" data-content="Registrar contraseña minimo 8 caracteres" data-original-title="Confirmar contraseña">
+                                        Confirmar contraseña</label>
+                                </div>
+                                <div class="controls">
+                                    <input id="password2" type="password" name="password2">
+                                </div>
+                            </div>
+
+
+                        <?php endif;?>
+                    <?php endif;?>
+
                     <?php endforeach; ?>
-                </fieldset>
+
+                <?php endif;?>
+                    <?php  if($field->fieldname=='TERM'&&$this->params!=false): ?>
+
+                <?php  endif; ?>
+
+
+                <?php endforeach; ?>
+            </fieldset>
+            <div id="searchresults">
+
             </div>
+            <div class="main-submit">
+                <button type="submit" id="guardar" class="btn btn-primary validate">
+                    <?php echo JText::_('JSUBMIT'); ?>
+                </button>
+            </div>
+            <input type="hidden" name="userId" value="<?php echo $this->userId ?>" />
+
+            <input type="hidden" name="option" value="com_perfil" />
+            <input type="hidden" name="task" value="perfil.save" />
+            <?php echo JHtml::_('form.token', array('id'=>'token')); ?>
+        </form>
+        <div id="componnetContent">
         </div>
-        <input type="hidden" name="option" value="com_wishlist" />
-        <input type="hidden" name="task" value=""/>
-        <input type="hidden" name="boxchecked" value="0" />
-        <?php echo JHtml::_('form.token'); ?>
-    </div>
-</form>

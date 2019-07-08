@@ -2228,7 +2228,7 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focu
 /* line 4, templates/rt_photon/scss/photon/sections/_navigation.scss */
 /* line 9, templates/rt_photon/scss/photon/sections/_navigation.scss */
 #g-navigation {
-  background: #5d2b57;
+  background: #2a3a5c;
   color: #fff;
   position: relative;
   z-index: 10001;
@@ -2439,7 +2439,7 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focu
 }
 /* line 204, templates/rt_photon/scss/photon/sections/_navigation.scss */
 #g-navigation .g-social a {
-  color: #5d2b57;
+  color: #2a3a5c;
   background: rgba(255, 255, 255, 0.35);
   width: 1.3rem;
   height: 1.3rem;
@@ -2492,7 +2492,7 @@ input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focu
 }
 /* line 1, templates/rt_photon/scss/photon/sections/_header.scss */
 #g-header {
-  background: #711f3e;
+  background: #247eb3;
   color: #fff;
   margin: 2rem 1.563rem;
   box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.05);

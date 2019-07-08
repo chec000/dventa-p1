@@ -14,21 +14,27 @@ class PerfilModelPerfil extends JModelAdmin {
      * @param type $userId
      */
     public function updateUser($data, $userId) {
-        $db = JFactory::getDbo();
-        // Fields to update.
-        $fields = array(
-            $db->quoteName('name') . '=' . $db->quote($data['name']),
-            $db->quoteName('email') . '=' . $db->quote($data['email'])
-        );
-        $query = $db->getQuery(true);
-        $conditions = array(
-            $db->quoteName('id') . ' = ' . $db->quote($userId),
-        );
-        $query->update($db->quoteName('#__users'))
+
+        if(count($data)>0){
+            $db = JFactory::getDbo();
+            // Fields to update.
+            $fields=array();
+            foreach ($data as $key=>$value){
+                array_push($fields,$db->quoteName($key) . '=' . $db->quote($value));
+            }
+
+            $query = $db->getQuery(true);
+            $conditions = array(
+                $db->quoteName('id') . ' = ' . $db->quote($userId),
+            );
+
+            $query->update($db->quoteName('#__users'))
                 ->set($fields)
                 ->where($conditions);
-        $db->setQuery($query);
-        return $db->execute();
+            $db->setQuery($query);
+            return $db->execute();
+
+        }
 
     }
 
@@ -39,72 +45,107 @@ class PerfilModelPerfil extends JModelAdmin {
      * @param type $jinput
      * @return boolean
      */
-    public function updateData($data, $userId, $jinput) {
+   public function updateData($data, $userId, $jinput) {
+
+
+
         try {
             $db = JFactory::getDbo();
             $query = $db->getQuery(true);
-
-
-
             $query->select('i.user_id')
-                    ->from($db->quoteName('#__core_user_info', 'i'))
-                    ->where($db->quoteName('i.user_id') . ' = ' . $db->quote($userId));
+                ->from($db->quoteName('#__core_user_info', 'i'))
+                ->where($db->quoteName('i.user_id') . ' = ' . $db->quote($userId));
             $db->setQuery($query);
             $results = $db->loadObject();
 
-
-
             if ($results !== null) {
                 // Fields to update.
-                $date = new DateTime();
-
                 $fields = array();
-
+               $no_car_data=false;
 
                 foreach ($data as $p => $value) {
-                    if($p!='TERM' && $p!='email'){
+                    if($p!='TERM' && $p!='email'&&$p!='name'&&$p!='username'&&$p!='password'&&$p!='car'){
                         array_push($fields, $db->quoteName($p) . '=' . $db->quote($value));
-
                     }
+                    if($p=="car_nodata"){
+                     $no_car_data=true;       
+                    }
+
+                }
+                if(!$no_car_data){
+                    $f=0;
+                       array_push($fields, $db->quoteName('car_nodata') . '='.  $f);
                 }
 
-                $query = $db->getQuery(true);
-                // Conditions for which records should be updated.
-                $conditions = array(
-                    $db->quoteName('user_id') . ' = ' . $db->quote($userId),
-                );
-                $query->update($db->quoteName('#__core_user_info'))
+
+                if (count($fields)>0){
+                    $query = $db->getQuery(true);
+                    // Conditions for which records should be updated.
+                    $conditions = array(
+                        $db->quoteName('user_id') . ' = ' . $db->quote($userId),
+                    );
+
+            
+                    $query->update($db->quoteName('#__core_user_info'))
                         ->set($fields)
                         ->where($conditions);
-                $db->setQuery($query);
-                $db->execute();
+                    $db->setQuery($query);
+                    $db->execute();
+                }
             } else {
                 $db = JFactory::getDbo();
                 //try {
 
-               $columns=array(
-                   'user_id'
-
-               );
-                $values = array($userId);
-
-                foreach ($data as $p => $value) {
-                    if($p!='TERM' && $p!='email'){
-                        array_push($columns, $p );
-                        array_push($values, $value );
+                $columns=array(
+                    'id',
+                    'user_id',
+                    'state_id'
+                );
+                $values = array($db->quote(null),$db->quote($userId),$db->quote(2));
+                $campos=[
+                    'user_id',
+                    'state_id',
+                    'branch_office',
+                    'cellphone',
+                    'phone',
+                    'street',
+                    'int_number',
+                    'ext_number',
+                    'reference',
+                    'zip_code',
+                    'location',
+                    'city',
+                    'state',
+                    'rfc',
+                    'nss',
+                    'pid',
+                    'gmin',
+                    'distributor',
+                    'dob',
+                    'complete_data',
+                    'complete_data_at'
+                ];
+                    foreach ($data as $p => $value) {
+                    if($p!='TERM' && $p!='email'&&$p!='name'&&$p!='username'&&$p!='password'&&$p!='car'){
+                        array_push($values, $db->quote($value ));
+                        array_push($columns,$p);
                     }
                 }
-
-           $query = $db->getQuery(true);
+                foreach ($campos as $p => $v) {
+                    if (!in_array($v, $columns)) {
+                        array_push($columns,$v);
+                        array_push($values, $db->quote('' ));
+                    }
+                }
+                $query = $db->getQuery(true);
                 $query
-                        ->insert($db->quoteName('#__core_user_info'))
-                        ->columns($db->quoteName($columns))
-                        ->values(implode(',', $values));
+                    ->insert($db->quoteName('#__core_user_info'))
+                    ->columns($db->quoteName($columns))
+                    ->values(implode(',',$values));
                 $db->setQuery($query);
                 $db->execute();
                 return true;
             }
-            //$this->updateCedis($userId, $data['cedis']);
         } catch (Exception $e) {
             $this->setError($e);
             return false;
@@ -113,9 +154,11 @@ class PerfilModelPerfil extends JModelAdmin {
         return true;
     }
 
+
 public  function  getParams(){
 
     $params = JComponentHelper::getParams('com_perfil');
+
     $param = $params->toArray();
     if (count($param)>0){
         return $param;
@@ -139,8 +182,6 @@ public  function  getParams(){
 
     public function getData() {
 
-        //$dashboardID = $params->get('dashboardID');
-
         $user = JFactory::getUser();
         $userId = $user->get('id');
         $this->data = new JUser($userId);
@@ -150,23 +191,10 @@ public  function  getParams(){
             $query = $db->getQuery(true);
             $query->select(array(
                         $db->quoteName('u.email'),
-                        $db->quoteName('i.user_id'),
                         $db->quoteName('u.name'),
-                        $db->quoteName('i.cellphone'),
-                        $db->quoteName('i.phone'),
-                        $db->quoteName('i.street'),
-                        $db->quoteName('i.int_number'),
-                        $db->quoteName('i.ext_number'),
-                        $db->quoteName('i.reference'),
-                        $db->quoteName('i.zip_code'),
-                        $db->quoteName('i.location'),
-                        $db->quoteName('i.city'),
-                        $db->quoteName('i.state'),
-                        $db->quoteName('i.rfc'),
-                        $db->quoteName('i.nss'),
-                        $db->quoteName('i.pid'),
-                        $db->quoteName('i.gmin'),
-
+                        $db->quoteName('u.password'),
+                        'i.*',
+                     
             ))
                     ->from($db->quoteName('#__users', 'u'))
                     ->join('LEFT', $db->quoteName('#__core_user_info', 'i') . ' ON (' . $db->quoteName('u.id') . ' = ' . $db->quoteName('i.user_id') . ')')
@@ -180,7 +208,6 @@ public  function  getParams(){
                 $this->_subject->setError($e->getMessage());
                 return false;
             }
-
                 if($results!=null){
                     foreach ($results as $key => $value) {
                         $this->data->$key = $value;
@@ -244,71 +271,3 @@ public  function  getParams(){
     }
 
 }
-
-
-/*
- *
- *
- *
- *                 $fields = array(
-                   //$db->quoteName('name') . '=' . $db->quote($data['name']),
-                    $db->quoteName('cellphone') . '=' . $db->quote($data['cellphone']),
-                    $db->quoteName('phone') . '=' . $db->quote($data['phone']),
-                    $db->quoteName('street') . '=' . $db->quote($data['street']),
-                    $db->quoteName('int_number') . '=' . $db->quote($data['int_number']),
-                    $db->quoteName('ext_number') . '=' . $db->quote($data['ext_number']),
-                    $db->quoteName('reference') . '=' . $db->quote($data['reference']),
-                    $db->quoteName('zip_code') . '=' . $db->quote($data['zip_code']),
-                    $db->quoteName('location') . '=' . $db->quote($data['location']),
-                    $db->quoteName('city') . '=' . $db->quote($data['city']),
-                    $db->quoteName('state') . '=' . $db->quote($data['state']),
-                    $db->quoteName('rfc') . '=' . $db->quote($data['rfc']),
-                    $db->quoteName('nss') . '=' . $db->quote($data['nss']),
-                    $db->quoteName('pid') . '=' . $db->quote($data['pid']),
-                    $db->quoteName('gmin') . '=' . $db->quote($data['gmin']),
-
-                    $db->quoteName('complete_data') . '=' . $db->quote('1'),
-                    $db->quoteName('complete_data_at') . '=' . $db->quote($date->format('Y-m-d H:i:s')),
-
-                );
-
-                $columns = array(
-                    'user_id',
-                    'cellphone',
-                    'phone',
-                    'street',
-                    'int_number',
-                    'ext_number',
-                    'reference',
-                    'zip_code',
-                    'location',
-                    'city',
-                    'state',
-                    'rfc',
-                    'nss',
-                    'pid',
-                    'gmin',
-                    'complete_data',
-                );
-
-                $values = array(
-                    $db->quote($userId),
-                    $db->quote($data['cellphone']),
-                    $db->quote($data['phone']),
-                    $db->quote($data['street']),
-                    $db->quote($data['int_number']),
-                    $db->quote($data['ext_number']),
-                    $db->quote($data['reference']),
-                    $db->quote($data['zip_code']),
-                    $db->quote($data['cellphone']),
-                    $db->quote($data['city']),
-                    $db->quote($data['state']),
-                    $db->quote($data['rfc']),
-                    $db->quote($data['nss']),
-                    $db->quote($data['pid']),
-                     $db->quote($data['gmin']),
-                    $db->quote('1'),
-                );
- *
- *
- * */

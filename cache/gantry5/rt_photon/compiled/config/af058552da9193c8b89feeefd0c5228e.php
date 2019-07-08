@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1538693581,
-    'checksum' => '78888cb174a3698da58a781840ba93cd',
+    'timestamp' => 1560542890,
+    'checksum' => '816ae1e97b4bde0684aff3860e4bada0',
     'files' => [
         'templates/rt_photon/custom/config/_offline' => [
             'index' => [
@@ -17,23 +17,23 @@ return [
         'templates/rt_photon/custom/config/default' => [
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/default/index.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/default/layout.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -177,7 +177,7 @@ return [
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/default/styles.yaml',
-                'modified' => 1538693575
+                'modified' => 1560542879
             ]
         ],
         'templates/rt_photon/config/default' => [
@@ -849,7 +849,7 @@ return [
                 'text-color' => '#ffffff'
             ],
             'header' => [
-                'background' => '#711f3e',
+                'background' => '#247eb3',
                 'text-color' => '#ffffff'
             ],
             'main' => [
@@ -861,7 +861,7 @@ return [
                 'animation' => 'g-fade-in-up'
             ],
             'navigation' => [
-                'background' => '#5d2b57',
+                'background' => '#2a3a5c',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
@@ -906,10 +906,20 @@ return [
                 'body_top' => ''
             ],
             'assets' => [
-                'favicon' => '',
+                'favicon' => 'gantry-media://global/favicon.png',
                 'touchicon' => '',
                 'css' => [
-                    
+                    0 => [
+                        'location' => '',
+                        'inline' => '.g-newsslider-headlines li {
+opacity: 100 !important;
+}',
+                        'extra' => [
+                            
+                        ],
+                        'priority' => '0',
+                        'name' => 'ajustes'
+                    ]
                 ],
                 'javascript' => [
                     

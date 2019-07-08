@@ -1,0 +1,20 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript_footer %}
+    <script>
+            $( document ).ready(function() {
+                var trident = !!navigator.userAgent.match(/Trident\/7.0/);
+                var net = !!navigator.userAgent.match(/.NET4.0E/);
+                var IE11 = trident && net;
+
+                var IEold = ( navigator.userAgent.match(/MSIE/i) ? true : false );
+
+                if(IE11 || IEold){
+                    $("body").addClass("diable-body");
+                    $("body").append( "<div id='div_bloqueo'  class='bloqueo'></div>" );
+                    $("#div_bloqueo").append("<div class='centrado'><h4>Favor de utilizar Google Chrome o Mozilla Firefox</h4></div>");
+                }
+            });
+    </script>
+
+{% endblock %}

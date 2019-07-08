@@ -37,6 +37,12 @@ class plgSystemUserCustom extends JPlugin
                     $response=$this->validateNumber($number);
                     echo json_encode($response);
 
+                    break;                 
+                    case 'valida_email':
+                    $email = $app->input->post->getHTML('email', '');
+                    $response=$this->validateUser($email);
+                    echo json_encode($response);			
+					
                     break;
 
 			}
@@ -67,7 +73,7 @@ class plgSystemUserCustom extends JPlugin
     {
         $db = JFactory::getDbo();
         $query = $db->getQuery(true);
-        $no_registrado="no registrado";
+        $no_registrado="No Registrado";
         // Get the database object and a new query object.
         $query->select('u.*')
             ->from($db->quoteName('#__users','u'))
@@ -76,9 +82,9 @@ class plgSystemUserCustom extends JPlugin
 
         $db->setQuery($query);
         $response= $db->loadObject();
-
-        if($response){
-            if($response->name=="no registrado"&&$response->email==null||$response->name==null){
+        
+        if($response!=null){
+            if($response->name=="No Registrado"&&$response->email==null||$response->name==null){
                 return array(
                     "data"=>true,
                     "code"=>200,
@@ -97,9 +103,9 @@ class plgSystemUserCustom extends JPlugin
 
         }else{
             return array(
-                "data"=>false,
+                "data"=>null,
                 "id_user"=>null,
-                "code"=>300
+                "code"=>500
             );
         }
 
@@ -132,5 +138,35 @@ class plgSystemUserCustom extends JPlugin
 		}
 		
 	}
+
+
+
+    public function validateUser($email)
+    {
+
+    	try {
+    		$valido=true;
+        $db = JFactory::getDbo();
+        $query = $db->getQuery(true);
+        $no_registrado="No Registrado";
+        // Get the database object and a new query object.
+        $query->select('u.*')
+            ->from($db->quoteName('#__users','u'))
+            ->where('u.email  = ' . $db->quote($email));
+        // Set and query the database.
+
+        $db->setQuery($query);
+        $response= $db->loadObjectList();
+
+     if (count($response)>0) {
+     	$valido=false;
+     }else{
+     	$valido=true;
+     }    		
+    	} catch (Exception $e) {
+    	return false;		
+    	}
+   return $valido; 	
+}
 
 }

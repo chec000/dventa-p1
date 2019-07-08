@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/dventa/templates/rt_photon/custom/config/37/layout.yaml',
-    'modified' => 1547757465,
+    'modified' => 1559771619,
     'data' => [
         'version' => 2,
         'preset' => [
@@ -22,7 +22,10 @@ return [
             ],
             '/mainwrap/' => [
                 0 => [
-                    0 => 'position-module-2514'
+                    0 => 'position-module-9931'
+                ],
+                1 => [
+                    0 => 'position-module-8117'
                 ]
             ],
             '/optional/' => [
@@ -117,11 +120,17 @@ return [
             ]
         ],
         'content' => [
-            'position-module-2514' => [
+            'position-module-9931' => [
                 'title' => 'Module Instance',
                 'attributes' => [
                     'module_id' => '103',
                     'key' => 'module-instance'
+                ]
+            ],
+            'position-module-8117' => [
+                'title' => 'Module Instance',
+                'attributes' => [
+                    'module_id' => '117'
                 ]
             ]
         ]

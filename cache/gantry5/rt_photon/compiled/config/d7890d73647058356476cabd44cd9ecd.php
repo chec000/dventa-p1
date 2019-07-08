@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1548870901,
-    'checksum' => '2e8770be86ca794264c7b8c38b84b4e4',
+    'timestamp' => 1561400496,
+    'checksum' => '2591cd36ce57dc7f7536df066d4cb1e9',
     'files' => [
         'templates/rt_photon/custom/config/36' => [
             'assignments' => [
@@ -19,11 +19,11 @@ return [
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/36/page/body.yaml',
-                'modified' => 1537889610
+                'modified' => 1561052082
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/36/page/head.yaml',
-                'modified' => 1537889610
+                'modified' => 1561052082
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/36/styles.yaml',
@@ -41,15 +41,15 @@ return [
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -193,7 +193,7 @@ return [
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/default/styles.yaml',
-                'modified' => 1538693575
+                'modified' => 1560542879
             ]
         ],
         'templates/rt_photon/config/default' => [
@@ -684,6 +684,10 @@ return [
                 'mute' => true,
                 'startAt' => '0'
             ],
+            'block-application' => [
+                'enabled' => true,
+                'message' => ''
+            ],
             'hover' => [
                 'enabled' => true
             ],
@@ -865,7 +869,7 @@ return [
                 'text-color' => '#ffffff'
             ],
             'header' => [
-                'background' => '#711f3e',
+                'background' => '#247eb3',
                 'text-color' => '#ffffff'
             ],
             'main' => [
@@ -877,7 +881,7 @@ return [
                 'animation' => 'g-fade-in-up'
             ],
             'navigation' => [
-                'background' => '#5d2b57',
+                'background' => '#2a3a5c',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
@@ -990,6 +994,18 @@ opacity: 100 !important;
                         'inherit' => [
                             'outline' => 'default',
                             'atom' => 'hover-1375',
+                            'include' => [
+                                0 => 'attributes'
+                            ]
+                        ]
+                    ],
+                    4 => [
+                        'id' => 'block-application-6676',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
+                        'inherit' => [
+                            'outline' => 'default',
+                            'atom' => 'block-application-7570',
                             'include' => [
                                 0 => 'attributes'
                             ]

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1541005486,
-    'checksum' => '39b900d27ce5ec7f36045650014e056e',
+    'timestamp' => 1560962602,
+    'checksum' => '94b5498b3f25d441c0b6301dfdbf0bdf',
     'files' => [
         'templates/rt_photon/custom/config/39' => [
             'assignments' => [
@@ -19,15 +19,15 @@ return [
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/39/page/assets.yaml',
-                'modified' => 1541005486
+                'modified' => 1560962602
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/39/page/head.yaml',
-                'modified' => 1541005486
+                'modified' => 1560962602
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/39/styles.yaml',
-                'modified' => 1538691044
+                'modified' => 1554156272
             ]
         ]
     ],
@@ -283,6 +283,14 @@ opacity: 0.5 !important;
                             'mute' => '1',
                             'startAt' => '1'
                         ]
+                    ],
+                    2 => [
+                        'id' => 'block-application-1683',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
+                        'attributes' => [
+                            'enabled' => '1'
+                        ]
                     ]
                 ]
             ]
@@ -295,7 +303,7 @@ opacity: 0.5 !important;
             ],
             'accent' => [
                 'color-1' => '#d6d6d6',
-                'color-2' => '#711f3e',
+                'color-2' => '#22b0bd',
                 'color-3' => '#595959',
                 'color-4' => '#ffffff'
             ],

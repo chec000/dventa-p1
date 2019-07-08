@@ -1,8 +1,8 @@
 <?php
 return [
     'file' => 'gantry-theme://css-compiled/photon_39.css',
-    'timestamp' => 1554156274,
-    'md5' => '6e6ab29f43ba1b3c9a5d9080885c39b7',
+    'timestamp' => 1560542909,
+    'md5' => '1935f5ca4eb3143bbbe9cf33525f0167',
     'variables' => [
         'above-background' => '#18c9a6',
         'above-text-color' => '#686868',
@@ -33,13 +33,13 @@ return [
         'font-family-subpromo' => '\'dosis, Helvetica, Tahoma, Geneva, Arial, sans-serif\'',
         'footer-background' => '#0b3d3d',
         'footer-text-color' => '#ffffff',
-        'header-background' => '#711f3e',
+        'header-background' => '#247eb3',
         'header-text-color' => '#ffffff',
         'main-background' => '#4055a8',
         'main-text-color' => '#ffffff',
         'menu-col-width' => '180px',
         'menu-animation' => '\'g-fade-in-up\'',
-        'navigation-background' => '#5d2b57',
+        'navigation-background' => '#2a3a5c',
         'navigation-text-color' => '#ffffff',
         'offcanvas-background' => '#33160e',
         'offcanvas-text-color' => '#ffffff',

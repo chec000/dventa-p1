@@ -1,0 +1,34 @@
+atoms:
+  -
+    id: frameworks-8133
+    type: frameworks
+    title: 'JavaScript Frameworks'
+    inherit:
+      outline: default
+      atom: frameworks-8133
+      include:
+        - attributes
+  -
+    id: atomo-Ir-arriba-9744
+    type: atomo-Ir-arriba
+    title: 'Ir arriba'
+    inherit:
+      outline: default
+      atom: atomo-Ir-arriba-9744
+      include:
+        - attributes
+  -
+    id: hover-1375
+    type: hover
+    title: Hover
+    inherit:
+      outline: default
+      atom: hover-1375
+      include:
+        - attributes
+  -
+    id: block-application-6026
+    type: block-application
+    title: 'Block Application'
+    attributes:
+      enabled: '1'

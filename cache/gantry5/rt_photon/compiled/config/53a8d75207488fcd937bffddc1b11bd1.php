@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1538693582,
-    'checksum' => '55c9470c9cd626edaa627c8a0fd683d2',
+    'timestamp' => 1560542893,
+    'checksum' => 'c8d53997a35c192b7d7a2babdcb16351',
     'files' => [
         'templates/rt_photon/custom/config/38' => [
             'assignments' => [
@@ -11,33 +11,33 @@ return [
             ],
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/38/index.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/38/layout.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ]
         ],
         'templates/rt_photon/custom/config/default' => [
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/default/index.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/default/layout.yaml',
-                'modified' => 1538692178
+                'modified' => 1547757465
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1537381232
+                'modified' => 1539963823
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -181,7 +181,7 @@ return [
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/default/styles.yaml',
-                'modified' => 1538693575
+                'modified' => 1560542879
             ]
         ],
         'templates/rt_photon/config/default' => [
@@ -853,7 +853,7 @@ return [
                 'text-color' => '#ffffff'
             ],
             'header' => [
-                'background' => '#711f3e',
+                'background' => '#247eb3',
                 'text-color' => '#ffffff'
             ],
             'main' => [
@@ -865,7 +865,7 @@ return [
                 'animation' => 'g-fade-in-up'
             ],
             'navigation' => [
-                'background' => '#5d2b57',
+                'background' => '#2a3a5c',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
@@ -910,10 +910,20 @@ return [
                 'body_top' => ''
             ],
             'assets' => [
-                'favicon' => '',
+                'favicon' => 'gantry-media://global/favicon.png',
                 'touchicon' => '',
                 'css' => [
-                    
+                    0 => [
+                        'location' => '',
+                        'inline' => '.g-newsslider-headlines li {
+opacity: 100 !important;
+}',
+                        'extra' => [
+                            
+                        ],
+                        'priority' => '0',
+                        'name' => 'ajustes'
+                    ]
                 ],
                 'javascript' => [
                     
@@ -975,7 +985,7 @@ return [
         ],
         'index' => [
             'name' => 38,
-            'timestamp' => 1538692178,
+            'timestamp' => 1547757465,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1548890246,
-    'checksum' => 'fde8fac1d95bb96f127dc9b3d9024084',
+    'timestamp' => 1561994837,
+    'checksum' => '12f4beeb2863a39f02848982328897ac',
     'files' => [
         'templates/rt_photon/custom/config/37' => [
             'assignments' => [
@@ -11,11 +11,15 @@ return [
             ],
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/37/index.yaml',
-                'modified' => 1547757465
+                'modified' => 1559771619
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/37/layout.yaml',
-                'modified' => 1547757465
+                'modified' => 1559771619
+            ],
+            'page/head' => [
+                'file' => 'templates/rt_photon/custom/config/37/page/head.yaml',
+                'modified' => 1560963211
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/37/styles.yaml',
@@ -33,15 +37,15 @@ return [
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -185,7 +189,7 @@ return [
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/default/styles.yaml',
-                'modified' => 1538693575
+                'modified' => 1560542879
             ]
         ],
         'templates/rt_photon/config/default' => [
@@ -676,6 +680,10 @@ return [
                 'mute' => true,
                 'startAt' => '0'
             ],
+            'block-application' => [
+                'enabled' => true,
+                'message' => ''
+            ],
             'hover' => [
                 'enabled' => true
             ],
@@ -857,7 +865,7 @@ return [
                 'text-color' => '#ffffff'
             ],
             'header' => [
-                'background' => '#711f3e',
+                'background' => '#247eb3',
                 'text-color' => '#ffffff'
             ],
             'main' => [
@@ -869,7 +877,7 @@ return [
                 'animation' => 'g-fade-in-up'
             ],
             'navigation' => [
-                'background' => '#5d2b57',
+                'background' => '#2a3a5c',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
@@ -943,19 +951,11 @@ opacity: 100 !important;
                         'id' => 'frameworks-8133',
                         'type' => 'frameworks',
                         'title' => 'JavaScript Frameworks',
-                        'attributes' => [
-                            'enabled' => '1',
-                            'jquery' => [
-                                'enabled' => '1',
-                                'ui_core' => '0',
-                                'ui_sortable' => '0'
-                            ],
-                            'bootstrap' => [
-                                'enabled' => '0'
-                            ],
-                            'mootools' => [
-                                'enabled' => '0',
-                                'more' => '0'
+                        'inherit' => [
+                            'outline' => 'default',
+                            'atom' => 'frameworks-8133',
+                            'include' => [
+                                0 => 'attributes'
                             ]
                         ]
                     ],
@@ -963,23 +963,30 @@ opacity: 100 !important;
                         'id' => 'atomo-Ir-arriba-9744',
                         'type' => 'atomo-Ir-arriba',
                         'title' => 'Ir arriba',
-                        'attributes' => [
-                            'enabled' => '1',
-                            'offset' => '200',
-                            'efecto' => 'estilo4',
-                            'buttonicon' => 'fa fa-angle-up',
-                            'colorfondo' => 'rgba(0, 0, 0, 0.4)',
-                            'coloricono' => '#ffffff',
-                            'border-radius' => '50%',
-                            'anchura' => '30px',
-                            'altura' => '30px',
-                            'velocidadscroll' => '500'
+                        'inherit' => [
+                            'outline' => 'default',
+                            'atom' => 'atomo-Ir-arriba-9744',
+                            'include' => [
+                                0 => 'attributes'
+                            ]
                         ]
                     ],
                     2 => [
                         'id' => 'hover-1375',
                         'type' => 'hover',
                         'title' => 'Hover',
+                        'inherit' => [
+                            'outline' => 'default',
+                            'atom' => 'hover-1375',
+                            'include' => [
+                                0 => 'attributes'
+                            ]
+                        ]
+                    ],
+                    3 => [
+                        'id' => 'block-application-6026',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
                         'attributes' => [
                             'enabled' => '1'
                         ]
@@ -988,8 +995,8 @@ opacity: 100 !important;
             ]
         ],
         'index' => [
-            'name' => 37,
-            'timestamp' => 1547757465,
+            'name' => '37',
+            'timestamp' => 1559771619,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',
@@ -1011,10 +1018,6 @@ opacity: 100 !important;
                 'offcanvas' => 'Offcanvas'
             ],
             'particles' => [
-                'module' => [
-                    'position-module-2514' => 'Module Instance',
-                    'position-module-4132' => 'Module Instance'
-                ],
                 'messages' => [
                     'system-messages-8537' => 'System Messages'
                 ],
@@ -1025,6 +1028,11 @@ opacity: 100 !important;
                 ],
                 'menu' => [
                     'menu-6520' => 'Menu'
+                ],
+                'module' => [
+                    'position-module-4132' => 'Module Instance',
+                    'position-module-9931' => 'Module Instance',
+                    'position-module-8117' => 'Module Instance'
                 ],
                 'custom' => [
                     'custom-1368' => 'Custom HTML',
@@ -1046,16 +1054,15 @@ opacity: 100 !important;
             'inherit' => [
                 'default' => [
                     'top' => 'top',
-                    'navigation' => 'navigation',
-                    'mainBanner' => 'mainBanner',
-                    'copyright' => 'copyright',
-                    'offcanvas' => 'offcanvas',
                     'system-messages-8537' => 'system-messages-9828',
+                    'navigation' => 'navigation',
                     'logo-8027' => 'logo-1353',
                     'logo-6385' => 'logo-5992',
                     'menu-6520' => 'menu-4196',
                     'position-module-4132' => 'position-module-1300',
+                    'mainBanner' => 'mainBanner',
                     'custom-1368' => 'custom-3367',
+                    'copyright' => 'copyright',
                     'logo-5738' => 'logo-3639',
                     'custom-7314' => 'custom-6283',
                     'custom-7926' => 'custom-5507',
@@ -1063,6 +1070,7 @@ opacity: 100 !important;
                     'spacer-4502' => 'spacer-2787',
                     'social-5906' => 'social-5421',
                     'custom-3587' => 'custom-9794',
+                    'offcanvas' => 'offcanvas',
                     'mobile-menu-8328' => 'mobile-menu-1097'
                 ]
             ]
@@ -1086,7 +1094,10 @@ opacity: 100 !important;
                 ],
                 '/mainwrap/' => [
                     0 => [
-                        0 => 'position-module-2514'
+                        0 => 'position-module-9931'
+                    ],
+                    1 => [
+                        0 => 'position-module-8117'
                     ]
                 ],
                 '/optional/' => [
@@ -1181,11 +1192,17 @@ opacity: 100 !important;
                 ]
             ],
             'content' => [
-                'position-module-2514' => [
+                'position-module-9931' => [
                     'title' => 'Module Instance',
                     'attributes' => [
                         'module_id' => '103',
                         'key' => 'module-instance'
+                    ]
+                ],
+                'position-module-8117' => [
+                    'title' => 'Module Instance',
+                    'attributes' => [
+                        'module_id' => '117'
                     ]
                 ]
             ]

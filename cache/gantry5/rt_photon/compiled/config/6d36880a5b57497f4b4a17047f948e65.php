@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1538500749,
-    'checksum' => 'ec40cb6f121f549acafe6276976d8647',
+    'timestamp' => 1560542770,
+    'checksum' => 'ec5b0b3f7178a1b8cdb0da835e9b5e7d',
     'files' => [
         'templates/rt_photon/custom/config/38' => [
             'assignments' => [
@@ -11,11 +11,11 @@ return [
             ],
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/38/index.yaml',
-                'modified' => 1537888967
+                'modified' => 1547757465
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/38/layout.yaml',
-                'modified' => 1537395370
+                'modified' => 1547757465
             ]
         ]
     ],
@@ -30,7 +30,7 @@ return [
         ],
         'index' => [
             'name' => 38,
-            'timestamp' => 1537395370,
+            'timestamp' => 1547757465,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',

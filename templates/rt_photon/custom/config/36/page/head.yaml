@@ -36,3 +36,12 @@ atoms:
       atom: hover-1375
       include:
         - attributes
+  -
+    id: block-application-6676
+    type: block-application
+    title: 'Block Application'
+    inherit:
+      outline: default
+      atom: block-application-7570
+      include:
+        - attributes

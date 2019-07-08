@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledBlueprints',
-    'timestamp' => 1537895652,
-    'checksum' => 'e09aa92ba0815cb9072403c9e02ea77f',
+    'timestamp' => 1561070732,
+    'checksum' => '731ea69e2c1a7b4f398260ddb1477916',
     'files' => [
         'templates/rt_photon/custom/particles' => [
             'particles/atomo-Ir-arriba' => [
@@ -20,6 +20,10 @@ return [
             'particles/bg-video' => [
                 'file' => 'templates/rt_photon/custom/particles/bg-video.yaml',
                 'modified' => 1519682534
+            ],
+            'particles/block-application' => [
+                'file' => 'templates/rt_photon/custom/particles/block-application.yaml',
+                'modified' => 1561068846
             ],
             'particles/gridstatistic' => [
                 'file' => 'templates/rt_photon/custom/particles/gridstatistic.yaml',
@@ -575,6 +579,27 @@ return [
                 'default' => '0',
                 'required' => true,
                 'name' => 'particles.bg-video.startAt'
+            ],
+            'particles.block-application' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    
+                ]
+            ],
+            'particles.block-application.enabled' => [
+                'type' => 'input.checkbox',
+                'label' => 'Enabled',
+                'description' => 'Globally enable to the particles.',
+                'default' => true,
+                'name' => 'particles.block-application.enabled'
+            ],
+            'particles.block-application.message' => [
+                'type' => 'input.text',
+                'label' => 'Mensaje',
+                'description' => 'Mensaje de bloqueo',
+                'default' => '',
+                'name' => 'particles.block-application.message'
             ],
             'particles.gridstatistic' => [
                 'type' => '_root',
@@ -1942,7 +1967,7 @@ return [
             'particles.flexslider.items.*.overlayParallaxRatio' => [
                 'type' => 'input.text',
                 'label' => 'Parallax Ratio',
-                'default' => 0.299999999999999988897769753748434595763683319091796875,
+                'default' => 0.3,
                 'description' => 'Multiplier for scrolling speed to allow the parallax image to move with different speed. Less is slower, and 1 is normal.',
                 'name' => 'particles.flexslider.items.*.overlayParallaxRatio'
             ],
@@ -5136,6 +5161,10 @@ return [
                     'opacity' => 'particles.bg-video.opacity',
                     'mute' => 'particles.bg-video.mute',
                     'startAt' => 'particles.bg-video.startAt'
+                ],
+                'block-application' => [
+                    'enabled' => 'particles.block-application.enabled',
+                    'message' => 'particles.block-application.message'
                 ],
                 'gridstatistic' => [
                     'enabled' => 'particles.gridstatistic.enabled',

@@ -20,6 +20,8 @@ class PerfilController extends JControllerLegacy
 
     public function display($cachable = false, $urlparams = false)
     {
+
+
         $view = JFactory::getApplication()->input->getCmd('view', 'perfiles');
         JFactory::getApplication()->input->set('view', $view);
 

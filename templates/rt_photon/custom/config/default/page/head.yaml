@@ -37,3 +37,10 @@ atoms:
     title: Hover
     attributes:
       enabled: '1'
+  -
+    id: block-application-3705
+    type: block-application
+    title: 'Block Application'
+    attributes:
+      enabled: '1'
+      message: 'Es necesario que utilize la plataforma con otro navegador ya sea Google Crome o Mozilla Firefox'

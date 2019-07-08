@@ -9,7 +9,9 @@ layout:
   /banner/: {  }
   /mainwrap/:
     -
-      - position-module-2514
+      - position-module-9931
+    -
+      - position-module-8117
   /optional/: {  }
   mainBanner: {  }
   /footer/: {  }
@@ -67,8 +69,12 @@ structure:
         - attributes
         - children
 content:
-  position-module-2514:
+  position-module-9931:
     title: 'Module Instance'
     attributes:
       module_id: '103'
       key: module-instance
+  position-module-8117:
+    title: 'Module Instance'
+    attributes:
+      module_id: '117'

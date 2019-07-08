@@ -10,24 +10,25 @@
 // No direct access
 defined('_JEXEC') or die;
 
-JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/');
-JHtml::_('bootstrap.tooltip');
-JHtml::_('behavior.multiselect');
-JHtml::_('formbehavior.chosen', 'select');
+//JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/');
 
+    JHtml::_('behavior.tooltip');
+    JHtml::_('behavior.formvalidation');
+    JHtml::_('formbehavior.chosen', 'select');
+    JHtml::_('behavior.keepalive');
 
-$user      = JFactory::getUser();
-$userId    = $user->get('id');
-$listOrder = $this->state->get('list.ordering');
-$listDirn  = $this->state->get('list.direction');
-$canOrder  = $user->authorise('core.edit.state', 'com_perfil');
-$sortFields = $this->getSortFields();
+    $user      = JFactory::getUser();
+    $userId    = $user->get('id');
+    $listOrder = $this->state->get('list.ordering');
+    $listDirn  = $this->state->get('list.direction');
+    $canOrder  = $user->authorise('core.edit.state', 'com_perfil');
+    $sortFields = $this->getSortFields();
 
 ?>
     <form action="<?php echo JRoute::_('index.php?option=com_perfil&view=perfiles'); ?>" method="post" name="adminForm" id="adminForm">
 
         <div id="j-sidebar-container" class="span2">
-            <?php echo $this->sidebar; ?>
+            <?php //echo $this->sidebar; ?>
         </div>
 
         <div id="j-main-container">
@@ -53,8 +54,6 @@ $sortFields = $this->getSortFields();
 
                     <select class="span12 small" onchange="document.adminForm.type_filter.value=this.value; Joomla.submitform();return false;">
                     <?php echo $this->extra_sidebar?>
-
-
 
                 </select>
                 </div>
@@ -95,14 +94,15 @@ $sortFields = $this->getSortFields();
 
 
             <table class="table table-striped" id="userList">
+                <caption><h4><?php echo JText::_('COM_PERFIL_USERS');?></h4></caption>
                 <thead>
-                <th>Nombre</th>
-                <th>Nombre de usuario</th>
-                <th>Email</th>
-                <th>Telefono</th>
-                <th>Datos completos</th>
-                <th>Actualizar datos</th>
-
+                <th><?php echo JText::_('COM_PERFIL_NAME_LABEL');?></th>
+                <th><?php echo JText::_('COM_PERFIL_USERNAME');?></th>
+                <th><?php echo JText::_('COM_PERFIL_EMAIL_LABEL');?></th>
+                <th><?php echo JText::_('COM_PERFIL_CELLPHONE_LABEL');?></th>
+                <th><?php echo JText::_('COM_PERFIL_COMPONENT_DATACOMPLATE');?></th>
+                <th></th>
+                <th>Editar</th>
                 </thead>
 
                 <tbody>
@@ -133,16 +133,26 @@ $sortFields = $this->getSortFields();
                         <td>
 
                             <?php if ($item->complete_data==1): ?>
-                                <button data-status="<?php echo $item->complete_data?>"   data-id="<?php echo $item->id?>" id="btnUsuario-<?php echo $item->id?>" onclick="activarUsuario(<?php echo $item->id?>,1)" class="btn btn-success">Activar </button>
+                                <button data-status="<?php echo $item->complete_data?>"   data-id="<?php echo $item->id?>" id="btnUsuario-<?php echo $item->id?>" onclick="activarUsuario(<?php echo $item->id?>,1)" class="btn btn-success">
+                                    <?php echo JText::_('COM_PERFIL_BTN');?>
+                                </button>
 
                             <?php else:; ?>
 
-                                <button data-status="<?php echo $item->complete_data?>" data-id="<?php echo $item->id?>" id="btnUsuario-<?php echo $item->id?>" onclick="activarUsuario(<?php echo $item->id?>,0)" class="btn btn-danger">Activar</button>
+                                <button data-status="<?php echo $item->complete_data?>" data-id="<?php echo $item->id?>" id="btnUsuario-<?php echo $item->id?>" onclick="activarUsuario(<?php echo $item->id?>,0)" class="btn btn-success">
+                                    <?php echo JText::_('COM_PERFIL_BTN');?>
+                                </button>
                             <?php endif; ?>
 
 
                         </td>
+                        <td>
 
+                            <a href="<?php echo JRoute::_('index.php?option=com_perfil&view=perfil&layout=edit&&id='.(int) $item->id); ?>">
+                                <span class="icon-edit" aria-hidden="true"></span>
+
+                            </a>
+                        </td>
                     </tr>
 
                 <?php endforeach; ?>

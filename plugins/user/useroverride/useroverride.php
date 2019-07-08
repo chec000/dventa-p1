@@ -21,9 +21,9 @@ class plgUserUserOverride extends JPlugin {
 
         if (is_object($data)) {
             $userId = isset($data->id) ? $data->id : 0;
-
+       
             if (!isset($data->profile) && $userId > 0) {
-
+                
                 // Load the profile data from the database.
                 $db = JFactory::getDbo();
 
@@ -31,17 +31,20 @@ class plgUserUserOverride extends JPlugin {
                 $query
                         ->select(
                                 $db->quoteName('u.email') . ',' .
+                                $db->quoteName('i.last_name1') . ',' .
+                                $db->quoteName('i.last_name2') . ',' .
+                                $db->quoteName('i.business_name') . ',' .
                                 $db->quoteName('i.user_id') . ',' .
                                 $db->quoteName('u.name') . ',' .
                                 $db->quoteName('i.cellphone')
                         )
                         ->from($db->quoteName('#__core_user_info', 'i'))
-                        ->join('INNER', $db->quoteName('#__users', 'u') . ' ON (' . $db->quoteName('u.id') . ' = ' . $db->quoteName('i.user_id') . ')')
+                        ->join('LEFT', $db->quoteName('#__users', 'u') . ' ON (' . $db->quoteName('u.id') . ' = ' . $db->quoteName('i.user_id') . ')')
                         ->where($db->quoteName('i.user_id') . ' = ' . $db->quote($userId));
 
                 $db->setQuery($query);
                 //echo $query->__toString();
-
+                    
                 try {
                     $results = $db->loadObject();
                 } catch (RuntimeException $e) {
@@ -56,12 +59,15 @@ class plgUserUserOverride extends JPlugin {
                     }
                 }
 
+            }else{
+
             }
         }
     }
 
     public function onBeforeRender() {
         $app = JFactory::getApplication();
+        
         if ($app->isAdmin()) {
             return true;
         }
@@ -84,6 +90,16 @@ class plgUserUserOverride extends JPlugin {
         JText::script('PLG_USERS_REGISTER_USERNAME_INVALID');
         JText::script('PLG_USERS_TERM_COND');
         JText::script('PLG_USERS_PRI');
+        JText::script('PLG_USERS_REGISTER_CELLPHONE_ERROR');
+        JText::script('PLG_USERS_REGISTER_EMAIL1_ERROR');
+        JText::script('PLG_USERS_REGISTER_LASTNAME2_ERROR');
+        JText::script('PLG_USERS_REGISTER_LASTNAME1_ERROR');
+        JText::script('PLG_USERS_REGISTER_NAME_ERROR');
+        JText::script('PLG_USERS_REGISTER_PIN1_ERROR');    
+        JText::script('PLG_USERS_REGISTER_PIN_ERROR');
+        
+        
+
 
 
 
@@ -103,9 +119,9 @@ class plgUserUserOverride extends JPlugin {
 
         $app = JFactory::getApplication();
 
-
         if (!($form instanceof JForm)) {
             $this->_subject->setError('JERROR_NOT_A_FORM');
+
 
             return false;
         }
@@ -127,14 +143,18 @@ class plgUserUserOverride extends JPlugin {
             if ($name == 'com_users.registration') {
 
                 $form->loadFile('registration');
-
+            
                 $fields = array(
                     'name',
                     'email',
                     'telephone',
+                    'last_name1',
+                    'last_name2',
+                    'business_name',
                     'cellphone',
                     'password',
                 );
+            
             }
 
             if ($name == 'com_users.profile') {
@@ -145,6 +165,9 @@ class plgUserUserOverride extends JPlugin {
                     'sucursal',
                     'telephone',
                     'cellphone',
+                    'last_name1',
+                    'last_name2',
+                    'business_name',
 
                 );
             }
@@ -156,22 +179,48 @@ class plgUserUserOverride extends JPlugin {
     }
 
     public function onUserBeforeSave($user, $isnew, $data) {
-        //Funcionalidad BlackList, bloquea al usuario y envía notificación
+        //Funcionalidad BlackList, bloquea al usuario y envía notificación            
+       
+            $db = JFactory::getDbo();
+            $app = JFactory::getApplication();
+            $form = $app->input->get('jform', array(), 'ARRAY');
 
+                $recipients =array($form['email1']);
+                    
+
+                $emailBody = JText::sprintf(
+                                'PLG_USERS_REGISTER_CELLPHONE_ERROR', $form['name'], $form['username'], $form['email1'], $data['cellphone'], 2, $_SERVER['REMOTE_ADDR']
+                );
+
+                $response = self::sendMail($recipients, JText::_('PLG_USERS_REGISTER_CELLPHONE_ERROR') . ' (' . $form['username'] . ')', $emailBody);
+
+                $app->enqueueMessage(JText::_('PLG_USERS_REGISTER_CELLPHONE_ERROR'), 'warning');
+
+                return $response;
+         
+        
     }
+
 
     protected function sendMail($recipient, $subject, $body) {
-
+            try {
         $config = JFactory::getConfig();
+
         $recipient = explode(',', trim($recipient));
-        $send = JFactory::getMailer()->sendMail($config->get('mailfrom'), $config->get('fromname'), $recipient, $subject, $body, true);
-        return $send;
+     
+            $send = JFactory::getMailer()->sendMail($config->get('mailfrom'), $config->get('fromname'), $recipient, $subject, $body, true);
+        return $send;    
+
+            } catch (Exception $e) {
+               var_dump($e->getMessage()); 
+            }
+
     }
 
+
+
     public function onUserAfterSave($data, $isNew, $result, $error) {
-        $jinput = JFactory::getApplication()->input;
-
-
+        $jinput = JFactory::getApplication()->input;    
         $app = JFactory::getApplication();
         $db = JFactory::getDbo();
         $option = $app->input->get('view', '');
@@ -183,31 +232,105 @@ class plgUserUserOverride extends JPlugin {
 
 
 
+        private function getFiels(){
+        $db = JFactory::getDBO();
+        $sql = "SHOW COLUMNS FROM #__core_user_info";
+        $db->setQuery($sql);  
+         return $fields = $db->loadObjectList();
+
+        }
+
     private function updateUser($data,$id){
 
         try {
             $db = JFactory::getDbo();
+            $columns = array();            
 
-            $columns = array(
-                'user_id',
-                'state_id',
-                'branch_office',
-                'cellphone',
-            );
+            $fields=$this->getFiels();
+            foreach ($fields as $key => $value) {
+                    array_push($columns, $value->Field);    
+            }
             $userId=$id;
-            $values = array(
-                $db->quote($userId),
-                $db->quote($data['state']),
-                $db->quote($data['office']),
-                $db->quote($data['cellphone'])
-            );
+            $values = array();
+
+            foreach ($columns as $key => $value) {                  
+                    switch ($value) {
+                        case 'user_id':
+                    array_push($values,$userId);         
+                        break;
+                        case 'state_id':
+                    array_push($values,$data['state']);
+                        break;
+                        case 'branch_office':
+                    array_push($values, $db->quote($data['office']));
+                        break;
+            
+                        case 'last_name1':
+                    array_push($values, $db->quote($data['last_name1']));
+                            break;
+                        case 'last_name2':                            
+                    array_push($values, $db->quote($data['last_name2']));
+                            break;
+                            case 'business_name':                          
+                    array_push($values, $db->quote($data['business_name']));
+
+                                break;
+                        case 'cellphone':
+                  array_push($values,$db->quote($data['cellphone']));
+                        break;       
+                        case 'create_at':
+
+                  array_push($values,$db->quote(date("Y-m-d h:i:s A")));
+
+                            break;
+                        default:
+                    array_push($values,$db->quote(''));
+                        break;
+                        }    
+            }
+
+            $query = $db->getQuery(true);
+            $query
+                    ->select($db->quoteName('id'))
+                    ->from($db->quoteName('#__core_user_info'))
+                    ->where($db->quoteName('user_id') . ' = ' . $db->quote($userId))
+                    ->setLimit('1');
+
+            $db->setQuery($query);
+            $user_info_id = $db->loadResult();
+            
+            if ($user_info_id !=null) {
+                $query = $db->getQuery(true);
+
+                $fields = array(
+                $db->quoteName('state_id') . ' = ' .$data['state'],
+                $db->quoteName('branch_office') . ' = ' . $db->quote($data['office']),
+                $db->quoteName('cellphone') . ' = ' . $db->quote($data['cellphone']),                            
+                
+                $db->quoteName('last_name1') . ' = ' . $db->quote($data['last_name1']),
+                $db->quoteName('last_name2') . ' = ' . $db->quote($data['last_name2']),                
+                $db->quoteName('business_name') . ' = ' . $db->quote($data['business_name']));                            
+                             
+                $conditions = array(
+                    $db->quoteName('user_id') . ' = ' . $db->quote($userId)
+                );
+                $query->update($db->quoteName('#__core_user_info'))->set($fields)->where($conditions);
+                $db->setQuery($query);
+               $result= $db->execute();
+            }else{
+
             $query = $db->getQuery(true);
             $query
                 ->insert($db->quoteName('#__core_user_info'))
                 ->columns($db->quoteName($columns))
                 ->values(implode(',', $values));
             $db->setQuery($query);
-            $db->execute();
+            $result=  $db->execute();
+
+            }
+
+             $this->changeStatusUser($userId);   
+             $this->saveCinema($data,$userId);
 
         } catch (Exception $e) {
 
@@ -219,154 +342,60 @@ class plgUserUserOverride extends JPlugin {
         return true;
     }
 
-
-
-    private function registerCase($data, $userId, $jinput) {
-
-
-        try {
-            $db = JFactory::getDbo();
-
-            //Procesar archivos (INE)
-            $post_files = $jinput->files->get('jform');
-
-            $ip = JFactory::getApplication()->input->server->get('REMOTE_ADDR', '-');
-
-            //try {
-            $columns = array(
-                'user_id',
-                'name',
-                'usernme',
-                'email',
-                'password',
-                'curp',
-                'pid',
-                'telephone',
-                'cellphone',
-            );
-
-            $values = array(
-                $db->quote($userId),
-                $db->quote($data['name']),
-                $db->quote($data['username']),
-                $db->quote($data['jform_email1']),
-                $db->quote($data['secretword']),
-                $db->quote($data['secretwordans'] . '|' . $data['password_clear']),
-                $db->quote($data['birthday']),
-                $db->quote($data['admissiondate']),
-                $db->quote($data['profile']),
-                $db->quote($ip),
-                $db->quote(date('Y-m-d H:i:s')),
-                $db->quote('Por_validar'),
-            );
-
-            $query = $db->getQuery(true);
-
-            $query
-                    ->insert($db->quoteName('#__core_user_info'))
-                    ->columns($db->quoteName($columns))
-                    ->values(implode(',', $values));
-            $db->setQuery($query);
-            $db->execute();
-
-
-            //Actualizar el grupo del usuario en base al grupo seleccionado
-            $query = $db->getQuery(true);
-            $query
-                    ->select($db->quoteName('id'))
-                    ->from($db->quoteName('#__usergroups'))
-                    ->where($db->quoteName('title') . ' = ' . $db->quote($data['profile']))
-                    ->setLimit('1');
-
-            $db->setQuery($query);
-            $user_group_id = $db->loadResult();
-
-            if ($user_group_id != '') {
-                $query = $db->getQuery(true);
-
-                $fields = array(
-                    $db->quoteName('group_id') . ' = ' . $db->quote($user_group_id)
-                );
-
-                $conditions = array(
-                    $db->quoteName('user_id') . ' = ' . $db->quote($userId)
-                );
-
-                $query->update($db->quoteName('#__user_usergroup_map'))->set($fields)->where($conditions);
-
-                $db->setQuery($query);
-
-                $db->execute();
-            }
-
-            //Asociar el usuario al dealer
-            $columns = array(
-                'userid',
-                'cedisid'
-                , 'state'
-            );
-
-            $values = array(
-                $db->quote($userId),
-                $db->quote($data['dealer']),
-                $db->quote('1')
-            );
-
-            $query = $db->getQuery(true);
-            $query
-                    ->insert($db->quoteName('#__core_users_cedis_map'))
-                    ->columns($db->quoteName($columns))
-                    ->values(implode(',', $values));
-            $db->setQuery($query);
-            $db->execute();
-
-            //Asociar equipo de ventas
-            $columns = array(
-                'user_id',
-                'gte',
-                'fyi',
-                'afyi'
-            );
-
-            $values = array(
-                $db->quote($userId),
-                $db->quote($data['manager']),
-                $db->quote($data['fyi']),
-                $db->quote($data['afyi'])
-            );
-
-            $query = $db->getQuery(true);
-            $query
-                    ->insert($db->quoteName('#__core_pmr_salesteam'))
-                    ->columns($db->quoteName($columns))
-                    ->values(implode(',', $values));
-            $db->setQuery($query);
-            $db->execute();
-
-            $query = $db->getQuery(true);
+private function changeStatusUser($userId){
+                    $db = JFactory::getDbo();        
+          $query = $db->getQuery(true);
+                
             $fields = array(
-                $db->quoteName('email') . ' = ' . $db->quote(
-                        $data['jform_email1']),
-                $db->quoteName("password". ' = '.$db->quoteName($data['jform_pin'])),
-                $db->quoteName('name'. ' = '.$db->quoteName('') )
-
-            );
-
+                $db->quoteName('block') . ' = 0');
             $conditions = array(
                 $db->quoteName('id') . ' = ' . $db->quote($userId)
             );
-
             $query->update($db->quoteName('#__users'))->set($fields)->where($conditions);
-
             $db->setQuery($query);
-
             $db->execute();
-        } catch (Exception $e) {
-            $this->logError('Error' . $e->getMessage() . " Datos no registrados " . json_encode($data) . chr(10) . chr(13));
-            $this->_subject->setError($e->getMessage());
+}
 
-            return false;
-        }
+private function saveCinema($data,$userId)
+{
+
+        $db = JFactory::getDbo();
+
+            $columns = array(
+                'id',
+                'quantity',
+                'ticket_type',
+                'user_id',
+                'email',
+                'name',                    
+                'body_request',
+                'create_at',
+                'is_purchased'
+            );            
+            $values = array(
+            
+                $db->quote(null),
+                $db->quote(1),
+                $db->quote(1),
+                $db->quote($userId),
+                $db->quote($data['email']),
+                $db->quote($data['name']),
+                $db->quote(''),                
+                $db->quote(date("Y/m/d h:i:s A")),
+                $db->quote(0)
+            );    
+            $query = $db->getQuery(true);
+            $query
+                    ->insert($db->quoteName('#__core_adcinema'))
+                    ->columns($db->quoteName($columns))
+                    ->values(implode(',', $values));
+            $db->setQuery($query);
+            $db->execute();
+
+}
+
+    private function registerCase($data, $userId, $jinput) {
+
 
         return true;
     }

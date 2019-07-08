@@ -2,23 +2,6 @@
 <config>
     <fieldset name="campos" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL" description="COM_PERFIL_COMPONENT_DESC">
 
-
-        <fiel
-                name="name"
-                type="checkbox"
-                class="inputbox"
-                label="COM_PERFIL_NAME_LABEL"
-                value="true"
-                filter="boolean"
-        />
-        <fiel
-                name="username"
-                type="checkbox"
-                class="inputbox"
-                label="COM_PERFIL_USERNAME_LABEL"
-                value="true"
-                filter="boolean"
-        />
         <field
                 name="email"
                 type="checkbox"
@@ -26,8 +9,41 @@
                 label="COM_PERFIL_EMAIL_LABEL"
                 value="true"
                 filter="boolean"
-
         />
+                    <field
+                    name="username"
+                    type="checkbox"
+                    class="inputbox"
+                    label="COM_PERFIL_USERNAME"
+                    filter="boolean"
+                    value="true"
+
+                    />
+                                    <field
+                        name="last_name1"
+                        type="checkbox"
+                        class="inputbox"
+                        label="COM_PERFIL_LAST_NAME_LABEL"
+                        value="true"
+                        filter="boolean"
+                />
+                    <field
+                        name="last_name2"
+                        type="checkbox"
+                        class="inputbox"
+                        label="COM_PERFIL_LAST2_NAME_LABEL"
+                        value="true"
+                        filter="boolean"
+                />
+                <field
+                        name="name"
+                        type="checkbox"
+                        class="inputbox"
+                        label="COM_PERFIL_NAME_LABEL"
+                        value="true"
+                        filter="boolean"
+                />
+
         <field
                 name="cellphone"
                 type="checkbox"
@@ -84,6 +100,21 @@
                 value="true"
                 filter="boolean"
 
+        />
+                    <field
+                        name="business_name"
+                        type="checkbox"
+                        class="inputbox"
+                        label="COM_PERFIL_BUSINESS_NAME_LABEL"
+                        value="true"
+                        filter="boolean"
+                />
+        <field
+                name="dob"
+                type="checkbox"
+                class="in"
+                label="COM_PERFIL_DOB_LABEL"
+                value="true"
         />
         <field
                 name="zip_code"
@@ -148,7 +179,7 @@
                 filter="boolean"
         />
         <field
-                name="gmid"
+                name="gmin"
                 type="checkbox"
                 class="inputbox"
                 label="COM_PERFIL_GMID_LABEL"
@@ -160,6 +191,64 @@
                 type="checkbox"
                 class="inputbox"
                 label="COM_PERFIL_PASSWORD_LABEL"
+                value="true"        
+        />
+
+        <!--
+        Campos extra
+         -->
+        <field
+                name="car"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <field
+                name="car_year"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_YEAR_LABEL"
+                value="true"
+                filter="boolean"
+        />
+        <field
+                name="car_brand"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_BRAND_LABEL"
+                value="true"
+        />
+
+        <field
+                name="car_model"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_MODEL_LABEL"
+                value="true"
+        />
+
+        <field
+                name="car_gasoline"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_GASOLINE_LABEL"
+                value="true"
+        />
+        <field
+                name="car_cylinders"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_CYLINDERS_LABEL"
+                value="true"
+        />
+
+        <field
+                name="car_nodata"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_CAR_NODATA_LABEL"
                 value="true"
         />
     </fieldset>

@@ -29,8 +29,8 @@ class JConfig {
 	public $ftp_root = '';
 	public $ftp_enable = '0';
 	public $offset = 'America/Mexico_City';
-	public $mailonline = '0';
-	public $mailer = 'sendmail';
+	public $mailonline = '1';
+	public $mailer = 'smtp';
 	public $mailfrom = 'v2@adventa.mx';
 	public $fromname = 'Adbox V2';
 	public $sendmail = '/usr/sbin/sendmail';
@@ -56,8 +56,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'C:\xampp\htdocs\dventa\log';
-	public $tmp_path = 'C:\xampp\htdocs\dventa\tmp';
+	public $log_path = 'C:\\xampp\\htdocs\\dventa\\log';
+	public $tmp_path = 'C:\\xampp\\htdocs\\dventa\\tmp';
 	public $lifetime = '120';
 	public $session_handler = 'database';
 	public $shared_session = '0';

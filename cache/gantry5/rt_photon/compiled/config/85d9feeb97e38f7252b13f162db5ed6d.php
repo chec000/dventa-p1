@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1547505552,
-    'checksum' => '279c9cfa2373d1d6839bda05c605924f',
+    'timestamp' => 1561052082,
+    'checksum' => 'e95edaa7f2e7d5df17657f264b84a1e8',
     'files' => [
         'templates/rt_photon/custom/config/36' => [
             'assignments' => [
@@ -11,19 +11,19 @@ return [
             ],
             'index' => [
                 'file' => 'templates/rt_photon/custom/config/36/index.yaml',
-                'modified' => 1547505484
+                'modified' => 1547757813
             ],
             'layout' => [
                 'file' => 'templates/rt_photon/custom/config/36/layout.yaml',
-                'modified' => 1547505484
+                'modified' => 1547757813
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/36/page/body.yaml',
-                'modified' => 1537889610
+                'modified' => 1561052082
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/36/page/head.yaml',
-                'modified' => 1537889610
+                'modified' => 1561052082
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/36/styles.yaml',
@@ -42,7 +42,7 @@ return [
         ],
         'index' => [
             'name' => '36',
-            'timestamp' => 1547505484,
+            'timestamp' => 1547757813,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',
@@ -102,19 +102,20 @@ return [
                 'newsslider' => [
                     'newsslider-1896' => 'News Slider'
                 ],
-                'newsticker' => [
-                    'newsticker-4619' => 'News Ticker'
-                ],
-                'contenttabs' => [
-                    'contenttabs-6353' => 'Content Tabs'
-                ],
                 'custom' => [
+                    'custom-5713' => 'Custom HTML',
                     'custom-9187' => 'Custom HTML',
                     'custom-6542' => 'Custom HTML',
                     'custom-8704' => 'Custom HTML',
                     'custom-3849' => 'Custom HTML',
                     'custom-9356' => 'Custom HTML',
                     'custom-5996' => 'Custom HTML'
+                ],
+                'newsticker' => [
+                    'newsticker-4619' => 'News Ticker'
+                ],
+                'contenttabs' => [
+                    'contenttabs-6353' => 'Content Tabs'
                 ],
                 'gridcontent' => [
                     'gridcontent-6371' => 'Grid Content'
@@ -187,6 +188,9 @@ return [
                     ],
                     1 => [
                         0 => 'newsslider-1896'
+                    ],
+                    2 => [
+                        0 => 'custom-5713'
                     ]
                 ],
                 '/header/' => [
@@ -541,7 +545,7 @@ return [
                         'autoplay' => '1',
                         'items' => [
                             0 => [
-                                'image' => 'gantry-media://banners/mecanica/MX23NB6Q7C3W9D97BRR.jpg',
+                                'image' => 'gantry-media://Banner_01.jpg',
                                 'icon' => '',
                                 'title' => '',
                                 'desc' => '',
@@ -552,7 +556,7 @@ return [
                                 'name' => 'New item'
                             ],
                             1 => [
-                                'image' => 'gantry-media://banners/mecanica/860e-b8744db90665.jpg',
+                                'image' => 'gantry-media://Banner_02.jpg',
                                 'icon' => '',
                                 'title' => '',
                                 'desc' => '',
@@ -615,9 +619,16 @@ return [
                         ]
                     ]
                 ],
+                'custom-5713' => [
+                    'title' => 'Custom HTML',
+                    'attributes' => [
+                        'html' => '<br><br>'
+                    ]
+                ],
                 'newsticker-4619' => [
                     'title' => 'News Ticker',
                     'attributes' => [
+                        'enabled' => 0,
                         'speed' => 'fast',
                         'Interval' => '5000',
                         'Direction' => 'down',
@@ -625,18 +636,11 @@ return [
                         'label' => 'Noticias',
                         'items' => [
                             0 => [
-                                'content' => '¡El periodo de canje ya está aquí!',
+                                'content' => '¡Prepárate para escoger tu premio!',
                                 'readmoretext' => '',
                                 'readmorelink' => '',
                                 'readmoretarget' => '_self',
                                 'title' => 'Proximo'
-                            ],
-                            1 => [
-                                'content' => '¡Prepárate para canjear!',
-                                'readmoretext' => '',
-                                'readmorelink' => '',
-                                'readmoretarget' => '_self',
-                                'title' => 'Canje'
                             ]
                         ]
                     ],
@@ -897,6 +901,18 @@ return [
                         'inherit' => [
                             'outline' => 'default',
                             'atom' => 'hover-1375',
+                            'include' => [
+                                0 => 'attributes'
+                            ]
+                        ]
+                    ],
+                    4 => [
+                        'id' => 'block-application-6676',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
+                        'inherit' => [
+                            'outline' => 'default',
+                            'atom' => 'block-application-7570',
                             'include' => [
                                 0 => 'attributes'
                             ]

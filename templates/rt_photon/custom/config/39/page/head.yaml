@@ -18,3 +18,9 @@ atoms:
       opacity: '1'
       mute: '1'
       startAt: '1'
+  -
+    id: block-application-1683
+    type: block-application
+    title: 'Block Application'
+    attributes:
+      enabled: '1'

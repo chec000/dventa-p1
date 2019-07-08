@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'gantry-theme://config/default/page/head.yaml',
-    'modified' => 1539963823,
+    'modified' => 1561068548,
     'data' => [
         'meta' => [
             
@@ -52,6 +52,15 @@ return [
                 'title' => 'Hover',
                 'attributes' => [
                     'enabled' => '1'
+                ]
+            ],
+            3 => [
+                'id' => 'block-application-3705',
+                'type' => 'block-application',
+                'title' => 'Block Application',
+                'attributes' => [
+                    'enabled' => '1',
+                    'message' => 'Es necesario que utilize la plataforma con otro navegador ya sea Google Crome o Mozilla Firefox'
                 ]
             ]
         ]

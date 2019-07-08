@@ -40,6 +40,24 @@
                 header="PLG_USERS_LIST_WHEREHOUSELABEL_DEFAULT"
                 id="office"
         />
+        <field
+                name="last_name1"
+                type="text"
+                label="PLG_USERS_REGISTER_LASTNAME1_LABEL"
+                description="PLG_USERS_REGISTER_LASTNAME1_DESC"
+                filter="string"
+                required="true"
+                minlength="3"
+        />
+        <field
+                name="last_name2"
+                type="text"
+                label="PLG_USERS_REGISTER_LASTNAME2_LABEL"
+                description="PLG_USERS_REGISTER_LASTNAME2_DESC"
+                filter="string"
+                required="true"
+                minlength="3"
+        />
 
         <field
                 name="name"
@@ -48,7 +66,7 @@
                 description="PLG_USERS_REGISTER_NAME_DESC"
                 filter="string"
                 required="true"
-                minlength="10"
+                minlength="3"
         />
 
         <field
@@ -75,7 +93,14 @@
                 hint=""
                 maxlength="10"
         />
-
+        <field
+                name="business_name"
+                type="text"
+                label="PLG_USERS_REGISTER_BUSINESS_NAME_LABEL"
+                description="PLG_USERS_REGISTER_BUSINESS_NAME_DESC"
+                filter="string"                
+                minlength="3"
+        />
         <field
                 name="password1"
                 type="password"

@@ -2,44 +2,187 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbc448e9-b46d-4a22-b41f-e391332f2065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/perfil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/images/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfiles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/listhelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/pass_recovery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/createdby.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/custom_field.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/filemultiple.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/foreignkey.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/modifiedby.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/timecreated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/timeupdated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/perfil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/install.mysql.utf8.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/uninstall.mysql.utf8.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/update.mysql.utf8.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/funtions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/sweetalert2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/validacion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/perfil_helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/language/en-GB/en-GB.mod_account_detail.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_detail.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/assets/css/estilos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/assets/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/mod_account_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/mod_account_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/mod_account_detail/sql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rt_photon/custom/particles/block-application.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rt_photon/custom/particles/block-application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanica/view.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanica/view.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/listhelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/helpers/pass_recovery.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/language/en-GB/en-GB.com_perfil.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/language/en-GB/en-GB.com_perfil.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/language/en-GB/en-GB.com_perfil.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/language/en-GB/en-GB.com_perfil.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/createdby.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/custom_field.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/filemultiple.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/foreignkey.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/modifiedby.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/timecreated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/fields/timeupdated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/sql/install.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/install.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/sql/uninstall.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/uninstall.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/sql/update.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/sql/update.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/en-GB.com_perfil.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/en-GB.com_perfil.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/en-GB.com_perfil.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/en-GB.com_perfil.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/blueprints/9047f5d240b74fd42e8333f0f1477d50.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/blueprints/9047f5d240b74fd42e8333f0f1477d50.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/070391d9dea87e8db3d52fd2ae6fc532.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/070391d9dea87e8db3d52fd2ae6fc532.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/27e2b817447638e2bc59837ccbd9e2bd.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/27e2b817447638e2bc59837ccbd9e2bd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/3388992a227263421326f05ce1a4ae26.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/3388992a227263421326f05ce1a4ae26.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/39db2b8c6e98cbeacb5b9fa4158690a7.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/39db2b8c6e98cbeacb5b9fa4158690a7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/48b4a8265b3501501911a6e2092c933f.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/48b4a8265b3501501911a6e2092c933f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/53a8d75207488fcd937bffddc1b11bd1.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/53a8d75207488fcd937bffddc1b11bd1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/6d36880a5b57497f4b4a17047f948e65.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/6d36880a5b57497f4b4a17047f948e65.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/7b62e38fe136e22bfc7da6fb2fa86709.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/7b62e38fe136e22bfc7da6fb2fa86709.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/85d9feeb97e38f7252b13f162db5ed6d.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/85d9feeb97e38f7252b13f162db5ed6d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/af058552da9193c8b89feeefd0c5228e.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/af058552da9193c8b89feeefd0c5228e.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/bd47f94935b3afcda2cf454efeb3c064.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/bd47f94935b3afcda2cf454efeb3c064.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/bf50b2eddc147df61546278159334335.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/bf50b2eddc147df61546278159334335.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/d7890d73647058356476cabd44cd9ecd.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/d7890d73647058356476cabd44cd9ecd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/f66d02a0ecb74f968f55347798589d92.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/config/f66d02a0ecb74f968f55347798589d92.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/37e6cd0f1992190d4e092c8fd66bc41a.yaml.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/37e6cd0f1992190d4e092c8fd66bc41a.yaml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/5ca597b6fbb97415c22293e52dad64db.yaml.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/5ca597b6fbb97415c22293e52dad64db.yaml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/838ae92d6106bd043318f805ec1e44c2.yaml.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/838ae92d6106bd043318f805ec1e44c2.yaml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/b51a18a4ca89b07c6c43f95aff55287f.yaml.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/b51a18a4ca89b07c6c43f95aff55287f.yaml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/be2a6061852d86a253cfd0a5e57964bf.yaml.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/compiled/yaml/be2a6061852d86a253cfd0a5e57964bf.yaml.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_35.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_35.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_36.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_36.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_37.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_37.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_38.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_38.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_39.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_39.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_40.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom_40.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__body_only.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__body_only.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__error.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__error.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__offline.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/custom__offline.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_35.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_35.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_36.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_36.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_37.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_37.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_38.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_38.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_39.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_39.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_40.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla_40.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__body_only.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__body_only.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__error.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__error.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__offline.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon-joomla__offline.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_35.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_35.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_36.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_36.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_37.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_37.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_38.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_38.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_39.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_39.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_40.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon_40.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__body_only.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__body_only.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__error.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__error.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__offline.css.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/scss/photon__offline.css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/gantry5/rt_photon/twig/7a/7a1fcf62c960c8ef6a2aa932a0026992b533f174dabc2918b57e7be554dd36da.php" beforeDir="false" afterPath="$PROJECT_DIR$/cache/gantry5/rt_photon/twig/7a/7a1fcf62c960c8ef6a2aa932a0026992b533f174dabc2918b57e7be554dd36da.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/com_perfil.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/controllers/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/controllers/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/models/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/models/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_perfil/views/perfil/view.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_perfil/views/perfil/view.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/en-GB/en-GB.mod_account_status.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.mod_account_status.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/en-GB/en-GB.mod_account_status.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.mod_account_status.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_status.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_status.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_status.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_status.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/overrides/es-ES.override.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/overrides/es-ES.override.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/mod_account_status/helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_account_status/helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/mod_account_status/mod_account_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_account_status/mod_account_status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/mod_account_status/mod_account_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_account_status/mod_account_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/mod_account_status/sql/mysql/install.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_account_status/sql/mysql/install.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/mod_account_status/tmpl/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/mod_account_status/tmpl/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/user/useroverride/assets/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/user/useroverride/assets/js/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/user/useroverride/useroverride.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/user/useroverride/useroverride.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/36/page/head.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/36/page/head.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/37/index.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/37/index.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/37/layout.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/37/layout.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/39/page/head.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/39/page/head.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/default/page/head.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/default/page/head.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/config/default/styles.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/config/default/styles.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_35.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_35.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_36.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_36.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_36.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_36.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_37.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_37.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_38.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_38.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_39.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_39.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_39.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_39.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_40.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_40.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_40.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom_40.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__body_only.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__body_only.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__error.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__error.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__error.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__offline.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/custom__offline.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_35.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_35.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_36.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_36.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_37.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_37.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_38.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_38.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_40.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla_40.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__body_only.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__body_only.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__error.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__error.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__offline.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon-joomla__offline.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_35.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_35.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_35.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_35.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_36.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_36.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_36.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_36.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_37.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_37.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_37.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_37.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_38.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_38.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_38.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_38.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_39.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_39.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_40.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_40.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_40.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon_40.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__body_only.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__body_only.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__body_only.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__body_only.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__error.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__error.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__error.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__offline.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__offline.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__offline.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/css-compiled/photon__offline.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/particles/atomo-Ir-arriba.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/particles/atomo-Ir-arriba.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rt_photon/custom/scss/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rt_photon/custom/scss/custom.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,82 +198,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php">
+        <entry file="file://$PROJECT_DIR$/templates/rt_photon/custom/config/default/layout.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+            <state relative-caret-position="447">
+              <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_perfil/models/perfil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_perfil/controllers/perfil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-              <folding>
-                <element signature="e#6#151#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mod_account_status/helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/com_perfil/views/perfil/view.html.php">
+        <entry file="file://$PROJECT_DIR$/plugins/user/useroverride/useroverride.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret lean-forward="true" />
@@ -141,12 +218,75 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#1;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="239" column="28" lean-forward="true" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="46" column="19" selection-start-line="46" selection-end-line="46" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/js/validacion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="101" column="59" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="238" column="22" lean-forward="true" selection-start-line="238" selection-start-column="22" selection-end-line="238" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -156,46 +296,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>JHtmlSidebar::addEntry</find>
-      <find>'Form'</find>
-      <find>$form</find>
-      <find>nss</find>
-      <find>getKeyName</find>
-      <find>ge</find>
-      <find>$this-&gt;loadForm</find>
-      <find>com_perfil.perfil</find>
-      <find>for</find>
-      <find>credentials</find>
-      <find>getForm($data</find>
-      <find>field</find>
-      <find>config.xml</find>
-      <find>com_mecanicas&amp;</find>
-      <find>addToolbar</find>
-      <find>COM_FOLIO_COMPONENT_DESC</find>
-      <find>description</find>
-      <find>get(</find>
-      <find>MecanicasHelper</find>
-      <find>config</find>
-      <find>params</find>
+      <find>$canEdit</find>
+      <find>mecanica.edit</find>
       <find>getData</find>
-      <find>getFieldset</find>
-      <find>loadFormData</find>
-      <find>validate($form</find>
-      <find>Unknown column</find>
-      <find>unknownColumnType</find>
-      <find>user-&gt;id</find>
-      <find>COM_PERFIL_EMAIL_LABEL</find>
-      <find>name</find>
+      <find>Lista de campos</find>
+      <find>params</find>
+      <find>COM_PERFIL_REGISTER_USERNAME_LABEL</find>
+      <find>updateData</find>
+      <find>$userId</find>
+      <find>datosperfil</find>
+      <find>COM_PERFIL_REGITER_INVALID_NAME_FIELD</find>
+      <find>COM_PERFIL_REGISTRATION_PROFILE_LABEL</find>
+      <find>Editar mecánica</find>
+      <find>COM_MECANICAS_MANAGER_MECANICA</find>
+      <find>updateUser</find>
+      <find>save2copy</find>
+      <find>COM_PERFIL_COMPONENT_USER</find>
+      <find>Campo inválido</find>
+      <find>JLIB_FORM_FIELD_INVALID</find>
+      <find>COM_PERFIL_GMID_LABEL</find>
+      <find>isGminValid</find>
+      <find>ap_modal</find>
+      <find>INCENTIVA BY ADVENTA</find>
+      <find>Número de seguro social:</find>
+      <find>Aceptar</find>
+      <find>mainWrap</find>
+      <find>Aceptar terminos y condiciones</find>
+      <find>COM_USERS_TERM_COND</find>
+      <find>Avis</find>
+      <find>jform_TERM</find>
+      <find>TER</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\dventa\components</dir>
       <dir>C:\xampp\htdocs\dventa\components\com_users</dir>
+      <dir>C:\xampp\htdocs\dventa\administrator\components\com_perfil\views</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -204,64 +346,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/com_perfil/assets/js/funtions.js" />
-        <option value="$PROJECT_DIR$/components/com_perfil/controllers/Perfil.raw.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/assets/css/styles.css" />
-        <option value="$PROJECT_DIR$/plugins/user/useroverride/forms/profile.xml" />
-        <option value="$PROJECT_DIR$/plugins/user/useroverride/useroverride.xml" />
-        <option value="$PROJECT_DIR$/plugins/system/validacion/validacion.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" />
-        <option value="$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js" />
-        <option value="$PROJECT_DIR$/plugins/system/usercustom/usercustom.php" />
-        <option value="$PROJECT_DIR$/components/com_pass_recovery/pass_recovery.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_login/login.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/Perfil.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/perfil.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_notification/views/notification/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_notification/views/notifications/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_cart/controller.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_cart/models/carts.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfiles.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_cart/views/carts/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/perfil.js" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/perfil.css" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controller.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/controller.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/controllers/datosperfil.raw.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_users/views/users/tmpl/default.php" />
-        <option value="$PROJECT_DIR$/libraries/cms/html/list.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php" />
-        <option value="$PROJECT_DIR$/plugins/user/useroverride/forms/registration.xml" />
-        <option value="$PROJECT_DIR$/language/overrides/es-ES.override.ini" />
-        <option value="$PROJECT_DIR$/plugins/user/useroverride/useroverride.php" />
+        <option value="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_status.ini" />
         <option value="$PROJECT_DIR$/plugins/user/useroverride/assets/js/validation.js" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_menus/models/item.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/config.xlm" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.sys.ini" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php" />
-        <option value="$PROJECT_DIR$/administrator/components/com_config/model/component.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/models/perfil.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/sql/uninstall.mysql.utf8.sql" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/sql/install.mysql.utf8.sql" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/sql/update.mysql.utf8.sql" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/helpers/PerfilHelper.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/helpers/perfil_helper.php" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/helper.php" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/assets/css/estilos.css" />
+        <option value="$PROJECT_DIR$/components/com_perfil/controllers/datosperfil.raw.php" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/mod_account_detail.php" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/assets/js/script.js" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/mod_account_detail.xml" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/particles/block-application.yaml" />
+        <option value="$PROJECT_DIR$/modules/mod_account_detail/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/language/es-ES/es-ES.mod_account_detail.ini" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/particles/block-application.html.twing" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/custom/particles/block-application.html.twing" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/custom/scss/custom.scss" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/custom/particles/newsticker.html.twig" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/custom/particles/block-application.html.twig" />
+        <option value="$PROJECT_DIR$/templates/rt_photon/custom/particles/block-application.yaml" />
+        <option value="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.sys.ini" />
         <option value="$PROJECT_DIR$/components/com_perfil/controllers/perfil.php" />
-        <option value="$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml" />
-        <option value="$PROJECT_DIR$/administrator/components/com_perfil/config.xml" />
-        <option value="$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php" />
+        <option value="$USER_HOME$/Desktop/com_perfil/perfil.xml" />
+        <option value="$PROJECT_DIR$/language/overrides/es-ES.override.ini" />
+        <option value="$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanica/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controller.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfiles.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" />
         <option value="$PROJECT_DIR$/components/com_perfil/views/perfil/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php" />
+        <option value="$PROJECT_DIR$/components/com_perfil/models/perfil.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfil.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/config.xml" />
+        <option value="$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.ini" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js" />
+        <option value="$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini" />
+        <option value="$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml" />
+        <option value="$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/assets/js/validacion.js" />
+        <option value="$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js" />
+        <option value="$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="height" value="371" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -293,47 +436,6 @@
               <item name="administrator" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="com_perfil" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_perfil" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_perfil" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_perfil" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_perfil" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="perfiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="administrator" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
@@ -395,8 +497,23 @@
             <path>
               <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
               <item name="dventa" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="com_search" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dventa" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dventa" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dventa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dventa" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -408,16 +525,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AdventaProyecto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/administrator/components/com_perfil/assets/css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\dventa\administrator\components\com_perfil" />
-      <recent name="C:\xampp\htdocs\dventa\language\es-ES" />
-      <recent name="C:\xampp\htdocs\dventa\plugins\user\useroverride\language\en-GB" />
-      <recent name="C:\xampp\htdocs\dventa\plugins\user\useroverride\language\es-ES" />
+      <recent name="C:\xampp\htdocs\dventa\administrator\components\com_perfil\assets\css" />
+      <recent name="C:\xampp\htdocs\dventa\administrator\components\com_perfil\assets\js" />
+      <recent name="C:\xampp\htdocs\dventa\templates\rt_photon\particles" />
+      <recent name="C:\xampp\htdocs\dventa\modules\mod_account_detail" />
+      <recent name="C:\xampp\htdocs\dventa\modules\mod_account_detail\sql" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\dventa\templates\rt_photon\custom\particles" />
+      <recent name="C:\xampp\htdocs\dventa\language\en-GB" />
       <recent name="C:\xampp\htdocs\dventa\components\com_perfil\assets\js" />
       <recent name="C:\xampp\htdocs\dventa\components\com_perfil\assets\css" />
     </key>
@@ -454,18 +576,28 @@
       <workItem from="1559052808710" duration="13152000" />
       <workItem from="1559083402720" duration="582000" />
       <workItem from="1559138291913" duration="15528000" />
-      <workItem from="1559244078784" duration="38528000" />
+      <workItem from="1559244078784" duration="69582000" />
+      <workItem from="1559689979331" duration="785000" />
+      <workItem from="1559745373048" duration="61717000" />
+      <workItem from="1560176476767" duration="20167000" />
+      <workItem from="1560266755747" duration="16816000" />
+      <workItem from="1560353467956" duration="182000" />
+      <workItem from="1560431970353" duration="1624000" />
+      <workItem from="1560531281294" duration="17249000" />
+      <workItem from="1560649083402" duration="565000" />
+      <workItem from="1560726345107" duration="41245000" />
+      <workItem from="1561218940585" duration="44815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305296000" />
+    <option name="totallyTimeSpent" value="541515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23903178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26701966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -486,7 +618,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22768533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2730711" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -519,347 +651,376 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php</url>
-          <line>14</line>
+          <url>file://$PROJECT_DIR$/components/com_perfil/models/perfil.php</url>
+          <line>169</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/components/com_perfil/models/perfil.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_login/views/login/view.html.php">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_catalog/views/categories/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.sys.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="450">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/rt_photon/html/com_users/login/default.php">
+    <entry file="file://$USER_HOME$/Desktop/com_perfil/admin/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="39" column="64" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="64" />
+        <state relative-caret-position="289">
+          <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_login/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="78" lean-forward="true" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/controller.php">
+    <entry file="file://$USER_HOME$/Desktop/com_perfil/perfil.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/perfil.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml">
+    <entry file="file://$PROJECT_DIR$/language/overrides/es-ES.override.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/access.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/includes/toolbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="582" column="27" selection-start-line="582" selection-start-column="27" selection-end-line="582" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanicas/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+        <state relative-caret-position="68">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanicas/view.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="26" />
+        <state relative-caret-position="447">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanicas/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="161" column="10" lean-forward="true" selection-start-line="161" selection-start-column="10" selection-end-line="164" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/controllers/mecanicas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/models/mecanicas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/mecanicas.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/helpers/mecanicas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.sys.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="36" lean-forward="true" selection-start-line="12" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/models/component.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/model/application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/controller/application/display.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/controller/component/display.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/models/application.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/Component/ComponentHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_search/search.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_search/access.xml">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_search/config.xml">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/controller/component/save.php">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/controller/application/save.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_config/model/component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/vendor/joomla/registry/src/Registry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="618" selection-start-line="618" selection-end-line="618" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/src/Form/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="1067" column="53" lean-forward="true" selection-start-line="1067" selection-start-column="53" selection-end-line="1067" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/fof/model/model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="1109" selection-start-line="1109" selection-end-line="1109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/fof/render/strapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/templates/hathor/html/com_modules/module/edit_options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_config/model/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="294" column="32" selection-start-line="294" selection-start-column="32" selection-end-line="294" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/jcli/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="244" column="83" lean-forward="true" selection-start-line="244" selection-start-column="83" selection-end-line="244" selection-end-column="83" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/com_perfil/controllers/datosperfil.raw.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="92" />
+          <folding>
+            <element signature="n#getDatos#0;n#PerfilControllerDatosperfil#0;n#!!top" />
+            <element signature="n#getZip#0;n#PerfilControllerDatosperfil#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_account_status/helper.php">
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/language/es-ES/es-ES.com_perfil.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="501">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_perfil/models/perfil.php">
+    <entry file="file://$PROJECT_DIR$/libraries/src/Application/CMSApplication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="195">
+          <caret line="236" column="20" selection-start-line="236" selection-start-column="20" selection-end-line="236" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/com_perfil/controllers/perfil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#6#151#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/com_perfil/views/perfil/view.html.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="78" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/fof/toolbar/toolbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="1061" column="18" lean-forward="true" selection-start-line="1061" selection-start-column="18" selection-end-line="1061" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/models/mecanica.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanica/tmpl/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/controllers/mecanica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/includes/toolbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_mecanicas/views/mecanica/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="63" column="18" lean-forward="true" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_categories/models/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="790" lean-forward="true" selection-start-line="790" selection-end-line="790" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_perfil/models/perfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="n#getData#0;n#PerfilModelPerfil#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/perfil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfiles/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/controllers/funcionesAjax.raw.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="n#getDatos#0;n#PerfilControllerFuncionesAjax#0;n#!!top" />
+            <element signature="n#getZip#0;n#PerfilControllerFuncionesAjax#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/perfiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/controllers/perfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/views/perfil/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/language/es-ES/es-ES.com_perfil.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/js/perfil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/user/useroverride/assets/js/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="599" column="100" selection-start-line="599" selection-start-column="92" selection-end-line="599" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rt_photon/custom/config/default/layout.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/user/useroverride/useroverride.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/models/forms/perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="238" column="22" lean-forward="true" selection-start-line="238" selection-start-column="22" selection-end-line="238" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_perfil/models/forms/perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="239" column="28" lean-forward="true" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_perfil/views/perfil/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_perfil/language/es-ES/es-ES.com_perfil.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="46" column="19" selection-start-line="46" selection-end-line="46" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/assets/js/validacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="101" column="59" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_perfil/assets/js/validacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_perfil/perfil.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.formvalidator');
 ?>
 <div class="wrapPerfil">
-    <div id="componnetContent">
+    <div id="componnetContent" style="display:  <?php echo  ($this->params==true)?'block':'none'; ?>">
         <form  action="<?php echo JRoute::_('index.php?option=com_perfil&task=perfiles.save'); ?>" method="post" name="perfilForm" id="perfilForm" class="form-validate form-horizontal well" enctype="multipart/form-data">
             <fieldset>
                 <legend>
@@ -22,48 +22,47 @@ JHtml::_('behavior.formvalidator');
                                 <?php echo ($field->label); ?>
                             </div>
                             <div class="controls">
-                                <?php if ($field->fieldname === 'password1') : ?>
-                                    <?php // Disables autocomplete       ?>
-                                    <input type="password" style="display:none">
-                                <?php endif;
-                                ?>
                                 <?php
                                 echo $field->input;
                                 ?>
                             </div>
                         </div>
-                    <?php endif;?>
+
+                        <?php  if($field->fieldname==$param&&$field->fieldname=="password"): ?>
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <label id="jform_password2-lbl" for="password2" class="hasPopover" title="" data-content="Registrar contraseña minimo 8 caracteres" data-original-title="Confirmar contraseña">
+                                       Confirmar contraseña</label>
+                                </div>
+                                <div class="controls">
+                                    <input id="password2" type="password" name="password2">
+                                </div>
+                            </div>
+
+
+                        <?php endif;?>
+                        <?php endif;?>
 
                     <?php endforeach; ?>
-
-                <?php else:;?>
-                    <div class="control-group">
-                        <div class="control-label">
-                            <?php echo ($field->label); ?>
-                        </div>
-                        <div class="controls">
-                            <?php if ($field->fieldname === 'password1') : ?>
-                                <?php // Disables autocomplete       ?>
-                                <input type="password" style="display:none">
-                            <?php endif;
-                            ?>
-                            <?php
-                            echo $field->input;
-                            ?>
-                        </div>
-                    </div>
 
                 <?php endif;?>
                 <?php  if($field->fieldname=='TERM'&&$this->params!=false): ?>
 
                     <div class="control-group">
+
+
                         <div class="control-label">
-                            <?php echo ($field->label); ?>
+                            <?php //echo ($field->label); ?>
                         </div>
                         <div class="controls">
+
                             <?php
                             echo ($field->input);
                             ?>
+                            Acepto    
+                            <a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#tc_modal">   <?php echo JText::_('COM_USERS_TERM_COND'); ?> </a>
+                            |<a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#ap_modal">     <?php echo JText::_('COM_USERS_TERM_CONDITIONS'); ?></a>
+
                         </div>
                     </div>
                 <?php  endif; ?>

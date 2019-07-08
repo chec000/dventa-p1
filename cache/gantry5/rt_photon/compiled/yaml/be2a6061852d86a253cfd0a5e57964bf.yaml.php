@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'gantry-theme://config/36/page/head.yaml',
-    'modified' => 1537889610,
+    'modified' => 1561052082,
     'data' => [
         'atoms' => [
             0 => [
@@ -48,6 +48,18 @@ return [
                 'inherit' => [
                     'outline' => 'default',
                     'atom' => 'hover-1375',
+                    'include' => [
+                        0 => 'attributes'
+                    ]
+                ]
+            ],
+            4 => [
+                'id' => 'block-application-6676',
+                'type' => 'block-application',
+                'title' => 'Block Application',
+                'inherit' => [
+                    'outline' => 'default',
+                    'atom' => 'block-application-7570',
                     'include' => [
                         0 => 'attributes'
                     ]

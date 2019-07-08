@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1547757645,
-    'checksum' => 'ae82850f2f57b2f388cd0b0f898d7850',
+    'timestamp' => 1561068548,
+    'checksum' => '7b2a5e47f7c76477425e7ee0fc606b7a',
     'files' => [
         'templates/rt_photon/custom/config/default' => [
             'index' => [
@@ -15,15 +15,15 @@ return [
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -167,7 +167,7 @@ return [
             ],
             'styles' => [
                 'file' => 'templates/rt_photon/custom/config/default/styles.yaml',
-                'modified' => 1538693575
+                'modified' => 1560542879
             ]
         ],
         'templates/rt_photon/config/default' => [
@@ -658,6 +658,10 @@ return [
                 'mute' => true,
                 'startAt' => '0'
             ],
+            'block-application' => [
+                'enabled' => true,
+                'message' => ''
+            ],
             'hover' => [
                 'enabled' => true
             ],
@@ -839,7 +843,7 @@ return [
                 'text-color' => '#ffffff'
             ],
             'header' => [
-                'background' => '#711f3e',
+                'background' => '#247eb3',
                 'text-color' => '#ffffff'
             ],
             'main' => [
@@ -851,7 +855,7 @@ return [
                 'animation' => 'g-fade-in-up'
             ],
             'navigation' => [
-                'background' => '#5d2b57',
+                'background' => '#2a3a5c',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
@@ -964,6 +968,15 @@ opacity: 100 !important;
                         'title' => 'Hover',
                         'attributes' => [
                             'enabled' => '1'
+                        ]
+                    ],
+                    3 => [
+                        'id' => 'block-application-3705',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
+                        'attributes' => [
+                            'enabled' => '1',
+                            'message' => 'Es necesario que utilize la plataforma con otro navegador ya sea Google Crome o Mozilla Firefox'
                         ]
                     ]
                 ]

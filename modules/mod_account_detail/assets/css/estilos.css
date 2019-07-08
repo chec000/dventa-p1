@@ -1,0 +1,39 @@
+.points-item-detail {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+}
+
+.shadow{
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+}
+.detail-point-number{
+    font-size: 1.5rem;
+    color: #5d2b57;
+}
+.tabla{
+    background-color: #3e64cf;
+    color: white;
+}
+
+.tabla2{
+    background-color: #3e64cf!important;
+    color: white;
+}
+
+.leftBorder{
+    border-left: 1px solid #ccc;
+}
+.font{
+    font-weight: bold;
+}
+.puntos-div{
+    background-color: #2d2db3;
+    color: white;
+    height: 40px;
+    padding: 10px;
+}
+.color-black{
+    color: black;
+}

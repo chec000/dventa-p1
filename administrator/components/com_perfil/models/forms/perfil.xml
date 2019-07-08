@@ -1,182 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
-<form>
-    <fieldset name="campos" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL">
-        <fiel
-                name="name"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
 
+<form>
+    <fieldset name="mainWrap" label="COM_PERFIL_REGISTRATION_PROFILE_LABEL">
+
+        <!--
+            apellidos
+        -->
+        <field
+                name="last_name1"
+                type="text"
+                label="COM_PERFIL_REGISTER_LAST_NAME1_LABEL"
+                description="COM_PERFIL_REGISTER_LAST_NAME1_LABEL"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+
+        <field
+                name="last_name2"
+                type="text"
+                label="COM_PERFIL_REGISTER_LAST_NAME2_LABEL"
+                description="COM_PERFIL_REGISTER_LAST_NAME2_LABEL"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+        <!-- -->
+        <field
+                name="name"
+                type="text"
+                label="COM_PERFIL_REGISTER_NAME_LABEL"
+                description="COM_USERS_REGISTER_NAME_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+
+        <field
+                name="username"
+                type="text"
+                label="COM_PERFIL_REGISTER_USERNAME_LABEL"
+                description="COM_USERS_REGISTER_USERNAME_DESC"
+                filter="string"
+                required="true"
+                disabled="disabled"
+                size="30"
+                class="disableInput"
+                maxlength="25"
+        />
+        <field
+                name="password"
+                type="password"
+                required="true"
+                label="COM_PERFIL_REGISTER_PASSWORD_LABEL"
+                description="COM_USERS_REGISTER_PASSWORD_DESC"
+                filter="string"
+                minLenght="8"
         />
 
         <field
                 name="email"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="email"
+                label="COM_PERFIL_REGISTER_EMAIL1_LABEL"
+                description="COM_USERS_REGISTER_EMAIL1_DESC"
+                field="id"
+                filter="string"
+                message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+                required="true"
+                size="30"
+                unique="true"
+                autocomplete="email"
+                maxlength="40"
         />
         <field
                 name="cellphone"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
+                type="text"
+                label="COM_PERFIL_REGISTER_CELLPHONE_DESC"
+                description="COM_USERS_REGISTER_CELLPHONE_DESC"
+                class="validate-cellphone"
+                required="true"
+                size="10"
+                hint=""
+                maxlength="10"
+        />
 
+        <field
+                name="spacer"
+                type="spacer"
+                label="COM_PERFIL_REGISTER_LEGEND"
+                class="divisor"
         />
         <field
                 name="phone"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_TELEPHONE_DESC"
+                description="COM_PERFIL_REGISTER_PHONE_DESC"
+                class="validate-cellphone"
+                required="true"
+                size="10"
+                hint=""
+                maxlength="10"
         />
-
-
 
         <field
                 name="street"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_STREET_LABEL"
+                description="COM_PERFIL_REGISTER_STREET_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="100"
         />
-        <field
-                name="int_number"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
 
-        />
         <field
                 name="ext_number"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_EXT_NUMBER_LABEL"
+                description="COM_PERFIL_REGISTER_EXT_NUMBER_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
         />
+
+        <field
+                name="int_number"
+                type="text"
+                label="COM_PERFIL_REGISTER_INT_NUMBER_LABEL"
+                description="COM_PERFIL_REGISTER_INT_NUMBER_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+        />
+
         <field
                 name="reference"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
+                type="textarea"
+                rows="3"
+                cols="30"
+                label="COM_PERFIL_REGISTER_REFERENCIAS_LABEL"
+                description="COM_PERFIL_REGISTER_REFERENCIAS_DESC"
+                filter="string"
+                required="true"
 
         />
+
+        <field
+                name="dob"
+                type="calendar"
+                label="COM_PERFIL_REGISTER_DOB_LABEL"
+                description="COM_PERFIL_REGISTER_DOB_DESC"
+                required="true"
+                format="%Y-%m-%d"
+                filter="user_utc"
+                minyear="-60"
+                maxyear="-1"
+
+        />
+
         <field
                 name="zip_code"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
+                type="text"
+                label="COM_PERFIL_REGISTER_ZIP_CODE_LABEL"
+                description="COM_PERFIL_REGISTER_ZIP_CODE_DESC"
+                filter="string"
+                hint="COM_PERFIL_REGISTER_ZIP_CODE_LABEL_DESC"
+                required="true"
+                id="zip_code"
+                class="form-control"
+                size="10"
+                maxlength="5"
 
         />
+
         <field
                 name="location"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                class="disableInput"
+                label="COM_PERFIL_REGISTER_LOCATION_LABEL"
+                description="COM_PERFIL_REGISTER_LOCATION_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                readonly="readonly"
         />
         <field
                 name="city"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_CITY_LABEL"
+                description="COM_PERFIL_REGISTER_CITY_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                readonly="readonly"
+                class="disableInput"
         />
         <field
                 name="state"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                readonly="readonly"
+                class="disableInput"
+                label="COM_PERFIL_REGISTER_STATE_LABEL"
+                description="COM_PERFIL_REGISTER_STATE_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
         />
         <field
                 name="rfc"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_RFC_LABEL"
+                description="COM_PERFIL_REGISTER_RFC_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
         />
         <field
                 name="nss"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_NSS_LABEL"
+                description="COM_PERFIL_REGISTER_NSS_DESC"
+                filter="string"
+                required="true"
+                size="11"
+                maxlength="11"
         />
+
+        <field
+                name="business_name"
+                type="text"
+                label="COM_PERFIL_REGISTER_BUSINESS_NAME_LABEL"
+                description="COM_PERFIL_REGISTER_BUSINESS_NAME_LABEL"
+                filter="string"                
+                size="11"
+                maxlength="11"
+        />
+
         <field
                 name="pid"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
-
+                type="text"
+                label="COM_PERFIL_REGISTER_PID_LABEL"
+                description="COM_PERFIL_REGISTER_PID_DESC"
+                filter="string"
+                required="true"
+                size="30"
+                maxlength="25"
+                minLenght="6"
         />
         <field
-                name="gmid"
-                type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
-                filter="boolean"
+                name="gmin"
+                type="text"
+                label="COM_PERFIL_REGISTER_GMIN_LABEL"
+                description="COM_PERFIL_REGISTER_GMIN_DESC"
+                filter="string"
+                hint="COM_PERFIL_REGISTER_GMIN_HINT"
+                required="true"
+                size="30"
+                maxlength="9"
+        />
 
+
+        <field
+                name="spacer"
+                type="spacer"
+                label="COM_PERFIL_USER_CAR"
+                class="divisor"
+        />
+
+        <field
+                query="SELECT  id AS value,concat( brand, ' ', model, '', ' (', anio, ')') AS name  FROM #__cars"
+                name="car"
+                label="COM_PERFIL_CAR_LABEL"
+                type="sql"
+                key_field="value"                            
+                value_field="name"
+                autocomplete="true"
+                class="selectpicker"
+                data-live-search="true"
+                description="COM_FOLIO_CAR_DESC"            
         />
         <field
-                name="password"
+                name="car_brand"
+                label="COM_PERFIL_CAR_BRAND_LABEL"
+                type="text"
+                description="COM_FOLIO_BRAND_DESC"            
+                readonly="readonly"
+              class="disableInput"
+        />
+        
+        <field
+                name="car_model"
+                label="COM_PERFIL_CAR_MODEL_LABEL"
+                type="text"
+                description="COM_FOLIO_MODEL_DESC"
+                readonly="readonly"
+                class="disableInput"
+                />    
+
+        <field
+                name="car_year"
+                label="COM_PERFIL_CAR_YEAR_LABEL"
+                type="text"
+                description="COM_PERFIL_CAR_YEAR_DESC"            
+                readonly="readonly"
+                class="disableInput"
+        />
+        
+        <field
+                name="car_gasoline"
+                label="COM_PERFIL_CAR_GASOLINE_LABEL"
+               type="list"
+                description="COM_FOLIO_LITERS_DESC">
+                <option value="">Seleccione una opción</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+                <option value="110">110</option>
+                <option value="120">120</option>
+                <option value="130">130</option>
+        </field>
+        <field
+                name="car_cylinders"
+                label="COM_PERFIL_CAR_CYLINDERS_LABEL"
+                type="list"
+                description="COM_FOLIO_CYLINDERS_DESC">
+                <option value="">Seleccione una opción</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+
+        </field>
+
+        <field
+            
+                name="car_nodata"
                 type="checkbox"
-                class="inputbox"
-                label="COM_FOLIO_FIELD_BOTH_LABEL"
-                description="COM_FOLIO_FIELD_BOTH_DESC"
-                value="true"
+                class="claseChekbox"
+                label="COM_PERFIL_CAR_NODATA_LABEL"
+                value="false"
+                checked="false"
+                filter="boolean"
+            />
 
-
+        <field name="TERM"
+               type="checkbox"
+               required="true"
+               label=""
+               class="form-control term"
+               value="1"
+               default="1"
+               checked="1"
         />
 
+        <field name="id" type="hidden" default="" />
     </fieldset>
-
-
 </form>
+
+
+

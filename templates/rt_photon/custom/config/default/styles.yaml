@@ -16,13 +16,13 @@ top:
   background: '#ffffff'
   text-color: '#686868'
 navigation:
-  background: '#5d2b57'
+  background: '#2a3a5c'
   text-color: '#ffffff'
 slideshow:
   background: '#ffffff'
   text-color: '#8a8a8a'
 header:
-  background: '#711f3e'
+  background: '#247eb3'
   text-color: '#ffffff'
 above:
   background: '#18c9a6'

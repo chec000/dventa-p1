@@ -13,7 +13,8 @@ class MecanicasViewMecanica extends JViewLegacy
     //Se ejecuta por default si no se esta solicitando otra vista
     public function display($tpl = null)
     {
-      $this->item = $this->get('Item');
+
+        $this->item = $this->get('Item');
       $this->form = $this->get('Form');
 
       /*Checar errores, estos pueden ocurrir si alguno de los campos no se encuentran

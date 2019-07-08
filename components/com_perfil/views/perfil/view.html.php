@@ -36,6 +36,26 @@ class PerfilViewPerfil extends JViewLegacy {
         JText::script('COM_PERFIL_REGISTER_RFC_INVALID_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_NAME_FIELD');
+        JText::script('COM_PERFIL_REGITER_INVALID_PASSWORD_REPIT_FIELD');
+        JText::script('COM_PERFIL_REGITER_INVALID_PASSWORD_FIELD');
+        JText::script('COM_PERFIL_REGITER_INVALID_NAME__FIELD');
+   //validaciones
+        JText::script('COM_PERFIL_REGISTER_NAME_ERROR');
+        JText::script('COM_PERFIL_REGISTER_LASTNAME1_ERROR');
+        JText::script('COM_PERFIL_REGISTER_LASTNAME2_ERROR');
+        JText::script('COM_PERFIL_REGISTER_EMAIL1_ERROR');
+        JText::script('COM_PERFIL_REGISTER_CELLPHONE_ERROR');
+        JText::script('COM_PERFIL_REGISTER_REFERN_ERROR');
+        JText::script('COM_PERFIL_REGISTER_PIN1_ERROR');
+        JText::script('COM_PERFIL_REGISTER_PIN2_ERROR');
+        JText::script('COM_PERFIL_REGISTER_STREET_ERROR');
+        JText::script('COM_PERFIL_REGISTER_EMAIL_LABEL_ERROR');
+        JText::script('COM_PERFIL_REGISTER_TELEFONO_LABEL_ERROR');
+        JText::script('COM_PERFIL_INVALID_EMAIL_EXIST');
+        JText::script('COM_PERFIL_INVALID_DATA_TITLE');
+        JText::script('COM_PERFIL_INVALID_DATA');
+        
+
 
 
         $doc->addScript($this->_getJSSCSSPath('validacion.js', 'com_perfil','js'));

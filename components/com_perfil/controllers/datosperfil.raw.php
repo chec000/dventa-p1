@@ -4,6 +4,31 @@
 
     class PerfilControllerDatosperfil extends JControllerLegacy {
 
+    public function getCar()
+    {
+            $app = JFactory::getApplication();
+
+            $car=null;
+                try {
+                $id = $app->input->post->get('id', '');
+                $db = JFactory::getDbo();
+                $query = $db->getQuery(true);
+                // Get the database object and a new query object.
+                $query->select('c.*')
+                    ->from($db->quoteName('#__cars','c'));
+                //->where('z.zip_code like ' . $db->quote($zip));
+                $query->where($db->quoteName('c.id')." = ".$db->quote($id));
+                // Set and query the database.
+                $db->setQuery($query);
+                $car=$db->loadObject();
+                                      
+                   } catch (Exception $e) {
+                       echo null;
+                   }   
+
+        echo json_encode($car);
+       
+    }
         public function getDatos()
         {
 
@@ -90,5 +115,41 @@
         }
 
 
+ public function validaCorreo()
+    {
+        # code...validaCorreo
+        #   data:{email:email,id_usuario:idUsuario,token:key},
+        $valid=false;
+        $app = JFactory::getApplication();
+        $task = $app->input->get('task', '');
+        $token = $app->input->get->get('token', '');
+        $email = $app->input->get->get('email', '');
+        $id_usuario = $app->input->get->get('id_usuario', '');
+        $post_array = $app->input->getArray($_GET);
+       
+       try {
+         $db = JFactory::getDbo();
+         $query = $db->getQuery(true);               
+            $query->select('id')
+            ->from($db->quoteName('#__users'))
+            ->where('email='.$db->quote($post_array['vars']['email'])
+            )->andwhere('id !='.intval($post_array['vars']['id_usuario']));
+            
+          //
+        $db->setQuery($query);
+        $response=$db->loadObjectList();
+        
+        if (count($response)>0) {
+            $valid=false;
+        }else{
+            $valid=true;
+        }
+       } catch (Exception $e) {
+        var_dump($e->getMessage());
+           $valid=false;
+       }
+
+        echo  json_encode($valid);
+    }
 
     }

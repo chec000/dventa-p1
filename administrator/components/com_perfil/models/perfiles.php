@@ -118,15 +118,21 @@ class PerfilModelPerfiles extends JModelList
     public  function updateStatus($userId,$status){
         try{
 
+
             $db = JFactory::getDbo();
-            $fields = array(
-                //$db->quoteName('name') . '=' . $db->quote($data['name']),
-                $db->quoteName('complete_data') . '=' . $db->quote($status),
-            );
-
-
             $query = $db->getQuery(true);
-
+            $query->select('i.user_id')
+                ->from($db->quoteName('#__core_user_info', 'i'))
+                ->where($db->quoteName('i.user_id') . ' = ' . $db->quote($userId));
+            $db->setQuery($query);
+            $result = $db->loadObject();
+            if($result!=null){
+            $date= new DateTime();
+            $db = JFactory::getDbo();
+            $fields = array(              
+                $db->quoteName('complete_data') . '=' . $db->quote($status),
+                     );
+            $query = $db->getQuery(true);
             $conditions = array(
                 $db->quoteName('user_id') . ' = ' . $db->quote($userId),
             );
@@ -134,9 +140,18 @@ class PerfilModelPerfiles extends JModelList
                 ->set($fields)
                 ->where($conditions);
             $db->setQuery($query);
+              $result=$db->execute();
+    
+             echo  json_encode(array("result"=>$result,
+                "code"=>200
+         ));
+            }else{
+        
+             echo  json_encode(array("result"=>false,
+                "code"=>500
+                ));
 
-             echo  json_encode($db->execute());
-
+            }
 
         }catch(Exception $e){
         var_dump($e);
@@ -178,10 +193,11 @@ class PerfilModelPerfiles extends JModelList
 
         ))
             ->from($db->quoteName('#__users', 'u'))
-            ->join('INNER', $db->quoteName('#__core_user_info', 'i') . ' ON (' . $db->quoteName('u.id') . ' = ' . $db->quoteName('i.user_id') . ')');
+            ->join('LEFT', $db->quoteName('#__core_user_info', 'i') . ' ON (' . $db->quoteName('u.id') . ' = ' . $db->quoteName('i.user_id') . ')');
 
         $search = $this->setSearch($query,$db);
         $status=$this->getFilterStatus($search,$db);
+
 
         return $status;
 

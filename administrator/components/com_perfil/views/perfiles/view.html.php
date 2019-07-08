@@ -24,6 +24,7 @@ class perfilViewperfiles extends JViewLegacy
 	protected $pagination;
 	protected $state;
 	protected $extra_sidebar;
+	protected $userId;
 	/**
 	 * Display the view
 	 *
@@ -35,49 +36,44 @@ class perfilViewperfiles extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-        $app = JFactory::getApplication();
-      //  $params = JComponentHelper::getComponents('com_perfil');
-    //var_dump($params);
-    //die();
-      //  $dashboardID = $params->get('dashboardID');
+        $this->getFiles();
+        $this->addToolbar();
+        $array=array(
+            ''=>JText::_('COM_PERFIL_COMPONENT_DATA'),
+            'inactivo'=>JText::_('COM_PERFIL_COMPONENT_DATAINCOMPLATE'),
+            'activo'=>JText::_('COM_PERFIL_COMPONENT_DATACOMPLATE')
+        );
 
+        $this->extra_sidebar= JHtmlSelect::options($array,'opciones','',2,false);
+      	if (count($errors = $this->get('Errors')))
+		{
+			throw new Exception(implode("\n", $errors));
+		}
+
+        parent::display($tpl);
+	}
+
+	private function getFiles(){
         $doc = JFactory::getDocument();
         $doc->addScript($this->_getJSSCSSPath('jquery-3.4.1.min.js', 'com_perfil','js'));
         $doc->addScript($this->_getJSSCSSPath('perfil.js', 'com_perfil','js'));
 
         $doc->addStyleSheet($this->_getJSSCSSPath("perfil.css",'com_perfil','css'));
         $this->items = $this->get('Items');
-		$this->pagination = $this->get('Pagination');
-        //$this->filterForm    = $this->get('FilterForm');
+        $this->pagination = $this->get('Pagination');
         $this->activeFilters = $this->get('ActiveFilters');
         $this->state = $this->get('State');
-        $this->addToolbar();
-        $array=array(
-            ''=>'Filtrar usuarios por: ',
-            'inactivo'=>'Inactivos',
-            'activo'=>'Activos'
-        );
 
-        $this->extra_sidebar= JHtmlSelect::options($array,'opciones','',2,false);
+            //
+            //
+        $doc = JFactory::getDocument();
 
-        JHtmlSidebar::addEntry(
-            JText::_('COM_PERFIL_FIELDS'),
-            'index.php?option=com_perfil&view=perfil',
-            true
-        );
-        $this->sidebar = JHtmlSidebar::render();
+        $doc->addScript($this->_getJSSCSSPath('sweetalert2.min.js', 'com_perfil','js'));
+        $doc->addStyleSheet($this->_getJSSCSSPath("sweetalert2.min.css",'com_perfil','css'));
+        // $doc->addStyleSheet($this->_getJSSCSSPath("bootstrap.min.css",'com_perfil','css'));
 
-		// Check for errors.
-		if (count($errors = $this->get('Errors')))
-		{
-			throw new Exception(implode("\n", $errors));
-		}
 
-		//$this->addToolbar();
-
-        parent::display($tpl);
-	}
-
+    }
     public static function _getJSSCSSPath($jsfile, $component,$type) {
 
         $bPath = 'components/' . $component . '/assets/'.$type.'/' . $jsfile;
@@ -112,7 +108,7 @@ class perfilViewperfiles extends JViewLegacy
         $bar = JToolBar::getInstance('toolbar');
 
         //Titlo de la vista
-        JToolbarHelper::title(JText::_('Usuarios'), '');
+        JToolbarHelper::title(JText::_('COM_PERFIL_COMPONENT_USER'), '');
 
         $state = $this->get('State');
         JToolbarHelper::preferences('com_perfil');
