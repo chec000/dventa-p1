@@ -13,5 +13,19 @@
 
     }
 
+function showTable(object) {
+	$(object.dataset.target).toggle( "slow", function(element) {
+  		var active=$(object).children().first().hasClass('fa-plus');
+  		if (active) {
+		$(object).children().first().removeClass('fa-plus');
+  		$(object).children().first().addClass('fa-minus');
+  	
+  		}else{
+  		$(object).children().first().removeClass('fa-minus');
+  		$(object).children().first().addClass('fa-plus');
+  	
+  		}
 
+  });
+}
 

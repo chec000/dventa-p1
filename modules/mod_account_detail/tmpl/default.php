@@ -20,69 +20,89 @@
                         <?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_DETAILS'); ?>
                     </h4>
                 </div>
-                <div class="table-responsive">
+                <div class="">
                     <table class="table">
                         <thead>
-                        <tr class="tabla">
+                        <tr class="success">
                             <th>#</th>
-                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_TICKET'); ?></th>
                             <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_ANIO'); ?></th>
-                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_MONTH'); ?></th>
-                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_FECHACOMPRA'); ?></th>
-                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_FECHAPAGO'); ?></th>
-                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_MONTO'); ?></th>
+
+                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_ALL_PUNTOS'); ?></th>
+
+                            <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_ALL_TICKETS'); ?></th>
+                            
+                            
                             <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_PUNTOS'); ?></th>
+
+                            <th><?= JText::_('MOD_ACCOUNT_ACTIONS'); ?></th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php if (!empty($data_transaction['data_complate'])) : ?>
                             <td><?php $index=1;
-                                $monto_total=0;
-                                $punton_acumulados=0;
                                 ?></td>
                             <?php foreach ($data_transaction['data_complate'] as $item) : ?>
                                 <tr>
                                     <td><?php echo $index ?></td>
-                                    <td><?php echo  $item['ticket']?></td>
                                     <td><?php echo trim($item['year']); ?></td>
-                                    <td><?php echo trim($months[$item['month']]); ?></td>
-                                    <td><?php echo    $item['fecha_compra']?></td>
-                                    <td><?php echo    $item['fecha_pago']?></td>
-                                    <td><?php echo   $item['monto']?></td>
-                                    <td><?php echo    $item['puntos']?></td>
+                                    <td><?php echo trim($months[$item['month']]); ?></td>  <td><?php echo  $item['tickets']?></td>
+                                    <td><?php echo  $item['points']?></td>
 
+                                    <td>
+                                        <span class="dot" onclick="showTable(this)"  data-target="#demo-<?php echo $index;?>">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </span>
+
+                                        </span>
+                                       </td>
+
+                                    
                                 </tr>
-                                <td><?php
-                                    $index++;
-                                    $monto_total=$monto_total+$item['monto'];
-                                    $punton_acumulados=$punton_acumulados+$item['puntos'];
-                                    ?></td>
+                                <tr id="demo-<?php echo $index;?>" class="collapse">
+                             <td colspan="6">
+                                
+                                <div class="table-responsive">
+<table class="table table-bordered">
+    <thead>
+      <tr  class="success">
+       <th>#</th>
+        <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_TICKET'); ?></th>
+        <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_FECHACOMPRA'); ?></th>
+        <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_FECHAPAGO'); ?></th>
+        <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_MONTO'); ?></th>
+        <th><?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_PUNTOS'); ?>
+
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php $j=1;?>
+<?php foreach ($item['items'] as $i) : ?>
+      <tr>
+        <td><?php echo $j ?></td>
+        <td><?php echo $i['ticket']; ?></td>
+        <td><?php echo $i['fecha_compra']; ?></td>
+        <td><?php echo $i['fecha_pago']; ?></td>
+        <td>$<?php echo $i['monto']; ?></td>
+        <td><?php echo $i['puntos']; ?></td>
+      </tr>
+
+<?php endforeach; ?>
+
+
+    </tbody>
+  </table>
+</div>
+                            </td>
+                                </tr>
+ 
+
+                                <?php $index++;
+                                ?>
                             <?php endforeach; ?>
                         <?php endif; ?>
                         </tbody>
-                        <tfoot>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td class="tabla2">
-                                <?= JText::_('MOD_ACCOUNT_DETAIL_FRONT_POINT_MONTO'); ?>
-                            </td>
-                            <td class="tabla2">
-                                <?php
-                                echo $monto_total;
-                                ?>
-                            </td>
-                            <td class="tabla2">
-                                <?php
-                                echo $punton_acumulados;
-                                ?>
-
-                            </td>
-                        </tr>
-                        </tfoot>
+                        
                     </table>
 
                 </div>

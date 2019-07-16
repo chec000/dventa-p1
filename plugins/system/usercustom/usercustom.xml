@@ -7,7 +7,7 @@
   <license></license>
   <authorEmail>jaime.medina@adventa.mx</authorEmail>
   <authorUrl>http://adventa.mx</authorUrl>
-  <version>1.0.2</version>
+  <version>1.0.</version>
   <description>Plugin para realizar personalizaciones al componente Com_users del core</description>
   <files>
     <filename plugin="usercustom">usercustom.php</filename>

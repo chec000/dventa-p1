@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1560542897,
-    'checksum' => '40630c03ed618a645a5d6d15ec8e7205',
+    'timestamp' => 1562943179,
+    'checksum' => 'c708323cb196283f4d66980bd2dcc15f',
     'files' => [
         'templates/rt_photon/custom/config/35' => [
             'assignments' => [
@@ -33,15 +33,15 @@ return [
             ],
             'page/assets' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/assets.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/body' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/body.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'page/head' => [
                 'file' => 'templates/rt_photon/custom/config/default/page/head.yaml',
-                'modified' => 1539963823
+                'modified' => 1561068548
             ],
             'particles/accordion' => [
                 'file' => 'templates/rt_photon/custom/config/default/particles/accordion.yaml',
@@ -676,6 +676,10 @@ return [
                 'mute' => true,
                 'startAt' => '0'
             ],
+            'block-application' => [
+                'enabled' => true,
+                'message' => ''
+            ],
             'hover' => [
                 'enabled' => true
             ],
@@ -982,6 +986,15 @@ opacity: 100 !important;
                         'title' => 'Hover',
                         'attributes' => [
                             'enabled' => '1'
+                        ]
+                    ],
+                    3 => [
+                        'id' => 'block-application-3705',
+                        'type' => 'block-application',
+                        'title' => 'Block Application',
+                        'attributes' => [
+                            'enabled' => '1',
+                            'message' => 'Es necesario que utilize la plataforma con otro navegador ya sea Google Crome o Mozilla Firefox'
                         ]
                     ]
                 ]

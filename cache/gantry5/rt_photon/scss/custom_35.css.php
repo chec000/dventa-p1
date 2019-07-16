@@ -1,8 +1,8 @@
 <?php
 return [
     'file' => 'gantry-theme://css-compiled/custom_35.css',
-    'timestamp' => 1560542900,
-    'md5' => '74eeb06839b51ec53723b18c500667e3',
+    'timestamp' => 1562943187,
+    'md5' => 'f41b537959b65d872f6731458b183d56',
     'variables' => [
         'above-background' => '#18c9a6',
         'above-text-color' => '#686868',
@@ -57,7 +57,7 @@ return [
         'preset' => '\'preset1\''
     ],
     'imports' => [
-        'gantry-theme://scss/custom.scss' => 1537382420,
+        'gantry-theme://scss/custom.scss' => 1561058385,
         'gantry-theme://scss/_dependencies.scss' => 1519682534,
         'gantry-engine://scss/vendor/bourbon/_bourbon.scss' => 1537301222,
         'gantry-engine://scss/vendor/bourbon/settings/_prefixer.scss' => 1537301222,

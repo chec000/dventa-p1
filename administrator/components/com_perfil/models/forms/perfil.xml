@@ -121,8 +121,7 @@
                 type="text"
                 label="COM_PERFIL_REGISTER_EXT_NUMBER_LABEL"
                 description="COM_PERFIL_REGISTER_EXT_NUMBER_DESC"
-                filter="string"
-                required="true"
+                filter="string"               
                 size="30"
                 maxlength="25"
         />
@@ -137,7 +136,45 @@
                 size="30"
                 maxlength="25"
         />
+        <!--
+            <field
+                 query="SELECT  estado_id AS value,nombre AS name  FROM #__estados"
+                name="state_id"          
+                type="sql"
+                key_field="value"                            
+                value_field="name"
+                autocomplete="true"
+                class="selectpicker form-control"
+                data-live-search="true"
+                description="COM_PERFIL_STATE_ID_LABEL"    
 
+        />
+
+                <field
+                name="branch_office"
+                type="list"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"
+                value="true"
+                filter="boolean"                
+                
+        />
+    -->
+          <field
+                name="state_id"
+                type="hidden"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"                
+                                                
+        />
+
+                <field
+                name="branch_office"
+                type="hidden"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"                
+                
+        />
         <field
                 name="reference"
                 type="textarea"
@@ -159,7 +196,8 @@
                 format="%Y-%m-%d"
                 filter="user_utc"
                 minyear="-60"
-                maxyear="-1"
+                maxyear="-18"
+                default="2001-01-01"
 
         />
 
@@ -281,12 +319,13 @@
                 name="car"
                 label="COM_PERFIL_CAR_LABEL"
                 type="sql"
+                default=""
                 key_field="value"                            
                 value_field="name"
                 autocomplete="true"
-                class="selectpicker"
+                class="selectpicker form-control"
                 data-live-search="true"
-                description="COM_FOLIO_CAR_DESC"            
+                description="COM_PERFIL_CAR_LABEL"            
         />
         <field
                 name="car_brand"

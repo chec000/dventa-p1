@@ -85,6 +85,7 @@
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
+    z-index: 90000;
 }
 
 #searchResult li:nth-child(even){

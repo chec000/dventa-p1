@@ -65,7 +65,7 @@ jQuery(function() {
 });
 ";
 
-JFactory::getDocument()->addScriptDeclaration($script);
+//JFactory::getDocument()->addScriptDeclaration($script);
 ?>
 <?php $userId = isset($this->userId)?$this->userId:null;?>
 <?php if($userId===0):?>

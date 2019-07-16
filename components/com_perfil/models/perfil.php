@@ -63,8 +63,12 @@ class PerfilModelPerfil extends JModelAdmin {
                 $fields = array();
                $no_car_data=false;
 
-                foreach ($data as $p => $value) {
-                    if($p!='TERM' && $p!='email'&&$p!='name'&&$p!='username'&&$p!='password'&&$p!='car'){
+                foreach ($data as $key => $v) {
+        
+        
+                    $p=$v['name'];
+                     $value=$v['value'];        
+                    if($p!='TERM'&&$p!="password2" && $p!='email'&&$p!='name'&&$p!='username'&&$p!='password'&&$p!='car'){
                         array_push($fields, $db->quoteName($p) . '=' . $db->quote($value));
                     }
                     if($p=="car_nodata"){
@@ -85,12 +89,13 @@ class PerfilModelPerfil extends JModelAdmin {
                         $db->quoteName('user_id') . ' = ' . $db->quote($userId),
                     );
 
-            
                     $query->update($db->quoteName('#__core_user_info'))
                         ->set($fields)
                         ->where($conditions);
                     $db->setQuery($query);
-                    $db->execute();
+                    
+                 return   $db->execute();
+                    
                 }
             } else {
                 $db = JFactory::getDbo();
@@ -147,6 +152,7 @@ class PerfilModelPerfil extends JModelAdmin {
                 return true;
             }
         } catch (Exception $e) {
+           var_dump($e->getMessage());
             $this->setError($e);
             return false;
         }

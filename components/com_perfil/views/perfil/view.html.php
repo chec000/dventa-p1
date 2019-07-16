@@ -13,7 +13,9 @@ class PerfilViewPerfil extends JViewLegacy {
 
         $this->addResources();
         $this->form = $this->get('Form');
+       
         $this->params = $this->get('Params');
+        
         if (count($errors = $this->get('Errors'))) {
             JError::raiseError(500, implode("\n", $errors));
             return false;
@@ -36,6 +38,7 @@ class PerfilViewPerfil extends JViewLegacy {
         JText::script('COM_PERFIL_REGISTER_RFC_INVALID_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_NAME_FIELD');
+
         JText::script('COM_PERFIL_REGITER_INVALID_PASSWORD_REPIT_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_PASSWORD_FIELD');
         JText::script('COM_PERFIL_REGITER_INVALID_NAME__FIELD');
@@ -54,7 +57,9 @@ class PerfilViewPerfil extends JViewLegacy {
         JText::script('COM_PERFIL_INVALID_EMAIL_EXIST');
         JText::script('COM_PERFIL_INVALID_DATA_TITLE');
         JText::script('COM_PERFIL_INVALID_DATA');
-        
+        JText::script('COM_PERFIL_SELECT_OPTION');        
+JText::script('COM_PERFIL_TEXT_SAVE_FAIL');        
+
 
 
 
@@ -72,7 +77,7 @@ class PerfilViewPerfil extends JViewLegacy {
 
         $bPath = 'components/' . $component . '/assets/'.$type.'/' . $jsfile;
         if (file_exists(JPATH_BASE . '/' . $bPath)) {
-            return JURI::Root(true) . '/' . $bPath;
+            return JURI::Root(true) . '/' . $bPath.'?'.time();
         } else {
             return false;
         }

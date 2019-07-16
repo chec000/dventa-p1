@@ -92,6 +92,25 @@
                 filter="boolean"
 
         />
+                <field
+                name="state_id"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_STATE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
+
+                <field
+                name="branch_office"
+                type="checkbox"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"
+                value="true"
+                filter="boolean"
+
+        />
         <field
                 name="reference"
                 type="checkbox"

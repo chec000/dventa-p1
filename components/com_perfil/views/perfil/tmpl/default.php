@@ -2,6 +2,7 @@
 defined('_JEXEC') or die;
 JHtml::_('behavior.formvalidator');
 ?>
+
 <div class="wrapPerfil">
     <div id="componnetContent" style="display:  <?php echo  ($this->params==true)?'block':'none'; ?>">
         <form  action="<?php echo JRoute::_('index.php?option=com_perfil&task=perfiles.save'); ?>" method="post" name="perfilForm" id="perfilForm" class="form-validate form-horizontal well" enctype="multipart/form-data">
@@ -60,8 +61,8 @@ JHtml::_('behavior.formvalidator');
                             echo ($field->input);
                             ?>
                             Acepto    
-                            <a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#tc_modal">   <?php echo JText::_('COM_USERS_TERM_COND'); ?> </a>
-                            |<a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#ap_modal">     <?php echo JText::_('COM_USERS_TERM_CONDITIONS'); ?></a>
+                            <a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#tc_modal">   <?php echo JText::_('COM_USERS_COND'); ?> </a>
+                            &nbsp  y   &nbsp<a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#ap_modal">     <?php echo JText::_('COM_USERS_PRIV'); ?></a>
 
                         </div>
                     </div>
@@ -78,9 +79,20 @@ JHtml::_('behavior.formvalidator');
                     <?php echo JText::_('JSUBMIT'); ?>
                 </button>
             </div>
+                <!--    
             <input type="hidden" name="option" value="com_perfil" />
             <input type="hidden" name="task" value="perfil.save" />
-            <?php echo JHtml::_('form.token', array('id'=>'token')); ?>
+            -->
+
+            <?php echo JHtml::_('form.token', array('name'=>'token','id'=>'token')); ?>
+
+
         </form>
         <div id="componnetContent">
         </div>
+
+<div id="contenedor" >
+
+<div id="loader"></div>
+
+</div>

@@ -30,6 +30,21 @@ class PerfilControllerFunciones extends JControllerLegacy
        
     }
 
+    public function  getSucursales(){
+            $app = JFactory::getApplication();
+        $id_estado = $app->input->post->getHTML('estado_id', '');
+        $client = new SoapClient("http://www.apymsa.com.mx/ExodusWeb/Servicios/Adventa.asmx?op=ClientePenalizado&wsdl",
+            array('compression' => SOAP_COMPRESSION_ACCEPT, 'encoding' => 'UTF-8'));
+        $param = array(
+            'Usuario' => 'Adventa2015',
+            'PassWord' => 'HDk86djF5$6jh',
+            'EstadoID' => $id_estado
+        );
+        $result = $client->RecuperaSucursales($param)->RecuperaSucursalesResult;
+        echo $result;
+    }
+
+
     public function activateUser()
     {
         $app = JFactory::getApplication();

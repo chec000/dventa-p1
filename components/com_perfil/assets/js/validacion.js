@@ -52,6 +52,57 @@ function validaNumericos(event,type) {
                 liveSearch: true
             });
 
+
+           setTimeout(function(){ setTitle() }, 500);
+            function setTitle() {
+
+
+            var car=$("#jform_car_brand").val();
+             
+            var boton=$(".dropdown-toggle");
+            if (boton!=null) {
+            if (car!=null&&car!="") {
+
+             boton.addClass('btn-success');
+             boton.children().first().text(car);
+             $("#jform_car_gasoline").prop("required", true);  
+             $("#jform_car_cylinders").prop("required", true);  
+             }else{
+             boton.addClass('btn-success');
+             boton.children().first().text(Joomla.JText._('COM_PERFIL_SELECT_OPTION'));                          
+             }   
+
+            }
+           
+            }
+
+
+        $("#jform_state_id").change(function(){
+            var key = $("#token").attr("name");
+            
+             var url='index.php?option=com_perfil&task=datosperfil.getSucursales&format=raw';
+                       
+              if($(this).val()!=""||$(this).val()!=null){
+                $.ajax({
+                type:"POST",
+                url: url,
+                async: false,
+                data:{estado_id:$(this).val(),token:key},
+                context: document.body
+            }).done(function(data) {
+            $("#jform_branch_office").empty();
+            if(data!=null){
+            var items = $.parseJSON(data);
+            $.each(items, function(i, item) {
+                $("#jform_branch_office").append(new Option(item.Sucursal, item.Sucursal)
+                );
+              
+            });
+        }
+        });
+    }
+       });
+
             $('#jform_car').on('change', function() {
                 var id=$(this).val();;
                 var key = $("#token").attr("name");
@@ -67,6 +118,9 @@ function validaNumericos(event,type) {
                         $("#jform_car_model").val(data.model);
                         $("#jform_car_year").val(data.anio);
                         $("#jform_car_nodata").prop("checked", false);  
+                        $("#jform_car_gasoline").prop("required", true);  
+                        $("#jform_car_cylinders").prop("required", true);  
+
                     }
                 }).fail(function() {
                     console.log("error");
@@ -293,8 +347,13 @@ function validaNumericos(event,type) {
             }
 
             var isCellphoneValid = function (value) {
-                if (value.length==10) {           
+                if (value.length==10) {
+                var numero=parseInt(value);
+                if (numero>0) {
                     return true;           
+                }else{
+                    return false;
+                }
                 }else{
                     return false;  
                 }
@@ -434,18 +493,71 @@ function validaNumericos(event,type) {
                     $("#jform_car_year").val('');
                     $("#jform_car_gasoline").val('');       
                     $("#jform_car_cylinders").val('');       
+                    $("#jform_car_gasoline").prop("required", false);  
+                    $("#jform_car_cylinders").prop("required", false);  
 
                 }
             }
 
             $('#perfilForm').submit(function (event) {
-           
-            if(!validateForm()) {
-             swal(Joomla.JText._('COM_PERFIL_INVALID_DATA_TITLE'),Joomla.JText._('COM_PERFIL_INVALID_DATA') , "warning");
-              event.preventDefault();
-                    }
-                
+               disableCar();
+            
+            event.preventDefault();
 
+            if(!validateForm()) {
+             swal(Joomla.JText._('COM_PERFIL_INVALID_DATA_TITLE'),Joomla.JText._('COM_PERFIL_INVALID_DATA') , "warning");              
+                    }else{
+                        $("#contenedor").show();
+                    var key = $("#token").attr("name");
+                     var input_token=$("#token");
+                    $("#token").remove();
+                    var url='index.php?option=com_perfil&task=datosperfil.savePerfil&format=raw';
+                    $.ajax({
+                        type:"POST",
+                        url: url,
+                        data:{data:$( this ).serializeArray(),token:key},
+                    }).done(function(data) {
+                        $("#contenedor").hide();
+                            $('#perfilForm').append(input_token);
+                        if(data!=""||data!=null){
+                           try {
+                            var data = $.parseJSON(data);
+
+                              if(data.code==200){
+                                Swal.fire({
+                                  title: 'Datos actualizados',
+                                  text: data.msg,
+                                  type: 'success',
+                                  allowOutsideClick:false,
+                                  confirmButtonColor: '#3085d6', 
+                                  confirmButtonText: 'Aceptar'
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.href=window.location.origin;
+                                  }
+                                })
+                                
+                            }else{
+                                swal('Error', data.msg, "warning");
+                            }
+                      
+                               }        
+                                catch(err) {
+                              swal('Error',Joomla.JText._('COM_PERFIL_TEXT_SAVE_FAIL') , "danger");   
+
+                                }
+                            
+
+                        }
+
+                    }).fail(function() {
+                        $("#contenedor").hide();
+                        $('#perfilForm').append(input_token);
+                        swal('Error',Joomla.JText._('COM_PERFIL_TEXT_SAVE_FAIL') , "danger");
+                    });
+                    
+                    }           
+                       // $("#contenedor").toggle();
             });
 
          
@@ -519,13 +631,13 @@ function validaNumericos(event,type) {
                             response=false;
                         }
                 }   
-                var int=$("#jform_int_number").val();
-                if(int!=null){
-                        if (int=="") {
-                            response=false;
-                        setMessage("jform_int_number",Joomla.JText._('COM_PERFIL_INVALID_FIELD'));
-                        }
-                }   
+                //var int=$("#jform_int_number").val();
+               // if(int!=null){
+                 //       if (int=="") {
+                   //         response=false;
+                     //   setMessage("jform_int_number",Joomla.JText._('COM_PERFIL_INVALID_FIELD'));
+                       // }
+                //}   
                 var refe=$("#jform_reference").val();
                 if(refe!=null){
                         if (!validateReference(refe.trim())) {
@@ -549,15 +661,19 @@ function validaNumericos(event,type) {
                     }
                 }
 
-
-                if (!validatePIN($("#jform_password").val().trim(),$("#password2").val())) {
+                    if ($("#jform_password").val()!=null&&$("#password2").val()!=null) {
+                   if (!validatePIN($("#jform_password").val().trim(),$("#password2").val())) {
                     setMessage("password2",Joomla.JText._('COM_PERFIL_INVALID_FIELD'));
                     response=false;
                 }
+                        }
+                if ($("#jform_email").val()!=null) {
                 if (!validateExistEmail($("#jform_email").val().trim())) {
                  setMessage("jform_email",Joomla.JText._('COM_PERFIL_INVALID_EMAIL_EXIST'));   
                 response=false;
                 }
+                }
+
 
                     return response;
             }

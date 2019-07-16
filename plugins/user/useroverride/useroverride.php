@@ -21,9 +21,9 @@ class plgUserUserOverride extends JPlugin {
 
         if (is_object($data)) {
             $userId = isset($data->id) ? $data->id : 0;
-       
+
             if (!isset($data->profile) && $userId > 0) {
-                
+
                 // Load the profile data from the database.
                 $db = JFactory::getDbo();
 
@@ -44,7 +44,7 @@ class plgUserUserOverride extends JPlugin {
 
                 $db->setQuery($query);
                 //echo $query->__toString();
-                    
+
                 try {
                     $results = $db->loadObject();
                 } catch (RuntimeException $e) {
@@ -67,7 +67,7 @@ class plgUserUserOverride extends JPlugin {
 
     public function onBeforeRender() {
         $app = JFactory::getApplication();
-        
+
         if ($app->isAdmin()) {
             return true;
         }
@@ -95,22 +95,14 @@ class plgUserUserOverride extends JPlugin {
         JText::script('PLG_USERS_REGISTER_LASTNAME2_ERROR');
         JText::script('PLG_USERS_REGISTER_LASTNAME1_ERROR');
         JText::script('PLG_USERS_REGISTER_NAME_ERROR');
-        JText::script('PLG_USERS_REGISTER_PIN1_ERROR');    
+        JText::script('PLG_USERS_REGISTER_PIN1_ERROR');
         JText::script('PLG_USERS_REGISTER_PIN_ERROR');
-        
-        
-
-
-
-
-
         JHtml::stylesheet('plugins/' . $this->_type . '/' . $this->_name . '/assets/css/sweetalert2.min.css');
         JHtml::script('plugins/' . $this->_type . '/' . $this->_name . '/assets/js/sweetalert2.min.js');
         JHtml::stylesheet('plugins/' . $this->_type . '/' . $this->_name . '/assets/css/custom.css');
 
         $document = JFactory::getDocument();
         $document->addScript('plugins/' . $this->_type . '/' . $this->_name . '/assets/js/validation.js?t=' . time());
-
 
         return true;
     }
@@ -143,7 +135,7 @@ class plgUserUserOverride extends JPlugin {
             if ($name == 'com_users.registration') {
 
                 $form->loadFile('registration');
-            
+
                 $fields = array(
                     'name',
                     'email',
@@ -154,7 +146,7 @@ class plgUserUserOverride extends JPlugin {
                     'cellphone',
                     'password',
                 );
-            
+
             }
 
             if ($name == 'com_users.profile') {
@@ -178,174 +170,160 @@ class plgUserUserOverride extends JPlugin {
         return true;
     }
 
-    public function onUserBeforeSave($user, $isnew, $data) {
-        //Funcionalidad BlackList, bloquea al usuario y envía notificación            
-       
-            $db = JFactory::getDbo();
-            $app = JFactory::getApplication();
-            $form = $app->input->get('jform', array(), 'ARRAY');
-
-                $recipients =array($form['email1']);
-                    
-
-                $emailBody = JText::sprintf(
-                                'PLG_USERS_REGISTER_CELLPHONE_ERROR', $form['name'], $form['username'], $form['email1'], $data['cellphone'], 2, $_SERVER['REMOTE_ADDR']
-                );
-
-                $response = self::sendMail($recipients, JText::_('PLG_USERS_REGISTER_CELLPHONE_ERROR') . ' (' . $form['username'] . ')', $emailBody);
-
-                $app->enqueueMessage(JText::_('PLG_USERS_REGISTER_CELLPHONE_ERROR'), 'warning');
-
-                return $response;
-         
-        
-    }
-
-
-    protected function sendMail($recipient, $subject, $body) {
-            try {
-        $config = JFactory::getConfig();
-
-        $recipient = explode(',', trim($recipient));
-     
-            $send = JFactory::getMailer()->sendMail($config->get('mailfrom'), $config->get('fromname'), $recipient, $subject, $body, true);
-        return $send;    
-
-            } catch (Exception $e) {
-               var_dump($e->getMessage()); 
-            }
-
-    }
-
-
-
-    public function onUserAfterSave($data, $isNew, $result, $error) {
-        $jinput = JFactory::getApplication()->input;    
-        $app = JFactory::getApplication();
-        $db = JFactory::getDbo();
-        $option = $app->input->get('view', '');
-        $userId = ArrayHelper::getValue($data, 'id', 0, 'int');
-
-        $this->updateUser($data,$userId);
-
-    }
-
-
-
         private function getFiels(){
         $db = JFactory::getDBO();
         $sql = "SHOW COLUMNS FROM #__core_user_info";
-        $db->setQuery($sql);  
+        $db->setQuery($sql);
          return $fields = $db->loadObjectList();
-
         }
 
-    private function updateUser($data,$id){
+public function onUserAfterSave($data, $isNew, $result, $error) {
+
+        $jinput = JFactory::getApplication()->input;
+         $app = JFactory::getApplication();
+         $db = JFactory::getDbo();
+         $option = $app->input->get('view', '');
+         $userId = ArrayHelper::getValue($data, 'id', 0, 'int');
+         $this->updateUser($data,$userId);
+         self::_sendEmail($data);
+    }
+
+    public function onUserBeforeSave($user, $isnew, $data) {
+        //Funcionalidad BlackList, bloquea al usuario y envía notificación
+       // self::_sendEmail($data);
+        //die();
+    }
+
+    private function _sendEmail($data)
+    {
 
         try {
-            $db = JFactory::getDbo();
-            $columns = array();            
+            $app = JFactory::getApplication();
+            $form = $app->input->get('jform', array(), 'ARRAY');
+            $prefix = JText::sprintf('PLG_USEROVERRIDE_BIENVENIDO_TEXT');
+            $link=JText::sprintf('PLG_USEROVERRIDE_BIENVENIDO_MESSAGE_LINK');
+            $body   = $prefix . "\n" . $form['name'] .' '.$data['last_name1'].' '.$data['last_name2']."\r\n\r\n" .$link.'<a href="'.JUri::base().'">'.JText::sprintf('PLG_USEROVERRIDE_BIENVENIDO_LINK').'</a>';            
+                $subject=JText::sprintf('PLG_USEROVERRIDE_BIENVENIDO_WELCOME');
 
-            $fields=$this->getFiels();
-            foreach ($fields as $key => $value) {
-                    array_push($columns, $value->Field);    
-            }
-            $userId=$id;
-            $values = array();
+                $mailer = JFactory::getMailer();
+                $config = JFactory::getConfig();
+                $sender = [
+                $config->get('mailfrom'),
+                $config->get('fromname')
+            ];
 
-            foreach ($columns as $key => $value) {                  
-                    switch ($value) {
-                        case 'user_id':
-                    array_push($values,$userId);         
-                        break;
-                        case 'state_id':
-                    array_push($values,$data['state']);
-                        break;
-                        case 'branch_office':
-                    array_push($values, $db->quote($data['office']));
-                        break;
-            
-                        case 'last_name1':
-                    array_push($values, $db->quote($data['last_name1']));
-                            break;
-                        case 'last_name2':                            
-                    array_push($values, $db->quote($data['last_name2']));
-                            break;
-                            case 'business_name':                          
-                    array_push($values, $db->quote($data['business_name']));
 
-                                break;
-                        case 'cellphone':
-                  array_push($values,$db->quote($data['cellphone']));
-                        break;       
-                        case 'create_at':
-
-                  array_push($values,$db->quote(date("Y-m-d h:i:s A")));
-
-                            break;
-                        default:
-                    array_push($values,$db->quote(''));
-                        break;
-                        }    
-            }
-
-            $query = $db->getQuery(true);
-            $query
-                    ->select($db->quoteName('id'))
-                    ->from($db->quoteName('#__core_user_info'))
-                    ->where($db->quoteName('user_id') . ' = ' . $db->quote($userId))
-                    ->setLimit('1');
-
-            $db->setQuery($query);
-            $user_info_id = $db->loadResult();
-            
-            if ($user_info_id !=null) {
-                $query = $db->getQuery(true);
-
-                $fields = array(
-                $db->quoteName('state_id') . ' = ' .$data['state'],
-                $db->quoteName('branch_office') . ' = ' . $db->quote($data['office']),
-                $db->quoteName('cellphone') . ' = ' . $db->quote($data['cellphone']),                            
-                
-                $db->quoteName('last_name1') . ' = ' . $db->quote($data['last_name1']),
-                $db->quoteName('last_name2') . ' = ' . $db->quote($data['last_name2']),                
-                $db->quoteName('business_name') . ' = ' . $db->quote($data['business_name']));                            
-                             
-                $conditions = array(
-                    $db->quoteName('user_id') . ' = ' . $db->quote($userId)
-                );
-                $query->update($db->quoteName('#__core_user_info'))->set($fields)->where($conditions);
-                $db->setQuery($query);
-               $result= $db->execute();
-            }else{
-
-            $query = $db->getQuery(true);
-            $query
-                ->insert($db->quoteName('#__core_user_info'))
-                ->columns($db->quoteName($columns))
-                ->values(implode(',', $values));
-            $db->setQuery($query);
-            $result=  $db->execute();
-
-            }
-
-             $this->changeStatusUser($userId);   
-             $this->saveCinema($data,$userId);
-
+                $mailer->setSender($sender);
+                $mailer->addRecipient($form['email1']);
+                $mailer->setSubject($subject);
+                $mailer->isHtml(true);
+                $mailer->Encoding = 'base64';
+                $mailer->setBody($body);
+                $send = $mailer->Send();
         } catch (Exception $e) {
-
-            $this->logError('Error' . $e->getMessage() . " Datos no registrados " . json_encode($data) . chr(10) . chr(13));
-            $this->_subject->setError($e->getMessage());
-            return false;
+        echo $e->getMessage();
         }
 
-        return true;
+            return $sent;
+    }
+    private function updateUser($data,$id){
+    try {
+        $db = JFactory::getDbo();
+        $columns = array();
+        $fields=$this->getFiels();
+        foreach ($fields as $key => $value) {
+                array_push($columns, $value->Field);
+        }
+        $userId=$id;
+        $values = array();
+        foreach ($columns as $key => $value) {
+                switch ($value) {
+                    case 'user_id':
+                array_push($values,$userId);
+                    break;
+                    case 'state_id':
+                array_push($values,$data['state']);
+                    break;
+                    case 'branch_office':
+                array_push($values, $db->quote($data['office']));
+                    break;
+
+                    case 'last_name1':
+                array_push($values, $db->quote($data['last_name1']));
+                        break;
+                    case 'last_name2':
+                array_push($values, $db->quote($data['last_name2']));
+                        break;
+                        case 'business_name':
+                array_push($values, $db->quote($data['business_name']));
+                            break;
+                    case 'cellphone':
+              array_push($values,$db->quote($data['cellphone']));
+                    break;
+                    case 'create_at':
+              array_push($values,$db->quote(date("Y-m-d h:i:s A")));
+                        break;
+                    default:
+                array_push($values,$db->quote(''));
+                    break;
+                    }
+        }
+        $query = $db->getQuery(true);
+        $query
+                ->select($db->quoteName('id'))
+                ->from($db->quoteName('#__core_user_info'))
+                ->where($db->quoteName('user_id') . ' = ' . $db->quote($userId))
+                ->setLimit('1');
+        $db->setQuery($query);
+        $user_info_id = $db->loadResult();
+
+        if ($user_info_id !=null) {
+            $query = $db->getQuery(true);
+            $fields = array(
+            $db->quoteName('state_id') . ' = ' .$data['state'],
+            $db->quoteName('branch_office') . ' = ' . $db->quote($data['office']),
+            $db->quoteName('cellphone') . ' = ' . $db->quote($data['cellphone']),
+
+            $db->quoteName('last_name1') . ' = ' . $db->quote($data['last_name1']),
+            $db->quoteName('last_name2') . ' = ' . $db->quote($data['last_name2']),
+            $db->quoteName('business_name') . ' = ' . $db->quote($data['business_name']));
+
+            $conditions = array(
+                $db->quoteName('user_id') . ' = ' . $db->quote($userId)
+            );
+            $query->update($db->quoteName('#__core_user_info'))->set($fields)->where($conditions);
+            $db->setQuery($query);
+           $result= $db->execute();
+        }else{
+        $query = $db->getQuery(true);
+        $query
+            ->insert($db->quoteName('#__core_user_info'))
+            ->columns($db->quoteName($columns))
+            ->values(implode(',', $values));
+        $db->setQuery($query);
+        $result=  $db->execute();
+        }
+         $this->changeStatusUser($userId);
+         $this->saveCinema($data,$userId);
+    } catch (Exception $e) {
+        $this->logError('Error' . $e->getMessage() . " Datos no registrados " . json_encode($data) . chr(10) . chr(13));
+        $this->_subject->setError($e->getMessage());
+        return false;
+    }
+    return true;
+}
+    protected function sendMail($recipient, $subject, $body) {
+
+        $config = JFactory::getConfig();
+        $recipient = explode(',', trim($recipient));
+        $send = JFactory::getMailer()->sendMail($config->get('mailfrom'), $config->get('fromname'), $recipient, $subject, $body, true);
+        return $send;
     }
 
 private function changeStatusUser($userId){
-                    $db = JFactory::getDbo();        
+                    $db = JFactory::getDbo();
           $query = $db->getQuery(true);
-                
+
             $fields = array(
                 $db->quoteName('block') . ' = 0');
             $conditions = array(
@@ -367,23 +345,23 @@ private function saveCinema($data,$userId)
                 'ticket_type',
                 'user_id',
                 'email',
-                'name',                    
+                'name',
                 'body_request',
                 'create_at',
                 'is_purchased'
-            );            
+            );
             $values = array(
-            
+
                 $db->quote(null),
                 $db->quote(1),
                 $db->quote(1),
                 $db->quote($userId),
                 $db->quote($data['email']),
                 $db->quote($data['name']),
-                $db->quote(''),                
+                $db->quote(''),
                 $db->quote(date("Y/m/d h:i:s A")),
                 $db->quote(0)
-            );    
+            );
             $query = $db->getQuery(true);
             $query
                     ->insert($db->quoteName('#__core_adcinema'))

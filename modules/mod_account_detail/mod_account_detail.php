@@ -6,10 +6,10 @@
     require_once __DIR__.'/helper.php';
 
     $document = JFactory::getDocument();
-    $document->addStyleSheet("modules/mod_account_detail/assets/css/estilos.css");
-    $document->addStyleSheet("modules/mod_account_detail/assets/css/bootstrap.min.css");
-    $document->addScript("modules/mod_account_detail/assets/js/jquery.min.js");
-    $document->addScript("modules/mod_account_detail/assets/js/script.js");
+    $document->addStyleSheet("modules/mod_account_detail/assets/css/estilos.css?".time());
+    $document->addStyleSheet("modules/mod_account_detail/assets/css/bootstrap.min.css?".time());
+    $document->addScript("modules/mod_account_detail/assets/js/jquery.min.js?".time());
+    $document->addScript("modules/mod_account_detail/assets/js/script.js?".time());
     $helper = new  ModAccountDetailHelper;
 
     $user = JFactory::getUser();
@@ -21,8 +21,8 @@
 
 $data_transaction=$helper->getAllDataUser();
     $months=array(
-    '01'=>'Enero',
-    '02'=>'Febrero',
+        '01'=>'Enero',
+        '02'=>'Febrero',
         '03'=>'Marzo',
         '04'=>'Abril',
         '05'=>'Mayo',

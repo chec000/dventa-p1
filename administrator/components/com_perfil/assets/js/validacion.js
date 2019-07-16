@@ -49,8 +49,33 @@ function validaNumericos(event,type) {
         $(document).ready(function () {
             var valido=false;
             $('.selectpicker').selectpicker({
-                liveSearch: true
+                liveSearch: true,  
             });
+
+
+           setTimeout(function(){ setTitle() }, 500);
+            function setTitle() {
+
+
+            var car=$("#jform_car_brand").val();
+             
+            var boton=$(".dropdown-toggle");
+            if (boton!=null) {
+            if (car!=null&&car!="") {
+
+             //boton.addClass('btn-success');
+             boton.children().first().text(car);
+             $("#jform_car_gasoline").prop("required", true);  
+             $("#jform_car_cylinders").prop("required", true);  
+             }else{
+             //boton.addClass('btn-success');
+             boton.children().first().text(Joomla.JText._('COM_PERFIL_SELECT_OPTION'));                          
+             }   
+
+            }
+           
+            }
+
                  $('#jform_car').on('change', function() {
                  var id=$(this).val();;
                  var key = $("#token").attr("name");
@@ -65,6 +90,10 @@ function validaNumericos(event,type) {
                             $("#jform_car_brand").val(data.brand);                             
                             $("#jform_car_model").val(data.model);
                             $("#jform_car_year").val(data.anio);
+                           $("#jform_car_nodata").prop("checked", false);  
+                           $("#jform_car_gasoline").prop("required", true);  
+                           $("#jform_car_cylinders").prop("required", true);  
+
                             }
                     }).fail(function() {
         console.log("error");
@@ -74,6 +103,32 @@ function validaNumericos(event,type) {
                     });
                     
 
+
+        $("#jform_state_id").change(function(){
+            var key = $("#token").attr("name");
+            
+             var url='index.php?option=com_perfil&task=funciones.getSucursales&format=raw';
+                       
+              if($(this).val()!=""||$(this).val()!=null){
+                $.ajax({
+                type:"POST",
+                url: url,
+                async: false,
+                data:{estado_id:$(this).val(),token:key},
+                context: document.body
+            }).done(function(data) {
+            $("#jform_branch_office").empty();
+            if(data!=null){
+            var items = $.parseJSON(data);
+            $.each(items, function(i, item) {
+                $("#jform_branch_office").append(new Option(item.Sucursal, item.Sucursal)
+                );
+
+            });
+        }
+        });
+    }
+       });
 
 
             function disbleSubmit(){
@@ -89,6 +144,7 @@ function validaNumericos(event,type) {
         }
          }              
         }); 
+
             $('#jform_email').keyup(function (event) {
                 if(!isEmailValid()){
                     $("#jform_email_err").remove();
@@ -430,12 +486,14 @@ function validaNumericos(event,type) {
                     $("#jform_car_year").val('');
                     $("#jform_car_gasoline").val('');       
                     $("#jform_car_cylinders").val('');       
+                    $("#jform_car_gasoline").prop("required", false);  
+                    $("#jform_car_cylinders").prop("required", false);       
 
                 }
             }
 
             $('#perfilForm').submit(function (event) {
-           
+            disableCar();           
             if(!validateForm()) {
              swal('Corregir los datos', 'Hay campos en el formulario que no se han capturado correctamente, \nFavor de corregirlos', "warning");
               event.preventDefault();
@@ -444,7 +502,7 @@ function validaNumericos(event,type) {
 
             });
 
-            function validateForm() {
+              function validateForm() {
                 response = true;
 
                 var name=$("#jform_name").val();
@@ -544,19 +602,22 @@ function validaNumericos(event,type) {
                     }
                 }
 
-
-                if (!validatePIN($("#jform_password").val().trim(),$("#password2").val())) {
+                    if ($("#jform_password").val()!=null&&$("#password2").val()!=null) {
+                   if (!validatePIN($("#jform_password").val().trim(),$("#password2").val())) {
                     setMessage("password2",Joomla.JText._('COM_PERFIL_INVALID_FIELD'));
                     response=false;
                 }
+                        }
+                if ($("#jform_email").val()!=null) {
                 if (!validateExistEmail($("#jform_email").val().trim())) {
                  setMessage("jform_email",Joomla.JText._('COM_PERFIL_INVALID_EMAIL_EXIST'));   
                 response=false;
                 }
+                }
+
 
                     return response;
             }
-
 
             $("#jform_zip_code").keypress(function(event) {
                 if(event.keyCode == 13&&event.target.value.length==5) {

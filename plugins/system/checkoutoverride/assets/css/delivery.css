@@ -1,0 +1,293 @@
+input[readonly]{
+    background-color:#eeeeee !important;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color:#eeeeee;
+}
+.invalidField{
+        color: #9d261d;
+}
+.autocomplete-suggestions{
+    background-color: white;
+    border:1px solid #eeeeee;
+}
+
+.autocomplete-suggestions > div{
+    background-color: white;
+    border-top: 1px solid #eae6e9;
+    border:1px solid #eeeeee;
+    padding: 5px;
+}
+
+.autocomplete-suggestions > div:hover{
+    background-color: #eeeeee; 
+}
+
+.container{    
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    padding: 30px;
+    background-color: white;
+}
+
+#adminForm-cedis{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "cedis-select cedis-info"
+        "submit submit";
+}
+
+/*#adminForm-user{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: */
+/*        "field-name field-lastname"
+        "field-secondlastname field-email"
+        "field-street field-extNum"
+        "field-intNum field-reference"
+        "field-zipCode field-location"
+        "field-city field-town"
+        "field-state field-rfc"
+        "field-cellphone field-company"
+        "field-birthdate l"
+        "user-address-edit submit";*/
+/*}*/
+
+#adminForm-user > div{
+    margin-right: 6px;
+}
+/*
+.field-name{
+    grid-area: field-name;
+}
+.field-lastname{
+    grid-area: field-lastname;
+}
+.field-secondlastname{
+    grid-area: field-secondlastname;
+}
+.field-street{
+    grid-area: field-street;
+}
+
+.field-extNum{
+    grid-area: field-extNum;
+}
+
+.field-intNum{
+    grid-area: field-intNum;
+}
+
+.field-reference{
+    grid-area: field-reference;
+}
+
+.field-zipCode{
+    grid-area: field-zipCode;
+}
+
+.field-location{
+    grid-area: field-location;
+}
+
+.field-city{
+    grid-area: field-city;
+}
+
+.field-town{
+    grid-area: field-town;
+}
+
+.field-state{
+    grid-area: field-state;
+}
+.field-rfc{
+    grid-area: field-rfc;
+}
+.field-cellphone{
+    grid-area: field-cellphone;
+}
+.field-company{
+    grid-area: field-company;
+}
+.field-birthdate{
+    grid-area: field-birthdate;
+}*/
+
+.user-address-edit{
+    grid-area: user-address-edit;
+    color: black;
+}
+
+#cedis-select{
+    grid-area: cedis-select;
+    width: 100%;
+}
+
+#cedis-select{
+    grid-area: cedis-select;
+    width: 100%;
+}
+
+.cedis-info{
+    grid-area: cedis-info;
+}
+
+.submit{
+    grid-area: submit;
+    text-align: right;
+}
+
+.label-text {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: black;
+    padding-right: 5px;
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.label-text-info {
+    display: flex;
+}
+
+.required::after {
+    content: "*";
+    color: #ea3a4e;
+    padding-left: 2px;
+}
+
+.checkout-delivery__title::before {
+    content: "";
+    background-color: #a60032;
+    width: 80px;
+    height: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.checkout-delivery__title {
+    margin-top: -8px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.next-btn {
+    border: 2px solid #007852;
+    border-top-color: rgb(0, 120, 82);
+    border-right-color: rgb(0, 120, 82);
+    border-bottom-color: rgb(0, 120, 82);
+    border-left-color: rgb(0, 120, 82);
+    border-radius: 0 !important;
+    padding: 6px 40px;
+    color: #fff;
+    background-color: #007852;
+    border-color: #007852;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+}
+
+.next-btn:hover{
+    background-color: green;
+    border-color: green;
+}
+
+.user-address-field{
+    width: 100%;
+    padding-right: 0px !important;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 8px !important;
+}
+
+@media (max-width: 700px) {
+    #adminForm-cedis{
+        grid-template-areas: 
+            "cedis-selec"
+            "cedis-info"
+            "submit";
+    }
+
+    /*    #adminForm-user{
+            grid-template-areas: 
+                "field-name"
+                "field-lastname"
+                "field-secondlastname" 
+                "field-email"
+                "field-street"
+                "field-extNum"
+                "field-intNum"
+                "ield-reference"
+                "field-zipCode"
+                "ield-location"
+                "field-city"
+                "ield-town"
+                "field-state"
+                "ield-rfc"
+                "field-cellphone"
+                "ield-company"
+                "field-birthdate"
+                "user-address-edit submit"
+        }*/
+
+    .submit{
+        text-align: center;
+    }
+}
+
+
+.address-view__street-value{
+    font-size:12px;
+}
+.checkout-confirmation > div{
+    width: 48%;
+    display: inline-block;
+}
+.checkout-confirmation > div > label{
+    width: 25%;
+    display: inline-block;
+}
+#adminForm-user > div{
+    width: 48%;
+    display: inline-block;
+    height: 100px;
+}
+.user-address-field{
+    /*width: auto;*/
+}
+#field-state, #field-company{
+    width: 100%;
+    margin-left: 0px!important;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"],select, .uneditable-input {
+    /*border: 2px solid goldenrod!important;*/
+    height: 40px!important;
+}
+button{
+    height: 40px;
+}
+.error{
+    color: red!important;
+    display: inline-block;
+}
+.invalid {
+    border: 2px solid #e9322d!important;
+    -webkit-box-shadow: 0 0 6px #f8b9b7!important;
+    -moz-box-shadow: 0 0 6px #f8b9b7!important;
+    box-shadow: 0 0 6px #f8b9b7!important;
+
+}
+.js-calendar {
+    z-index: 9999999999!important;
+}

@@ -22,11 +22,12 @@ class PerfilControllerPerfil extends JControllerForm
         $jinput = JFactory::getApplication()->input;
 
         $app = JFactory::getApplication();
-
+        
         $model = $this->getModel('perfil');
         $input = $app->input;
         $data = $input->get('jform', array(), 'array');
-
+var_dump($data);
+        die();
         $form = $model->getForm($data, false);
 
         $currentUri = JRoute::_('index.php?option=com_perfil', false);

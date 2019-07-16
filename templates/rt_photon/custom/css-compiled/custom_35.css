@@ -1957,4 +1957,45 @@ select {
   color: #5d2b57 !important;
   font-size: 1rem;
 }
+/* line 377, templates/rt_photon/custom/scss/custom.scss */
+.bloqueo {
+  pointer-events: none;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  margin: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 3400;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 393, templates/rt_photon/custom/scss/custom.scss */
+.diable-body {
+  pointer-events: none;
+}
+/* line 396, templates/rt_photon/custom/scss/custom.scss */
+.centrado {
+  position: absolute;
+  /*nos posicionamos en el centro del navegador*/
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  /*determinamos una anchura*/
+  margin-left: -200px;
+  /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+  height: 300px;
+  /*determinamos una altura*/
+  margin-top: -150px;
+  /*indicamos que el margen superior, es la mitad de la altura*/
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+}
 /*# sourceMappingURL=custom_35.css.map */

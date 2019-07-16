@@ -107,7 +107,7 @@
                 name="street"
                 type="text"
                 label="COM_PERFIL_REGISTER_STREET_LABEL"
-                description="COM_PERFIL_REGISTER_STREET_DESC"
+                description="COM_PERFIL_REGISTER_STREET_LABEL"
                 filter="string"
                 required="true"
                 size="30"
@@ -130,8 +130,7 @@
                 type="text"
                 label="COM_PERFIL_REGISTER_INT_NUMBER_LABEL"
                 description="COM_PERFIL_REGISTER_INT_NUMBER_DESC"
-                filter="string"
-                required="true"
+                filter="string"          
                 size="30"
                 maxlength="25"
         />
@@ -148,6 +147,35 @@
 
         />
 
+        <!--
+            <field
+                 query="SELECT  estado_id AS value,nombre AS name  FROM #__estados"
+                name="state_id"          
+                type="sql"
+                key_field="value"                            
+                value_field="name"
+                autocomplete="true"
+                class="selectpicker form-control"
+                data-live-search="true"
+                description="COM_PERFIL_STATE_ID_LABEL"    
+
+        />
+    -->
+      <field
+                name="state_id"
+                type="hidden"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"                
+                                                
+        />
+
+                <field
+                name="branch_office"
+                type="hidden"
+                class="inputbox"
+                label="COM_PERFIL_BRANCH_OFFICE_LABEL"                
+                
+        />
         <field
                 name="dob"
                 type="calendar"
@@ -155,10 +183,12 @@
                 description="COM_PERFIL_REGISTER_DOB_DESC"
                 required="true"
                 format="%Y-%m-%d"
-                filter="user_utc"
+                value=""
+                class="form-control"
                 minyear="-60"
-                maxyear="-1"
-
+                maxyear="-18"
+                default="2001-01-01"
+                ranslateformat="true"
         />
    <field
                 name="business_name"
@@ -167,6 +197,7 @@
                 description="COM_PERFIL_REGISTER_BUSINESS_NAME_LABEL"
                 filter="string"                
                 size="11"
+                class="form-control"
                 maxlength="11"
         />
         
@@ -180,8 +211,8 @@
                 required="true"
                 id="zip_code"
                 class="form-control"
-                size="10"
-                maxlength="10"
+                size="5"
+                maxlength="5"
 
         />
 
@@ -253,7 +284,7 @@
                 maxlength="11"
         />
 
-        business_name
+
         <field
                 name="pid"
                 type="text"
@@ -293,14 +324,14 @@
                 key_field="value"                            
                 value_field="name"
                 autocomplete="true"
-                class="selectpicker"
-                description="COM_FOLIO_CAR_DESC"            
+                 class="selectpicker form-control"
+                description="COM_PERFIL_CAR_LABEL"            
         />
         <field
                 name="car_brand"
                 label="COM_PERFIL_CAR_BRAND_LABEL"
                 type="text"
-                description="COM_FOLIO_BRAND_DESC"            
+                description="COM_PERFIL_CAR_BRAND_LABEL"            
                 readonly="readonly"
               class="disableInput"
         />
@@ -309,7 +340,7 @@
                 name="car_model"
                 label="COM_PERFIL_CAR_MODEL_LABEL"
                 type="text"
-                description="COM_FOLIO_MODEL_DESC"
+                description="COM_PERFIL_CAR_MODEL_LABEL"
                 readonly="readonly"
                 class="disableInput"
                 />    
@@ -318,7 +349,7 @@
                 name="car_year"
                 label="COM_PERFIL_CAR_YEAR_LABEL"
                 type="text"
-                description="COM_PERFIL_CAR_YEAR_DESC"            
+                description="COM_PERFIL_CAR_YEAR_LABEL"            
                 readonly="readonly"
                 class="disableInput"
         />
@@ -327,7 +358,7 @@
                 name="car_gasoline"
                 label="COM_PERFIL_CAR_GASOLINE_LABEL"
                type="list"
-                description="COM_FOLIO_LITERS_DESC">
+                description="COM_PERFIL_CAR_GASOLINE_LABEL">
                 <option value="">Seleccione una opción</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
@@ -346,7 +377,7 @@
                 name="car_cylinders"
                 label="COM_PERFIL_CAR_CYLINDERS_LABEL"
                 type="list"
-                description="COM_FOLIO_CYLINDERS_DESC">
+                description="COM_PERFIL_CAR_CYLINDERS_LABEL">
                 <option value="">Seleccione una opción</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

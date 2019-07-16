@@ -30,10 +30,10 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'America/Mexico_City';
 	public $mailonline = '1';
-	public $mailer = 'smtp';
+	public $mailer = 'sendmail';
 	public $mailfrom = 'v2@adventa.mx';
 	public $fromname = 'Adbox V2';
-	public $sendmail = '/usr/sbin/sendmail';
+	public $sendmail = 'C:/Users/sendmail';
 	public $smtpauth = '1';
 	public $smtpuser = 'jaime.medina@adventa.mx';
 	public $smtppass = 'J_m3d1n4';

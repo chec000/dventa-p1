@@ -4,6 +4,21 @@
 
     class PerfilControllerDatosperfil extends JControllerLegacy {
 
+
+ public function  getSucursales(){
+            $app = JFactory::getApplication();
+        $id_estado = $app->input->post->getHTML('estado_id', '');
+        $client = new SoapClient("http://www.apymsa.com.mx/ExodusWeb/Servicios/Adventa.asmx?op=ClientePenalizado&wsdl",
+            array('compression' => SOAP_COMPRESSION_ACCEPT, 'encoding' => 'UTF-8'));
+        $param = array(
+            'Usuario' => 'Adventa2015',
+            'PassWord' => 'HDk86djF5$6jh',
+            'EstadoID' => $id_estado
+        );
+        $result = $client->RecuperaSucursales($param)->RecuperaSucursalesResult;
+        echo $result;
+    }
+
     public function getCar()
     {
             $app = JFactory::getApplication();
@@ -124,7 +139,8 @@
         $task = $app->input->get('task', '');
         $token = $app->input->get->get('token', '');
         $email = $app->input->get->get('email', '');
-        $id_usuario = $app->input->get->get('id_usuario', '');
+        $user = JFactory::getUser();
+        $id_usuario = $user->id;
         $post_array = $app->input->getArray($_GET);
        
        try {
@@ -133,7 +149,7 @@
             $query->select('id')
             ->from($db->quoteName('#__users'))
             ->where('email='.$db->quote($post_array['vars']['email'])
-            )->andwhere('id !='.intval($post_array['vars']['id_usuario']));
+            )->andwhere('id !='.$id_usuario);
             
           //
         $db->setQuery($query);
@@ -151,5 +167,102 @@
 
         echo  json_encode($valid);
     }
+
+
+
+    public function savePerfil()
+    {
+
+        $jinput = JFactory::getApplication()->input;
+        $app = JFactory::getApplication();
+        $token = $app->input->post->get('token', '');
+    
+    if ($token==JSession::getFormToken()) {
+    
+        $model = $this->getModel('perfil');
+        $input = $app->input;
+        $data = $input->get('data', array(), 'array');
+        $data_array = array();
+        $form = $model->getForm($data, false);
+        
+            foreach ($data as $key => $value) {
+              $field=str_replace ( "jform", '',$value['name']);  
+            $field=str_replace ( "[", '',$field);
+            $field=str_replace( "]", '',$field);
+                
+            $item= array(
+                "name"=>$field,
+                "value"=>$value['value']
+                );   
+            array_push($data_array, $item);
+            }
+
+        $data=$data_array;
+
+        if (!$form) {
+            $app->enqueueMessage($model->getError(), 'error');
+            $errors = $model->getErrors();
+            // Display up to three validation messages to the user.
+            for ($i = 0, $n = count($errors); $i < $n && $i < 3; $i++) {
+                if ($errors[$i] instanceof Exception) {
+                    $app->enqueueMessage($errors[$i]->getMessage(), 'warning');
+                } else {
+                    $app->enqueueMessage($errors[$i], 'warning');
+                }
+            }
+
+            return false;
+        }
+
+        $user = JFactory::getUser();
+        //if (!$model->updateData($validData, $userId, $jinput))
+        if (!$model->updateData($data, $user->id, $jinput)) {
+            $this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_SAVE_FAILED', $model->getError()));
+            $this->setMessage($this->getError(), 'error');
+
+        }
+
+          if (count($data>0)) {
+           $fields=$this->getFieldsUser($data);
+                  if (count($field)>0) {
+                $model->updateUser($fields, $user->id);                    
+                  }
+          }    
+        $app->enqueueMessage(JText::_('COM_PERFIL_TEXT_SAVE'), 'message');
+        
+ echo json_encode(array('code'=>200,
+                'msg'=>JText::_('COM_PERFIL_TEXT_SAVE_EXIT')
+    ));
+    }else{
+
+        echo json_encode(array('code'=>500,
+                'msg'=>JText::_('COM_PERFIL_TEXT_SAVE_FAIL')
+    ));
+    }
+
+    }
+    private function getFieldsUser($list)
+
+    {
+      $params = array();
+     foreach ($list as $key => $value) {
+        $p=$value['name'];
+        $v=$value['value'];        
+                    
+        
+            if ($p=='password') {
+                $params['password'] = JUserHelper::hashPassword($v);
+            }
+            if ($p=='email') {
+                $params['email'] = $v;
+            }
+            if ($p=='name') {
+                $params['name'] = $v;
+            }
+     }
+
+    return $params;    
+    }
+
 
     }

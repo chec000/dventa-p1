@@ -143,7 +143,7 @@ document.onreadystatechange = function () {
     $('#jform_email1').blur(function() {
         if(isEmailValid()){    
         if(!validateExistEmail($(this).val())){  
-          swal('Correo registrado', 'El correo ya esta registrado, trate con otro', "error");
+          swal('Correo registrado', 'El correo ya esta registrado, ¡Intente con otro!', "error");
          $(this).val('');            
         }
          }              
@@ -354,14 +354,19 @@ document.onreadystatechange = function () {
         }
 
 
-        var isCellphoneValid = function (value) {
-            if (value.length==10) {           
-                return true;           
-            }else{
-              return false;  
+
+            var isCellphoneValid = function (value) {
+                if (value.length==10) {
+                var numero=parseInt(value);
+                if (numero>0) {
+                    return true;           
+                }else{
+                    return false;
+                }
+                }else{
+                    return false;  
+                }
             }
-           
-        };
 
     function isEmailValid() {               
     var regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
@@ -384,12 +389,15 @@ document.onreadystatechange = function () {
          }  
 
      
-        function validatePassword(pin1){            
-                if(pin1.length>=8){
-                    return true;
+        function validatePassword(pin1){
+
+             var pattern = /^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/;
+              if(pattern.test(pin1)){
+               return true;
                 }else{
-                    return false;
-                }            
+                 return false;
+                }
+                    
         }
 
         function validatePIN(pin1,pin2){
@@ -405,8 +413,7 @@ document.onreadystatechange = function () {
         }
 
         var href='Acepto <a style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#tc_modal" >'+Joomla.JText._("PLG_USERS_TERM_COND")+'' +
-            ' </a>'+'|'+'<a  style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#ap_modal" >'+Joomla.JText._("PLG_USERS_PRI")+' </a>';
-
+            ' </a>'+'&nbsp;' +' y '+'&nbsp;'+ ' <a  style="color:black;text-decoration: underline;" href="#" data-toggle="modal" data-target="#ap_modal" > '+Joomla.JText._("PLG_USERS_PRI")+' </a>';
         $('#jform_TERM').parent().html(
         $('#jform_TERM').parent().html()+href);
 
